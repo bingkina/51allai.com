@@ -70,5 +70,6 @@ comment:
 
 #Analytics
 gauges_analytics: false
-google_analytics: false #UA-xxxxxx
+google_analytics: G-47C29C0P6D
 baidu_analytics: false # ddxxxxxxxxxxxxxxxxx In the https://hm.baidu.com/hm.js? Afterwards
+
