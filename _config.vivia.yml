@@ -23,18 +23,13 @@ hue: 250                         # The hue of the theme color (e.g. red: 0, oran
 
 # Personal info
 avatar:                             # Path to the avatar image relative to /source
-author: Your Name
+author: 51ALLAI
 subtitle: This is the subtitle
 links:
-  - name: Twitter
-    icon: fa-brands fa-twitter      # Find icon codes at https://fontawesome.com/search
-    url: https://twitter.com
-  - name: Steam
-    icon: fa-brands fa-steam
-    url: https://store.steampowered.com
-  - name: GitHub
-    icon: fa-brands fa-github
-    url: https://github.com
+  - name: Weibo
+    icon: fa-brands fa-weibo      # Find icon codes at https://fontawesome.com/search
+    url: https://weibo.com/u/2504512700
+
 
 # Sidebar
 sidebar:
