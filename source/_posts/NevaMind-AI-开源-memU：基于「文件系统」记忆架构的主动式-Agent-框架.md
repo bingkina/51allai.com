@@ -1,8 +1,8 @@
 ---
 title: NevaMind-AI 开源 memU：基于「文件系统」记忆架构的主动式 Agent 框架
 date: 2026-02-05 19:32:12
-categories:
-tags:
+categories: AI资讯
+tags: memU
 ---
 ## [NevaMind-AI 开源 memU：基于「文件系统」记忆架构的主动式 Agent 框架]
 
