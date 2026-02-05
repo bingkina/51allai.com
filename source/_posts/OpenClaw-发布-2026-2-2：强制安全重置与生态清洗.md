@@ -1,6 +1,7 @@
 ---
 title: OpenClaw 发布 2026.2.2：强制安全重置与生态清洗
 date: 2026-02-04 20:32:48
+categories: AI资讯
 tags: OpenClaw
 ---
 

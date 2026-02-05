@@ -1,6 +1,7 @@
 ---
 title: 昆仑万维发布“天工 Skywork”桌面端：本地化 OS Agent 与多模型聚合
 date: 2026-02-04 21:02:01
+categories: AI资讯
 tags: 昆仑万维
 ---
 > 此举标志着昆仑万维从单一模型厂商向“AI 操作系统（OS Agent）”平台转型，主打“本地沙盒隐私安全”与“Claude/Gemini 模型聚合”，意在抢占 Windows 生态的系统级办公入口。
