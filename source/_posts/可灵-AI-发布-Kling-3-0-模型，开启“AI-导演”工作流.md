@@ -3,8 +3,6 @@ title: 可灵 AI 发布 Kling 3.0 模型，开启“AI 导演”工作流
 date: 2026-02-05 10:44:04
 tags:
 ---
-## [简讯：可灵 AI 发布 Kling 3.0 全家桶，开启“AI 导演”工作流]
-
 > 快手可灵 (Kling) 正式迈入 3.0 时代，核心突破在于从“生成片段”向“生成剧情”进化，首创“智能分镜”与“视觉思维链”技术，试图解决 AI 视频长久以来的连贯性与叙事难题。
 ![可灵正式迈入 3.0 时代！All in One, One for All！持续开放中-0001](https://images.51allai.com/blog/%E5%8F%AF%E7%81%B5%E6%AD%A3%E5%BC%8F%E8%BF%88%E5%85%A5%203.0%20%E6%97%B6%E4%BB%A3%EF%BC%81All%20in%20One%2C%20One%20for%20All%EF%BC%81%E6%8C%81%E7%BB%AD%E5%BC%80%E6%94%BE%E4%B8%AD-0001_20260205_104752.png)
 
