@@ -24,7 +24,7 @@ hue: 250                         # The hue of the theme color (e.g. red: 0, oran
 # Personal info
 avatar: about/icon.png                         # Path to the avatar image relative to /source
 author: 51ALLAI
-subtitle: This is the subtitle
+subtitle: 探索 AI 的无限可能
 links:
   - name: Weibo
     icon: fa-brands fa-weibo      # Find icon codes at https://fontawesome.com/search
