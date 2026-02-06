@@ -83,22 +83,34 @@ hexo.extend.injector.register('body_end', function () {
   }
   .ais-SearchBox-input:focus { box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.2); }
   #hits { padding: 0 20px 20px; overflow-y: auto; max-height: 50vh; }
-  .ais-Hits-item {
-    padding: 14px;
-    margin-bottom: 10px;
-    background: var(--hover-bg, #f8f9fa);
-    border-radius: 10px;
-    list-style: none;
+  .ais-Hits-list {
+    display: flex !important;
+    flex-direction: column !important;
+    padding: 0 !important;
+    margin: 0 !important;
   }
+  .ais-Hits-item {
+    width: 100% !important;
+    padding: 12px 16px !important;
+    margin: 0 0 8px 0 !important;
+    border: 1px solid var(--border-color, #ddd);
+    border-radius: 8px;
+    list-style: none;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.08) !important;
+    background: var(--card-bg, #fff) !important;
+  }
+  .ais-Hits-item:hover { 
+    border-color: var(--color-primary, #007bff);
+    box-shadow: 0 2px 6px rgba(0,0,0,0.12) !important;
+  }
+  .ais-Hits-item:last-child { margin-bottom: 0 !important; }
   .ais-Hits-item a {
     color: var(--text-color, #333);
     text-decoration: none;
-    font-size: 16px;
-    font-weight: 600;
+    font-size: 15px;
   }
   .ais-Hits-item a:hover { color: var(--color-primary, #007bff); }
-  .hit-date { color: #888; font-size: 13px; margin-top: 6px; }
-  .ais-Hits-list { padding: 0; margin: 0; }
+  .hit-date { color: #888; font-size: 12px; margin-left: 10px; }
   #nav-search-btn { cursor: pointer; }
   #nav-search-btn i { font-size: 16px; }
 </style>
@@ -164,7 +176,8 @@ hexo.extend.injector.register('body_end', function () {
       templates: {
         item: function(hit) {
           var url = hit.path || hit.permalink || '#';
-          return '<article><a href="/' + url + '">' + instantsearch.highlight({ attribute: 'title', hit: hit }) + '</a><div class="hit-date">' + (hit.date ? new Date(hit.date).toLocaleDateString('zh-CN') : '') + '</div></article>';
+          var date = hit.date ? new Date(hit.date).toLocaleDateString('zh-CN') : '';
+          return '<a href="/' + url + '">' + instantsearch.highlight({ attribute: 'title', hit: hit }) + '</a><span class="hit-date">' + date + '</span>';
         },
         empty: '<div style="text-align:center;padding:20px;color:#888;">没有找到相关文章</div>',
       },
