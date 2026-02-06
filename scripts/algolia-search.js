@@ -104,13 +104,32 @@ hexo.extend.injector.register('body_end', function () {
     box-shadow: 0 2px 6px rgba(0,0,0,0.12) !important;
   }
   .ais-Hits-item:last-child { margin-bottom: 0 !important; }
+  .hit-title { display: flex; align-items: center; justify-content: space-between; }
   .ais-Hits-item a {
     color: var(--text-color, #333);
     text-decoration: none;
     font-size: 15px;
+    flex: 1;
   }
   .ais-Hits-item a:hover { color: var(--color-primary, #007bff); }
-  .hit-date { color: #888; font-size: 12px; margin-left: 10px; }
+  .hit-date { color: #888; font-size: 12px; margin-left: 10px; white-space: nowrap; }
+  .hit-snippet { 
+    color: #666; 
+    font-size: 13px; 
+    margin-top: 6px; 
+    line-height: 1.5;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+  }
+  .hit-snippet em { 
+    background: #fff3cd; 
+    color: #333; 
+    font-style: normal;
+    padding: 0 2px;
+    border-radius: 2px;
+  }
   #nav-search-btn { cursor: pointer; }
   #nav-search-btn i { font-size: 16px; }
 </style>
@@ -177,10 +196,17 @@ hexo.extend.injector.register('body_end', function () {
         item: function(hit) {
           var url = hit.path || hit.permalink || '#';
           var date = hit.date ? new Date(hit.date).toLocaleDateString('zh-CN') : '';
-          return '<a href="/' + url + '">' + instantsearch.highlight({ attribute: 'title', hit: hit }) + '</a><span class="hit-date">' + date + '</span>';
+          var snippet = '';
+          if (hit._snippetResult && hit._snippetResult.content) {
+            snippet = hit._snippetResult.content.value;
+          } else if (hit.content) {
+            snippet = hit.content.substring(0, 100) + '...';
+          }
+          return '<div class="hit-item"><div class="hit-title"><a href="/' + url + '">' + instantsearch.highlight({ attribute: 'title', hit: hit }) + '</a><span class="hit-date">' + date + '</span></div>' + (snippet ? '<div class="hit-snippet">' + snippet + '</div>' : '') + '</div>';
         },
         empty: '<div style="text-align:center;padding:20px;color:#888;">没有找到相关文章</div>',
       },
+      attributesToSnippet: ['content:50'],
     }),
   ]);
 
