@@ -6,7 +6,7 @@ menu:                      # Links in the navigation bar
 rss: /atom.xml
 
 home:
-  style: default           # default, detail
+  style: detail           # default, detail
 
 favicon: favicon.png             # Path to the custom favicon relative to /source (e.g. "/favicon.png" if your favicon file is located at /source/favicon.png)
 
@@ -40,10 +40,10 @@ sidebar:
     normal:                # Scroll along with the page
       - profile
     sticky:                # Stick to the top of the page
-      - category
+      - recent_posts
       - tag
-#      - archive
-#      - recent_posts
+      - category
+      - archive
 
 # Sidebar Widget behavior
 archive_type: 'monthly'
