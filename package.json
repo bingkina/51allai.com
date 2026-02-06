@@ -7,7 +7,7 @@
     "clean": "hexo clean",
     "deploy": "hexo deploy",
     "server": "hexo server",
-    "publish": "hexo clean && hexo generate && git add . && git commit -m '更新博客' && git push"
+    "publish": "hexo clean && hexo generate && hexo algolia && git add . && git commit -m '更新博客' && git push"
   },
   "hexo": {
     "version": "8.1.1"
@@ -15,9 +15,11 @@
   "dependencies": {
     "colorjs.io": "^0.6.1",
     "hexo": "^8.0.0",
+    "hexo-algoliasearch": "^2.0.1",
     "hexo-generator-archive": "^2.0.0",
     "hexo-generator-category": "^2.0.0",
     "hexo-generator-index": "^4.0.0",
+    "hexo-generator-search": "^2.4.3",
     "hexo-generator-tag": "^2.0.0",
     "hexo-renderer-ejs": "^2.0.0",
     "hexo-renderer-marked": "^7.0.0",

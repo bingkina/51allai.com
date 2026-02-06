@@ -65,3 +65,25 @@ deploy:
 # Vivia 主题配置：归档页禁用分页
 archive_generator:
   per_page: 0
+
+# 搜索配置
+search:
+  path: search.xml
+  field: post
+  content: true
+
+# Algolia 搜索配置 (hexo-algoliasearch)
+algolia:
+  appId: DB7LNOTMKC
+  apiKey: 08fa765245ff5d620182548155119e62
+  adminApiKey: 90e918bb7228d0983ccc3507a6a6b8fc
+  indexName: 51allai
+  chunkSize: 5000
+  fields:
+    - title
+    - slug
+    - path
+    - categories
+    - tags
+    - date
+    - content
