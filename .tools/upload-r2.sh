@@ -17,6 +17,9 @@ BASENAME=$(basename "$FILE")
 EXT="${BASENAME##*.}"
 NAME="${BASENAME%.*}"
 
+# 将空格替换为下划线，确保文件名 URL 安全
+NAME=$(echo "$NAME" | tr ' ' '_')
+
 # 添加时间戳避免重名覆盖
 TIMESTAMP=$(date +%Y%m%d_%H%M%S)
 NEWNAME="${NAME}_${TIMESTAMP}.${EXT}"
