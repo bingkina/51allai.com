@@ -87,3 +87,18 @@ algolia:
     - tags
     - date
     - content
+
+# SEO 优化 - 站点地图
+sitemap:
+  path: sitemap.xml
+  rel: true
+  tags: true
+  categories: true
+
+# SEO 优化 - RSS 订阅
+feed:
+  type: atom
+  path: atom.xml
+  limit: 20
+  content: true
+  content_limit: 200
