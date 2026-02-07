@@ -151,6 +151,14 @@ hexo.extend.injector.register('body_end', function () {
     subNav.insertBefore(searchBtn, subNav.firstChild);
   }
 
+  // 动态添加 sitemap 链接到页脚
+  var footerInfo = document.getElementById('footer-info');
+  if (footerInfo) {
+    var sitemapLink = document.createElement('span');
+    sitemapLink.innerHTML = ' & <a href="https://51allai.com/sitemap.xml" target="_blank">Sitemap</a>';
+    footerInfo.appendChild(sitemapLink);
+  }
+
   var searchModal = document.getElementById('search-modal');
   var searchCloseBtn = document.getElementById('search-close-btn');
   var searchOverlay = document.querySelector('.search-modal-overlay');
