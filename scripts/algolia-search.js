@@ -132,6 +132,10 @@ hexo.extend.injector.register('body_end', function () {
   }
   #nav-search-btn { cursor: pointer; }
   #nav-search-btn i { font-size: 16px; }
+  /* 修复返回顶部按钮遮挡导航栏的问题 */
+  .back-to-top-wrapper { pointer-events: none !important; }
+  .back-to-top-wrapper button,
+  .back-to-top-wrapper a { pointer-events: auto !important; }
 </style>
 
 <script>
