@@ -2,7 +2,7 @@
 title: Google Antigravity IDE 正式集成 Claude Opus 4.6
 categories: AI资讯
 date: 2026-02-10 23:19:35
-tags:
+tags: Antigravity
 ---
 > Google 旗下的 AI 原生 IDE "Antigravity" 已于 2026 年 2 月 6 日完成对 Anthropic 最新模型 Claude Opus 4.6 的接入，用户通过重启客户端即可在模型列表中调用。
 ![iShot_2026-02-10_23.16.11](https://images.51allai.com/blog/iShot_2026-02-10_23.16.11_20260210_232207.png)
