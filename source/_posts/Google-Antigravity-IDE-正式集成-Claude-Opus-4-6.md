@@ -11,11 +11,11 @@ tags: Antigravity
 
 根据 Google AI 开发者社区及 Reddit 核心用户反馈，Antigravity IDE 的最新热更新已将 reasoning model（推理模型）列表中的 Claude Opus 4.5 替换或升级为 Claude Opus 4.6。
 
-* **接入方式：**官方原生支持（通过 Google Vertex Model Garden 渠道），无需用户配置第三方 Proxy。
+* **接入方式：** 官方原生支持（通过 Google Vertex Model Garden 渠道），无需用户配置第三方 Proxy。
 
-* **版本特性：**Opus 4.6 是 Anthropic 于 2026 年 2 月初发布的最新旗舰模型，主要针对长上下文代码推理和复杂重构任务进行了优化。
+* **版本特性：** Opus 4.6 是 Anthropic 于 2026 年 2 月初发布的最新旗舰模型，主要针对长上下文代码推理和复杂重构任务进行了优化。
 
-* **生效方法：**用户需重启 Antigravity 客户端（完全关闭进程），在 Agent 设置的 "Reasoning Model" 下拉菜单中即可看到新版本。
+* **生效方法：** 用户需重启 Antigravity 客户端（完全关闭进程），在 Agent 设置的 "Reasoning Model" 下拉菜单中即可看到新版本。
 
 ## 性能表现与差异
 
