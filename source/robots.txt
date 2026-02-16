@@ -1,6 +1,6 @@
-# 允许所有常规搜索引擎抓取全站内容
+# 允许所有常规搜索引擎和 AI 爬虫抓取全站内容
 User-agent: *
 Allow: /
 
-# 告诉搜索引擎您的网站地图位置
+# 告诉爬虫您的网站地图位置
 Sitemap: https://51allai.com/sitemap.xml
