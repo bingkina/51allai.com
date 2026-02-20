@@ -4,8 +4,6 @@ categories: AI资讯
 tags: [Google, Gemini]
 date: 2026-02-20 10:22:25
 ---
-# 标题：Google 突降 Gemini 3.1 Pro，核心推理指标 ARC-AGI-2 翻倍至 77.1%
-
 > Google 将上周 Deep Think 模型的核心推理能力正式下放至 3.1 Pro，主攻复杂逻辑推演与智能体（Agentic）工作流，API 侧大幅优化自定义工具调用。
 ![iShot_2026-02-20_10.24.05](https://images.51allai.com/blog/iShot_2026-02-20_10.24.05_20260220_102503.png)
 
