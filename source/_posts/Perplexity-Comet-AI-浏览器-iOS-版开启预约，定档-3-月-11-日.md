@@ -5,7 +5,6 @@ tags: [Perplexity, Comet]
 date: 2026-02-21 12:48:24
 ---
 > Perplexity 正式将其 AI 原生浏览器 Comet 引入 iOS 生态，试图通过多模型融合与代理式自动化重塑移动端流量入口。
-
 ![iShot_2026-02-21_12.48.45](https://images.51allai.com/blog/iShot_2026-02-21_12.47.57_20260221_124856.png)
 
 # 多模型调度与代理式交互
