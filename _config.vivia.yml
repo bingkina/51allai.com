@@ -32,6 +32,9 @@ links:
   - name: 小红书
     icon: xiaohongshu.png
     url: https://www.xiaohongshu.com/user/profile/621b87680000000010009366
+  - name: 抖音
+    icon: douyin.png
+    url: https://www.douyin.com/user/MS4wLjABAAAAfQ0uJKk8pXniGGkOY5jUiEHz6XsLyQt-1RfywpMIyxw  
 
 
 # Sidebar
