@@ -26,8 +26,8 @@ avatar: avatar.png                         # Path to the avatar image relative t
 author: 51ALLAI
 subtitle: 探索 AI 的无限可能
 links:
-  - name: 小红书          # Find icon codes at https://fontawesome.com/search
-    icon: source/xiaohongshu.png
+  - name: 小红书
+    icon: xiaohongshu.png
     url: https://www.xiaohongshu.com/user/profile/621b87680000000010009366
 
 
