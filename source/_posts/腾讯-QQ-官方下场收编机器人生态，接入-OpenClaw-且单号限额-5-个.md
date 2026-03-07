@@ -1,7 +1,7 @@
 ---
 title: 腾讯 QQ 官方下场收编机器人生态，接入 OpenClaw 且单号限额 5 个
 categories: AI资讯
-tags: []
+tags: [OpenClaw, QQ]
 date: 2026-03-08 00:12:19
 ---
 > 腾讯正式打通 QQ 机器人与 AI Agent 框架 OpenClaw的官方链路，标志着 QQ 机器人从“违规外挂”时代正式进入“官方监管 + Agent”时代。
