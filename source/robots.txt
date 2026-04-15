@@ -1,6 +1,18 @@
-# 允许所有常规搜索引擎和 AI 爬虫抓取全站内容
+# 允许所有搜索引擎抓取内容
 User-agent: *
 Allow: /
 
-# 告诉爬虫您的网站地图位置
+# 屏蔽没有独立价值的低质量页面，节省爬虫预算
+Disallow: /page/
+Disallow: /search/
+Disallow: /search.xml
+Disallow: /*?*
+
+# 允许聚合页被抓取
+Allow: /tags/
+Allow: /categories/
+Allow: /archives/
+
+# 站点地图
 Sitemap: https://51allai.com/sitemap.xml
+Sitemap: https://51allai.com/atom.xml

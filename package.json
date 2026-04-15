@@ -7,7 +7,7 @@
     "clean": "hexo clean",
     "deploy": "hexo deploy",
     "server": "hexo server",
-    "publish": "hexo clean && hexo generate && hexo algolia && git add . && git commit -m '更新博客' && git push"
+    "publish": "bash -c 'set -a && [ -f .env ] && source .env; set +a && hexo clean && hexo generate && hexo algolia && git add . && git commit -m \"更新博客\" && git push'"
   },
   "hexo": {
     "version": "8.1.1"

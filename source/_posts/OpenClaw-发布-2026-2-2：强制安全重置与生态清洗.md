@@ -1,5 +1,6 @@
 ---
 title: OpenClaw 发布 2026.2.2：强制安全重置与生态清洗
+description: "OpenClaw 2026.2.2 是针对近期 CVE-2026-25253 RCE 漏洞的强制性安全修复版本。该版本废除所有旧版 Token（Classic Tokens），引入了隔离的浏览器环境，并对充斥着恶意插件的 ClawHub 生态启动了清洗机制。"
 date: 2026-02-04 20:32:48
 categories: AI资讯
 tags: OpenClaw

@@ -1,5 +1,6 @@
 ---
 title: 字节跳动上线豆包“专家模式”，全端接入豆包大模型2.0 Pro
+description: "豆包大模型2.0 Pro重点强化深度推理与多模态动态感知能力，核心指标对标GPT-5.2与Gemini 3 Pro，并通过阶梯定价策略降低复杂Agent任务的API调用成本。"
 categories: AI资讯
 date: 2026-02-14 15:04:11
 tags: 豆包
@@ -13,7 +14,7 @@ tags: 豆包
 * **2.0 Lite / Mini**：Lite版综合性能超越前代主力模型（豆包1.8），输入定价下探至0.6元/百万Tokens；Mini版主打低时延与高并发场景。
 * **2.0 Code**：专为编程场景构建，已接入字节AI编程产品TRAE。
 
-### 核心Benchmark与技术突破点
+#### 核心Benchmark与技术突破点
 
 * **数学与逻辑推理**：2.0 Pro 在 IMO（国际数学奥赛）、CMO 及 ICPC 编程竞赛中达到金牌级水平；在 Putnam 基准测试中成绩超越 Gemini 3 Pro。
 * **Agent能力与世界知识**：在 HLE-text（人类的最后考试）中获得目前披露的最高分 54.2 分；在长尾领域知识测试 SuperGPQA 中分数超过 GPT-5.2，并在 HealthBench 排名第一。
