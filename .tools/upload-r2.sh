@@ -8,7 +8,7 @@ DOMAIN="https://images.51allai.com"
 
 if [ -z "$1" ]; then
     echo "用法: image <图片路径>"
-    echo "或者直接把图片拖到终端执行: image "
+    echo "或者直接把图片拖到终端执行: image <拖入图片>"
     exit 1
 fi
 
@@ -24,20 +24,24 @@ NAME=$(echo "$NAME" | tr ' ' '_')
 TIMESTAMP=$(date +%Y%m%d_%H%M%S)
 NEWNAME="${NAME}_${TIMESTAMP}.${EXT}"
 
+# 复制到临时目录并重命名，再上传（rclone 以目标文件名为准）
+TMPFILE="/tmp/$NEWNAME"
+cp "$FILE" "$TMPFILE"
+
 echo "📤 正在上传: $BASENAME → $NEWNAME"
-rclone copy "$FILE" "r2:$BUCKET/$FOLDER/" --copy-dest-name "$NEWNAME" 2>/dev/null
 
-# 如果上面的方法不支持，使用备用方案
-if [ $? -ne 0 ]; then
-    # 先复制到临时位置再上传
-    TMPFILE="/tmp/$NEWNAME"
-    cp "$FILE" "$TMPFILE"
-    rclone copy "$TMPFILE" "r2:$BUCKET/$FOLDER/"
-    rm "$TMPFILE"
-fi
+rclone copy "$TMPFILE" "r2:$BUCKET/$FOLDER/" \
+    --timeout 30s \
+    --contimeout 15s \
+    --retries 3 \
+    --progress
 
-if [ $? -eq 0 ]; then
+STATUS=$?
+rm -f "$TMPFILE"
+
+if [ $STATUS -eq 0 ]; then
     URL="$DOMAIN/$FOLDER/$NEWNAME"
+    echo ""
     echo "✅ 上传成功!"
     echo ""
     echo "🔗 访问链接: $URL"
@@ -45,10 +49,10 @@ if [ $? -eq 0 ]; then
     echo "📋 Markdown 格式:"
     echo "![$NAME]($URL)"
     echo ""
-    # 复制 Markdown 格式到剪贴板
     echo "![$NAME]($URL)" | pbcopy
     echo "💡 已复制 Markdown 到剪贴板"
 else
-    echo "❌ 上传失败"
+    echo "❌ 上传失败（rclone 退出码: $STATUS）"
+    echo "请检查网络连接或运行: rclone lsd r2:$BUCKET"
     exit 1
 fi
