@@ -147,7 +147,7 @@ hexo.extend.injector.register('body_end', function () {
     searchBtn.id = 'nav-search-btn';
     searchBtn.className = 'nav-icon';
     searchBtn.title = '搜索';
-    searchBtn.innerHTML = '<i class="fa fa-search"></i>';
+    searchBtn.innerHTML = '<i class="fa-solid fa-magnifying-glass"></i>';
     subNav.insertBefore(searchBtn, subNav.firstChild);
   }
 
@@ -208,13 +208,24 @@ hexo.extend.injector.register('body_end', function () {
         item: function(hit) {
           var url = hit.path || hit.permalink || '#';
           var date = hit.date ? new Date(hit.date).toLocaleDateString('zh-CN') : '';
+          // 优先用 Algolia 高亮结果，降级用原始标题
+          var titleHtml = (hit._highlightResult && hit._highlightResult.title && hit._highlightResult.title.value)
+            ? hit._highlightResult.title.value
+            : (hit.title || '');
+          // 优先用摘要片段，降级截取正文前 100 字
           var snippet = '';
-          if (hit._snippetResult && hit._snippetResult.content) {
+          if (hit._snippetResult && hit._snippetResult.content && hit._snippetResult.content.value) {
             snippet = hit._snippetResult.content.value;
           } else if (hit.content) {
-            snippet = hit.content.substring(0, 100) + '...';
+            snippet = hit.content.substring(0, 100) + '…';
           }
-          return '<div class="hit-item"><div class="hit-title"><a href="/' + url + '">' + instantsearch.highlight({ attribute: 'title', hit: hit }) + '</a><span class="hit-date">' + date + '</span></div>' + (snippet ? '<div class="hit-snippet">' + snippet + '</div>' : '') + '</div>';
+          return '<div class="hit-item">'
+            + '<div class="hit-title">'
+            + '<a href="/' + url + '">' + titleHtml + '</a>'
+            + (date ? '<span class="hit-date">' + date + '</span>' : '')
+            + '</div>'
+            + (snippet ? '<div class="hit-snippet">' + snippet + '</div>' : '')
+            + '</div>';
         },
         empty: '<div style="text-align:center;padding:20px;color:#888;">没有找到相关文章</div>',
       },
