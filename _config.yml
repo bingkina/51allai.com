@@ -78,7 +78,7 @@ search:
 # 旧的 adminApiKey 请立即在 Algolia 控制台吊销并重新生成。
 algolia:
   appId: DB7LNOTMKC
-  apiKey: 08fa765245ff5d620182548155119e62
+  apiKey: 8d8f5aa02241c1a6bb5134b0b9c9fd8e
   indexName: 51allai
   chunkSize: 5000
   fields:

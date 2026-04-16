@@ -20,10 +20,10 @@ hexo.extend.injector.register('body_end', function () {
   </div>
 </div>
 
-<!-- Algolia 搜索脚本 -->
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/instantsearch.css@7/themes/algolia-min.css">
-<script src="https://cdn.jsdelivr.net/npm/algoliasearch@4/dist/algoliasearch-lite.umd.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/instantsearch.js@4"></script>
+<!-- Algolia 搜索脚本（使用 unpkg 作为备用 CDN，国内更稳定） -->
+<link rel="stylesheet" href="https://unpkg.com/instantsearch.css@7/themes/algolia-min.css">
+<script src="https://unpkg.com/algoliasearch@4/dist/algoliasearch-lite.umd.js"></script>
+<script src="https://unpkg.com/instantsearch.js@4/dist/instantsearch.production.min.js"></script>
 
 <style>
   .search-modal {
