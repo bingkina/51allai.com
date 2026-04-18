@@ -55,7 +55,9 @@ time_format: HH:mm:ss
 updated_option: mtime
 per_page: 10
 pagination_dir: page
-include: null
+# 强制包含 _redirects：Hexo 默认忽略下划线前缀的文件，需显式声明
+include:
+  - _redirects
 exclude: null
 ignore: null
 theme: vivia
