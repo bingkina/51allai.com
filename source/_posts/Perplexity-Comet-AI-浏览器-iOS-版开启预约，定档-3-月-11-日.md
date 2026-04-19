@@ -1,5 +1,6 @@
 ---
 title: Perplexity Comet AI 浏览器 iOS 版开启预约，定档 3 月 11 日
+permalink: posts/2026/02/perplexity-comet-ios-preorder/
 description: "Perplexity 正式将其 AI 原生浏览器 Comet 引入 iOS 生态，试图通过多模型融合与代理式自动化重塑移动端流量入口。 多模型调度与代理式交互 Comet 摒弃了传统浏览器的单一搜索框逻辑，定位为“AI 个人助手”。"
 categories: AI资讯
 tags: [Perplexity, Comet]

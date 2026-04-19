@@ -1,5 +1,6 @@
 ---
 title: 微信推出 ClawBot 官方插件接入 OpenClaw 智能体
+permalink: posts/2026/03/wechat-clawbot-openclaw/
 description: "腾讯开放国民级社交通讯接口，使用户能在聊天窗口直接调度本地 AI Agent。 官方插件 ClawBot 落地 2026年3月22日，微信正式上线“ClawBot”插件。用户更新微信后（路径：我—设置—插件），可通过终端指令、扫码或复制命令将本地 OpenClaw 接入微信。"
 categories: AI资讯
 tags: [OpenClaw, ClawBot, 微信, 腾讯]

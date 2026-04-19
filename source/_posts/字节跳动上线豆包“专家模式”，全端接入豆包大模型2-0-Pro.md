@@ -1,5 +1,6 @@
 ---
 title: 字节跳动上线豆包“专家模式”，全端接入豆包大模型2.0 Pro
+permalink: posts/2026/02/doubao-expert-mode-2-0-pro/
 description: "豆包大模型2.0 Pro重点强化深度推理与多模态动态感知能力，核心指标对标GPT-5.2与Gemini 3 Pro，并通过阶梯定价策略降低复杂Agent任务的API调用成本。"
 categories: AI资讯
 date: 2026-02-14 15:04:11

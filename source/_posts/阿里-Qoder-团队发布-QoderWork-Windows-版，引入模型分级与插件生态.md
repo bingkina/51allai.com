@@ -1,5 +1,6 @@
 ---
 title: 阿里 Qoder 团队发布 QoderWork Windows 版，引入模型分级与插件生态
+permalink: posts/2026/03/alibaba-qoderwork-windows/
 description: "该版本标志着 QoderWork 从单纯的本地 AI 助理向平台化演进，通过预置沙盒与 Skills 广场试图解决 AI Agent 在桌面端落地的环境配置与能力扩展痛点。 1. 模型分级策略 QoderWork Windows 版引入“标准档”与“旗舰档”双层级模型架构。"
 categories: AI资讯
 tags: [QoderWork]

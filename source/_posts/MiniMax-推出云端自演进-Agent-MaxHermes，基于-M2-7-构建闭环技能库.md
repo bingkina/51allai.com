@@ -1,5 +1,6 @@
 ---
 title: MiniMax 推出云端自演进 Agent MaxHermes，基于 M2.7 构建闭环技能库
+permalink: posts/2026/04/minimax-maxhermes-self-evolving/
 categories: AI资讯
 tags: [MiniMax, OpenClaw, Agent]
 date: 2026-04-16 14:43:11

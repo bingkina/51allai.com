@@ -1,5 +1,6 @@
 ---
 title: 阿里发布企业级 Agent 平台“悟空”，钉钉底座完成 CLI 原生改造
+permalink: posts/2026/03/alibaba-wukong-agent-platform/
 description: "阿里发布企业级 Agent 平台“悟空”，钉钉底座完成 CLI 原生改造 阿里推出独立应用兼钉钉内置平台“悟空”，以原生 API 调度替代 GUI 模拟操作，从“个人玩具”级 Agent 转向企业级权限可控的业务流，标志着协同办公的底层驱动由人机交互转向 Token 执行。"
 categories: AI资讯
 tags: [Agent, 阿里, 悟空]

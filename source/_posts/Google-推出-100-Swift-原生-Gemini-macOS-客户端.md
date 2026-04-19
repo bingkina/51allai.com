@@ -1,5 +1,6 @@
 ---
 title: Google 推出 100% Swift 原生 Gemini macOS 客户端
+permalink: posts/2026/04/gemini-macos-swift-client/
 categories: AI资讯
 tags: []
 date: 2026-04-16 10:54:12

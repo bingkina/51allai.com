@@ -1,5 +1,6 @@
 ---
 title: Anthropic 发布 Claude Opus 4.7 与重构版 Claude Code
+permalink: posts/2026/04/anthropic-claude-opus-4-7/
 categories: AI资讯
 tags: [Anthropic, Claude]
 date: 2026-04-16 23:50:00

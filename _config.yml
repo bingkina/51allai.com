@@ -6,7 +6,7 @@ author: 51ALLAI
 language: zh-CN
 timezone: Asia/Shanghai
 url: https://51allai.com
-permalink: posts/:year/:month/:day/:title/
+permalink: posts/:year/:month/:slug/
 permalink_defaults: null
 pretty_urls:
   trailing_index: true

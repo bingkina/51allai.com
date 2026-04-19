@@ -1,5 +1,6 @@
 ---
 title: 字节跳动 Seedance 2.0 发布：AI 视频从「抽卡」迈向「工业化导演」
+permalink: posts/2026/02/bytedance-seedance-2-0/
 description: "字节跳动于 2026 年 2 月初低调上线的新一代视频模型，核心突破在于原生音画同步与多镜头叙事的一致性，标志着 AI 视频生成从“生成一段素材”进化为“导演一场戏”。 1. 原生音画同构与多镜头叙事 (Native A/V & Multi-Shot) Seedance 2."
 categories: AI资讯
 date: 2026-02-09 19:16:58

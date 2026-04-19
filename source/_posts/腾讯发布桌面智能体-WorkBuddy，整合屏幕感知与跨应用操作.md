@@ -1,5 +1,6 @@
 ---
 title: 腾讯发布桌面智能体 WorkBuddy，整合屏幕感知与跨应用操作
+permalink: posts/2026/03/tencent-workbuddy-desktop-agent/
 description: "腾讯元宝团队推出独立桌面客户端，主打“零代码/零部署”的开箱即用体验，具备屏幕上下文理解能力，意在通过 OS 层级交互抢占 PC 端办公流量入口。 1. 产品形态与定位 独立客户端架构：不同于网页版 Chatbot，WorkBuddy 以独立桌面应用（Windows/macOS）…"
 categories: AI资讯
 tags: [腾讯, WorkBuddy]

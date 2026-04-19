@@ -1,5 +1,6 @@
 ---
 title: 字节跳动发布 Doubao-Seed-2.0 系列，主攻 Agent 长链路推理与极端降本
+permalink: posts/2026/02/bytedance-doubao-seed-2-0/
 description: "字节跳动基座大模型完成跨代升级，Doubao-Seed-2.0 聚焦大规模生产环境中的复杂任务执行，通过单价降维打击（百万 Tokens 0.6元起）与多模态大一统架构，争夺企业级 Agent 底层算力入口。"
 categories: AI资讯
 date: 2026-02-15 15:28:59
