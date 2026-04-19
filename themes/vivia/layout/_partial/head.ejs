@@ -1,0 +1,225 @@
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="theme-color" content="#1a1a2e">
+  <meta name="format-detection" content="telephone=no">
+
+  <%- partial('google-analytics') %>
+  <%- partial('baidu-analytics') %>
+  <%- partial('gauges-analytics') %>
+
+  <%
+    // ---- Title ----
+    var title = page.title;
+    if (is_archive()){
+      title = __('archive_a');
+      if (is_month()) title += ': ' + page.year + '/' + page.month;
+      else if (is_year()) title += ': ' + page.year;
+    } else if (is_category()){
+      title = __('category') + ': ' + page.category;
+    } else if (is_tag()){
+      title = __('tag') + ': ' + page.tag;
+    }
+
+    // ---- Description ----
+    var pageDesc = '';
+    if (page.description) {
+      pageDesc = page.description;
+    } else if (is_post() && page.excerpt) {
+      pageDesc = strip_html(page.excerpt).replace(/\s+/g, ' ').trim().substring(0, 160);
+    } else if (is_post() && page.content) {
+      pageDesc = strip_html(page.content).replace(/\s+/g, ' ').trim().substring(0, 160);
+    } else {
+      pageDesc = config.description || '';
+    }
+
+    // ---- Canonical URL ----
+    var canonicalUrl = config.url.replace(/\/$/, '') + url_for(page.path || '');
+
+    // ---- OG Image ----
+    var ogImage = '';
+    if (page.cover) {
+      ogImage = /^https?:\/\//.test(page.cover) ? page.cover : (config.url.replace(/\/$/, '') + url_for(page.cover));
+    } else if (page.photos && page.photos.length) {
+      ogImage = page.photos[0];
+    } else if (theme.default_cover) {
+      ogImage = /^https?:\/\//.test(theme.default_cover) ? theme.default_cover : (config.url.replace(/\/$/, '') + url_for(theme.default_cover));
+    } else if (theme.avatar) {
+      ogImage = config.url.replace(/\/$/, '') + url_for(theme.avatar);
+    }
+  %>
+
+  <title><% if (title){ %><%= title %> | <% } %><%= config.title %><% if (is_home()){ %> - <%= config.subtitle %><% } %></title>
+  <meta name="description" content="<%= pageDesc %>">
+  <% if (is_post() && page.tags && page.tags.length) { %>
+    <meta name="keywords" content="<%= page.tags.map(function(t){return t.name}).join(', ') %>">
+  <% } else if (config.keywords) { %>
+    <meta name="keywords" content="<%= config.keywords %>">
+  <% } %>
+  <meta name="author" content="<%= config.author %>">
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+
+  <link rel="canonical" href="<%= canonicalUrl %>">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="<%= is_post() ? 'article' : 'website' %>">
+  <meta property="og:title" content="<% if (title){ %><%= title %><% } else { %><%= config.title %><% } %>">
+  <meta property="og:description" content="<%= pageDesc %>">
+  <meta property="og:url" content="<%= canonicalUrl %>">
+  <meta property="og:site_name" content="<%= config.title %>">
+  <meta property="og:locale" content="zh_CN">
+  <% if (ogImage) { %>
+    <meta property="og:image" content="<%= ogImage %>">
+  <% } %>
+  <% if (is_post()) { %>
+    <meta property="article:published_time" content="<%= page.date.toISOString() %>">
+    <meta property="article:modified_time" content="<%= page.updated.toISOString() %>">
+    <meta property="article:author" content="<%= page.author || config.author %>">
+    <% if (page.categories && page.categories.length) { %>
+      <meta property="article:section" content="<%= page.categories.data[0].name %>">
+    <% } %>
+    <% if (page.tags && page.tags.length) { %>
+      <% page.tags.each(function(tag){ %>
+        <meta property="article:tag" content="<%= tag.name %>">
+      <% }) %>
+    <% } %>
+  <% } %>
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="<%= ogImage ? 'summary_large_image' : 'summary' %>">
+  <meta name="twitter:title" content="<% if (title){ %><%= title %><% } else { %><%= config.title %><% } %>">
+  <meta name="twitter:description" content="<%= pageDesc %>">
+  <% if (ogImage) { %>
+    <meta name="twitter:image" content="<%= ogImage %>">
+  <% } %>
+
+  <!-- JSON-LD structured data -->
+  <% if (is_home()) { %>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "<%= config.title %>",
+      "alternateName": "<%= config.subtitle %>",
+      "url": "<%= config.url %>",
+      "description": "<%= config.description %>",
+      "inLanguage": "zh-CN",
+      "publisher": {
+        "@type": "Organization",
+        "name": "<%= config.author %>",
+        "url": "<%= config.url %>",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "<%= config.url.replace(/\/$/, '') + url_for(theme.avatar || '/avatar.png') %>"
+        }
+      },
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": "<%= config.url.replace(/\/$/, '') %>/search/?q={search_term_string}",
+        "query-input": "required name=search_term_string"
+      }
+    }
+    </script>
+  <% } %>
+  <% if (is_post()) { %>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "NewsArticle",
+      "headline": "<%- page.title.replace(/"/g, '\\"') %>",
+      "description": "<%- pageDesc.replace(/"/g, '\\"') %>",
+      "datePublished": "<%= page.date.toISOString() %>",
+      "dateModified": "<%= page.updated.toISOString() %>",
+      "author": {
+        "@type": "Organization",
+        "name": "<%= page.author || config.author %>",
+        "url": "<%= config.url %>"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "<%= config.title %>",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "<%= config.url.replace(/\/$/, '') + url_for(theme.avatar || '/avatar.png') %>"
+        }
+      },
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "<%= canonicalUrl %>"
+      }<% if (ogImage) { %>,
+      "image": ["<%= ogImage %>"]<% } %><% if (page.tags && page.tags.length) { %>,
+      "keywords": "<%= page.tags.map(function(t){return t.name}).join(', ') %>"<% } %><% if (page.categories && page.categories.length) { %>,
+      "articleSection": "<%= page.categories.data[0].name %>"<% } %>
+    }
+    </script>
+  <% } %>
+
+  <!-- Breadcrumb for posts -->
+  <% if (is_post()) { %>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "首页",
+          "item": "<%= config.url %>"
+        }<% if (page.categories && page.categories.length) { %>,
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "<%= page.categories.data[0].name %>",
+          "item": "<%= config.url.replace(/\/$/, '') + url_for('/categories/' + page.categories.data[0].slug + '/') %>"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "<%- page.title.replace(/"/g, '\\"') %>",
+          "item": "<%= canonicalUrl %>"
+        }<% } else { %>,
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "<%- page.title.replace(/"/g, '\\"') %>",
+          "item": "<%= canonicalUrl %>"
+        }<% } %>
+      ]
+    }
+    </script>
+  <% } %>
+
+  <!-- Resource hints: speed up external CDN handshake -->
+  <link rel="preconnect" href="https://cdn.staticfile.org" crossorigin>
+  <link rel="dns-prefetch" href="https://cdn.staticfile.org">
+  <link rel="preconnect" href="https://www.googletagmanager.com" crossorigin>
+  <link rel="dns-prefetch" href="https://hm.baidu.com">
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdn.staticfile.org/font-awesome/6.4.2/css/fontawesome.min.css">
+  <link rel="stylesheet" href="https://cdn.staticfile.org/font-awesome/6.4.2/css/brands.min.css">
+  <link rel="stylesheet" href="https://cdn.staticfile.org/font-awesome/6.4.2/css/solid.min.css">
+
+  <% if (config.feed) { %>
+    <%- feed_tag() %>
+  <% } else if (theme.rss) { %>
+    <%- feed_tag(theme.rss) %>
+  <% } %>
+
+  <% if (theme.favicon){ %>
+    <%- favicon_tag(theme.favicon) %>
+  <% } else { %>
+    <link rel="icon" media="(prefers-color-scheme: light)" href="<%- url_for("/images/favicon-light-32.png") %>" sizes="32x32">
+    <link rel="icon" media="(prefers-color-scheme: light)" href="<%- url_for("/images/favicon-light-128.png") %>" sizes="128x128">
+    <link rel="icon" media="(prefers-color-scheme: light)" href="<%- url_for("/images/favicon-light-180.png") %>" sizes="180x180">
+    <link rel="icon" media="(prefers-color-scheme: light)" href="<%- url_for("/images/favicon-light-192.png") %>" sizes="192x192">
+    <link rel="icon" media="(prefers-color-scheme: dark)" href="<%- url_for("/images/favicon-dark-32.png") %>" sizes="32x32">
+    <link rel="icon" media="(prefers-color-scheme: dark)" href="<%- url_for("/images/favicon-dark-128.png") %>" sizes="128x128">
+    <link rel="icon" media="(prefers-color-scheme: dark)" href="<%- url_for("/images/favicon-dark-180.png") %>" sizes="180x180">
+    <link rel="icon" media="(prefers-color-scheme: dark)" href="<%- url_for("/images/favicon-dark-192.png") %>" sizes="192x192">
+  <% } %>
+
+  <%- css('css/style') %>
+</head>
