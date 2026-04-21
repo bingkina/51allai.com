@@ -3,7 +3,7 @@
 # 用法: image <图片路径>
 
 BUCKET="51allai-images"
-FOLDER="51allai.com"
+FOLDER="blog"
 DOMAIN="https://images.51allai.com"
 
 if [ -z "$1" ]; then
