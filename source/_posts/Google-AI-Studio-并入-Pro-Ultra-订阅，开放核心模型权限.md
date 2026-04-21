@@ -6,7 +6,7 @@ tags: [Google Studio, AI]
 date: 2026-04-21 10:42:27
 ---
 > Google 调整 AI 开发者工具商业化策略，将 AI Studio 整合至付费订阅体系，通过配额提升与高阶模型绑定加速应用落地。
-![截图2026-04-21_10.45.30@2x](https://images.51allai.com/blog/截图2026-04-21_10.45.30@2x_20260421_104606.png)
+![google-ai-studio-pro-ultra](https://images.51allai.com/blog/G1_v6_1920x1080-0001_20260421_110000.png)
 
 Google AI Studio 正式并入 Google AI Pro 与 Ultra 订阅计划。此举将开发者的工具链与 Google 的高阶订阅服务完成了直接捆绑。
 
