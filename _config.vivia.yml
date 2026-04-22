@@ -1,7 +1,7 @@
 # Header
 menu:                      # Links in the navigation bar
   Home: /
-  Archives: /archives
+  Archives: /archives/
 #  About: /about
 rss: /atom.xml
 
