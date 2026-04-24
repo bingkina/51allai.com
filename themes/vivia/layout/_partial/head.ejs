@@ -38,15 +38,25 @@
     var canonicalUrl = config.url.replace(/\/$/, '') + url_for(page.path || '');
 
     // ---- OG Image ----
+    // 优先级：frontmatter.cover > frontmatter.photos > 正文首图 > 主题 default_cover > 头像
+    // 文章页务必提取一张代表图，否则社交分享卡片只能 fallback 到头像，CTR 接近 0
     var ogImage = '';
     if (page.cover) {
       ogImage = /^https?:\/\//.test(page.cover) ? page.cover : (config.url.replace(/\/$/, '') + url_for(page.cover));
     } else if (page.photos && page.photos.length) {
       ogImage = page.photos[0];
-    } else if (theme.default_cover) {
-      ogImage = /^https?:\/\//.test(theme.default_cover) ? theme.default_cover : (config.url.replace(/\/$/, '') + url_for(theme.default_cover));
-    } else if (theme.avatar) {
-      ogImage = config.url.replace(/\/$/, '') + url_for(theme.avatar);
+    } else if (is_post()) {
+      var firstImg = first_content_image(page.content);
+      if (firstImg) {
+        ogImage = /^https?:\/\//.test(firstImg) ? firstImg : (config.url.replace(/\/$/, '') + url_for(firstImg));
+      }
+    }
+    if (!ogImage) {
+      if (theme.default_cover) {
+        ogImage = /^https?:\/\//.test(theme.default_cover) ? theme.default_cover : (config.url.replace(/\/$/, '') + url_for(theme.default_cover));
+      } else if (theme.avatar) {
+        ogImage = config.url.replace(/\/$/, '') + url_for(theme.avatar);
+      }
     }
   %>
 
@@ -194,6 +204,8 @@
   <!-- Resource hints: speed up external CDN handshake -->
   <link rel="preconnect" href="https://cdn.staticfile.org" crossorigin>
   <link rel="dns-prefetch" href="https://cdn.staticfile.org">
+  <link rel="preconnect" href="https://images.51allai.com" crossorigin>
+  <link rel="dns-prefetch" href="https://images.51allai.com">
   <link rel="preconnect" href="https://www.googletagmanager.com" crossorigin>
   <link rel="dns-prefetch" href="https://hm.baidu.com">
 

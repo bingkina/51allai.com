@@ -3,6 +3,7 @@ title: 腾讯开源混元 Hy3 Preview：295B MoE 架构，主攻 Agent 与代码
 permalink: posts/2026/04MM/Hy3-Preview/
 categories: AI资讯
 tags: [腾讯, 混元]
+description: "腾讯首席 AI 科学家姚顺雨上任后的首个大语言模型，放弃参数规模竞赛，转向快慢思考融合与低成本实用性。"
 date: 2026-04-23 21:08:33
 ---
 > 腾讯首席 AI 科学家姚顺雨上任后的首个大语言模型，放弃参数规模竞赛，转向快慢思考融合与低成本实用性。

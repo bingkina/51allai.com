@@ -4,7 +4,7 @@ permalink: posts/2026/02/kunlun-skywork-desktop-agent/
 description: "此举标志着昆仑万维从单一模型厂商向“AI 操作系统（OS Agent）”平台转型，主打“本地沙盒隐私安全”与“Claude/Gemini 模型聚合”，意在抢占 Windows 生态的系统级办公入口。"
 date: 2026-02-04 21:02:01
 categories: AI资讯
-tags: 昆仑万维
+tags: [昆仑万维, Agent]
 ---
 > 此举标志着昆仑万维从单一模型厂商向“AI 操作系统（OS Agent）”平台转型，主打“本地沙盒隐私安全”与“Claude/Gemini 模型聚合”，意在抢占 Windows 生态的系统级办公入口。
 ![20260204-210008](https://images.51allai.com/blog/20260204-210008_20260204_210345.jpeg)

@@ -1,0 +1,24 @@
+<%
+  var related = related_posts(post, 5);
+%>
+<% if (related && related.length) { %>
+<aside class="related-posts" aria-label="相关文章">
+  <div class="main-title-bar">
+    <div class="main-title-dot"></div>
+    <div class="main-title">相关文章</div>
+  </div>
+  <ul class="related-posts-list">
+    <% related.forEach(function(r){
+      var d = new Date(r.date);
+      var iso = d.toISOString().slice(0, 10);
+    %>
+      <li class="related-post-item">
+        <a class="related-post-link" href="<%- url_for(r.path) %>">
+          <span class="related-post-title"><%= r.title %></span>
+          <time class="related-post-date" datetime="<%= iso %>"><%= iso %></time>
+        </a>
+      </li>
+    <% }) %>
+  </ul>
+</aside>
+<% } %>

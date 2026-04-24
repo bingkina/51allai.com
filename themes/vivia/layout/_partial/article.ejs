@@ -64,6 +64,9 @@
   </div>
   <% if (!index){ %>
     <%- partial('post/nav') %>
+    <% if (is_post()) { %>
+      <%- partial('post/related') %>
+    <% } %>
   <% } %>
 </article>
 

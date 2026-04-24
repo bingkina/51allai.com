@@ -3,6 +3,7 @@ title: 深度求索开源 DeepSeek-V4 预览版，混合注意力机制重构百
 permalink: posts/2026/04/DeepSeek-V4-Preview/
 categories: AI资讯
 tags: [DeepSeek]
+description: "DeepSeek 推出 1.6 万亿参数的 V4-Pro 与 2840 亿参数的 V4-Flash 预览版，通过底层注意力架构重构大幅度压缩长文本推理开销，核心代码能力直指闭源第一梯队。"
 date: 2026-04-24 12:24:00
 ---
 > DeepSeek 推出 1.6 万亿参数的 V4-Pro 与 2840 亿参数的 V4-Flash 预览版，通过底层注意力架构重构大幅度压缩长文本推理开销，核心代码能力直指闭源第一梯队。

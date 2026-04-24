@@ -4,7 +4,7 @@ permalink: posts/2026/02/nevamind-memu-file-memory/
 description: "该项目通过引入结构化的长期记忆与定时任务循环，将传统的“问答式”LLM 交互转变为具备自主发起对话能力的 7×24 小时伴侣型 Agent，旨在解决当前 Agent 缺乏上下文连续性及被动响应的行业痛点。"
 date: 2026-02-05 19:32:12
 categories: AI资讯
-tags: memU
+tags: [memU, Agent]
 ---
 > 该项目通过引入结构化的长期记忆与定时任务循环，将传统的“问答式”LLM 交互转变为具备自主发起对话能力的 7×24 小时伴侣型 Agent，旨在解决当前 Agent 缺乏上下文连续性及被动响应的行业痛点。
 ![iShot_2026-02-05_19.33.59](https://images.51allai.com/blog/iShot_2026-02-05_19.33.59_20260205_193412.png)
