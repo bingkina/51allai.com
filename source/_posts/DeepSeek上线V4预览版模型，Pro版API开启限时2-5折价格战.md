@@ -10,7 +10,7 @@ cover: https://images.51allai.com/blog/v4-spec_20260425_231923.png
 > DeepSeek正式推出标配1M上下文的V4架构模型，通过对Pro版API施加激进的限时降价策略，进一步拉低Agent应用的规模化落地成本，并强制推进旧接口的生态交替。
 ![v4-spec](https://images.51allai.com/blog/v4-spec_20260425_231923.png)
 
-# 核心API价格倒挂与旧接口淘汰
+## 核心API价格倒挂与旧接口淘汰
 DeepSeek官方文档更新显示，`deepseek-v4-pro` 模型API正在进行“限时2.5折”特惠，窗口期截至北京时间2026年5月5日23:59。
 具体折后计费标准（人民币/百万Tokens）：
 - **缓存命中输入**：0.25元（原价1元）
