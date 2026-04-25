@@ -10,3 +10,6 @@ _multiconfig.yml
 # 机密配置，不入仓
 .env
 .env.local
+
+# Claude Code worktrees（本地协作目录，不入仓，避免 CF Pages 当作子模块克隆失败）
+.claude/worktrees/
