@@ -95,6 +95,13 @@
 
   <link rel="canonical" href="<%= canonicalUrl %>">
 
+  <% if (page.prev) { %>
+    <link rel="prev" href="<%= config.url.replace(/\/$/, '') + url_for(page.prev_link) %>">
+  <% } %>
+  <% if (page.next) { %>
+    <link rel="next" href="<%= config.url.replace(/\/$/, '') + url_for(page.next_link) %>">
+  <% } %>
+
   <!-- Open Graph -->
   <meta property="og:type" content="<%= is_post() ? 'article' : 'website' %>">
   <meta property="og:title" content="<% if (title){ %><%= title %><% } else { %><%= config.title %><% } %>">
