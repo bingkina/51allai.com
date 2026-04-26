@@ -30,6 +30,29 @@
       pageDesc = strip_html(page.excerpt).replace(/\s+/g, ' ').trim().substring(0, 160);
     } else if (is_post() && page.content) {
       pageDesc = strip_html(page.content).replace(/\s+/g, ' ').trim().substring(0, 160);
+    } else if (is_tag() && page.tag) {
+      var tagDesc = '51AllAI 关于「' + page.tag + '」的最新报道与深度解读。';
+      pageDesc = (page.current && page.current > 1) ? (tagDesc + ' 第 ' + page.current + ' 页。') : tagDesc;
+    } else if (is_category() && page.category) {
+      var catDesc = '51AllAI 「' + page.category + '」分类下的全部 AI 资讯文章。';
+      pageDesc = (page.current && page.current > 1) ? (catDesc + ' 第 ' + page.current + ' 页。') : catDesc;
+    } else if (is_archive()) {
+      var archiveDesc = '';
+      if (is_month()) {
+        archiveDesc = '51AllAI ' + page.year + '年' + page.month + '月的 AI 科技新闻归档。';
+      } else if (is_year()) {
+        archiveDesc = '51AllAI ' + page.year + '年 AI 科技新闻归档。';
+      } else {
+        archiveDesc = '51AllAI 全部文章归档，按时间浏览 AI 科技动态。';
+      }
+      pageDesc = (page.current && page.current > 1) ? (archiveDesc + ' 第 ' + page.current + ' 页。') : archiveDesc;
+    } else if (is_home()) {
+      var homeDesc = config.description || '';
+      pageDesc = (page.current && page.current > 1) ? (homeDesc + ' 第 ' + page.current + ' 页。') : homeDesc;
+    } else if (page.path && (page.path === 'about/' || page.path === 'about/index.html' || page.title === 'about' || page.title === 'About')) {
+      pageDesc = '关于 51AllAI 团队与我们的使命。';
+    } else if (page.path && page.path.startsWith('search/')) {
+      pageDesc = '在 51AllAI 站内搜索 AI 科技新闻与深度解读。';
     } else {
       pageDesc = config.description || '';
     }
