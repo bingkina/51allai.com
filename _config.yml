@@ -108,3 +108,11 @@ feed:
   limit: 20
   content: true
   content_limit: 200
+
+# IndexNow — 向 Bing / Yandex 即时推送新文章
+hexo_indexnow:
+  apikey: 079f705e44c06b2187c75b7f65cecfce
+  server: indexnow  # 使用 indexnow.org 统一入口，同时覆盖 Bing + Yandex + Google
+  count: latest  # 每次只推送最新文章
+  txt_name: indexnow  # key 文件名：{txt_name}.txt
+  log_urls: true
