@@ -37,7 +37,7 @@ hexo.extend.injector.register('head_end', `<style>
 .related-posts .main-title { font-size: 1rem; font-weight: 600; color: var(--main-title); }
 .related-posts-list { list-style: none; margin: 0; padding: 0; }
 .related-post-item { margin: 0; }
-.related-post-item + .related-post-item { border-top: 1px solid var(--card-btn-bg); }
+.related-post-item + .related-post-item { border-top: 1px solid var(--card-btn-gap); }
 .related-post-link { display: flex; justify-content: space-between; align-items: baseline; gap: 1rem; padding: 0.55rem 0; text-decoration: none; color: var(--btn-content); transition: color 0.15s; }
 .related-post-link:hover .related-post-title { color: var(--primary); }
 .related-post-title { flex: 1; font-size: 0.95em; line-height: 1.45; }
@@ -47,3 +47,32 @@ hexo.extend.injector.register('head_end', `<style>
   .related-post-date { font-size: 0.78em; }
 }
 </style>`);
+
+// 文章页底部注入相关文章列表（弥补主题模板中未调用的问题）
+hexo.extend.injector.register('body_end', function () {
+  var locals = this;
+  if (!locals.page || !locals.page.path || !locals.page.path.startsWith('posts/')) return '';
+
+  var related = this.related_posts(locals.page, 5);
+  if (!related || related.length === 0) return '';
+
+  var siteUrl = locals.config.url ? locals.config.url.replace(/\/$/, '') : '';
+
+  var html = '<section class="related-posts"><div class="main-title-bar"><div class="main-title">相关文章</div></div><ul class="related-posts-list">';
+
+  for (var i = 0; i < related.length; i++) {
+    var post = related[i];
+    var title = post.title || 'Untitled';
+    var url = siteUrl + '/' + post.path;
+    var dateStr = post.date ? new Date(post.date).toLocaleDateString('zh-CN') : '';
+
+    html += '<li class="related-post-item">'
+      + '<a class="related-post-link" href="' + url + '">'
+      + '<span class="related-post-title">' + title + '</span>'
+      + '<span class="related-post-date">' + dateStr + '</span>'
+      + '</a></li>';
+  }
+
+  html += '</ul></section>';
+  return html;
+}, 'default');

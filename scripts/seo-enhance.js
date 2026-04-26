@@ -1,5 +1,5 @@
 // SEO / Core Web Vitals 增强：
-// 1) first_content_image helper：正文第一张图 URL，供 head.ejs 做 og:image fallback。
+// 1) first_content_image helper：正文第一张图 URL，供 head.ejs 提取 og:image。
 // 2) after_post_render filter：给文章正文的 <img> 注入懒加载与解码属性。
 //    - 首图视为 LCP 候选，加 fetchpriority="high"，不加 loading="lazy"，避免延迟首屏。
 //    - 其余图加 loading="lazy"，全部统一加 decoding="async"。
