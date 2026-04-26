@@ -116,3 +116,8 @@ hexo_indexnow:
   count: 10  # 每次推送最近 10 篇文章（避免多篇文章同时发布时只推 1 篇）
   txt_name: indexnow  # key 文件名：{txt_name}.txt
   log_urls: true
+
+# Baidu URL Submit — 百度站长平台主动推送（百度不支持 IndexNow）
+baidu_url_submit:
+  token: 0ZbcllZSIWauNn2r  # 百度站长平台主动推送准入密钥
+  count: 10  # 每次推送最近 10 篇文章
