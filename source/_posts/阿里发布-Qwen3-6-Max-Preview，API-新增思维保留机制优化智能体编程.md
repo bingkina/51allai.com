@@ -1,6 +1,6 @@
 ---
 title: 阿里发布 Qwen3.6-Max-Preview，API 新增思维保留机制优化智能体编程
-permalink: posts/2026/04/Qwen3.6-Max-Preview/
+permalink: posts/2026/04/qwen3.6-max-preview/
 categories: AI资讯
 tags: [Qwen, 阿里]
 description: "阿里云上线下一代旗舰大模型早期预览版，通过底层接口支持多轮思维链保留，刷新第三方平台国产大模型评测上限。"
