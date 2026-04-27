@@ -1,8 +1,8 @@
 ---
 title: Anthropic 发布 Claude Opus 4.7 与重构版 Claude Code
 permalink: posts/2026/04/anthropic-claude-opus-4-7/
-categories: AI资讯
-tags: [Anthropic, Claude, Agent]
+categories: 大模型
+tags: [anthropic, claude-opus, model-release]
 description: "Anthropic 推出视觉与长周期推理能力升级的 Opus 4.7 模型，并同步重构 Claude Code 桌面端引入云端并发与自动化任务触发（Routines），标志着 AI 辅助编程从单点对话交互向全自动后台 Agent 工作流实质性演进。"
 date: 2026-04-16 23:50:00
 ---

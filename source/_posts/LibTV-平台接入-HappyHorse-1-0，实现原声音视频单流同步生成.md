@@ -1,8 +1,8 @@
 ---
 title: LibTV 平台接入 HappyHorse 1.0，实现原声音视频单流同步生成
 permalink: posts/2026/04/libtv-happyhorse-1-0/
-categories: AI资讯
-tags: [HappyHorse, 视频生成, 音频生成, 多模态, LibTV, Transformer, AIGC]
+categories: 多模态
+tags: [libtv, happyhorse, video-generation, audio-generation]
 date: 2026-04-27 19:51:30
 description:
 cover: https://images.51allai.com/blog/20260427-194949_20260427_195203.jpeg

@@ -2,8 +2,8 @@
 title: 科大讯飞发布 AI 代理 AstronClaw，主打沙箱隔离与多模型调度
 permalink: posts/2026/03/iflytek-astronclaw-sandbox/
 description: "科大讯飞正式切入“龙虾”（自动化 AI 代理）赛道，凭借沙箱隔离技术与跨多款主流大模型的调度能力，解决企业级协同办公的数据安全与复杂任务执行痛点。 事实纠偏：非“养虾”农业工具，实为企业级 AI 代理 针对话题中的“主打安全养虾”，经核实系对行业最新术语“龙虾”（指代新型自动化…"
-categories: AI资讯
-tags: [科大讯飞, AstronClaw, OpenClaw]
+categories: 智能体
+tags: [iflytek, astronclaw, enterprise]
 date: 2026-03-12 20:46:42
 ---
 > 科大讯飞正式切入“龙虾”（自动化 AI 代理）赛道，凭借沙箱隔离技术与跨多款主流大模型的调度能力，解决企业级协同办公的数据安全与复杂任务执行痛点。

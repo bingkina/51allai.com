@@ -2,8 +2,8 @@
 title: 智谱发布原生Agent模型GLM-5-Turbo，API定价上调20%并转向订阅制
 permalink: posts/2026/03/zhipu-glm-5-turbo-subscription/
 description: "智谱推出专为OpenClaw（龙虾）Agent场景深度优化的基座模型GLM-5-Turbo，商业模式实质性从API按量计费向“数字员工”打包订阅服务演进。 核心参数与Agent定向优化 GLM-5-Turbo 支持 200K 上下文长度与最大 128K 输出 Token。"
-categories: AI资讯
-tags: [智谱, GLM-5-Turbo, OpenClaw]
+categories: 大模型
+tags: [zhipu, glm-5-turbo, model-release, pricing]
 date: 2026-03-16 16:44:27
 ---
 > 智谱推出专为OpenClaw（龙虾）Agent场景深度优化的基座模型GLM-5-Turbo，商业模式实质性从API按量计费向“数字员工”打包订阅服务演进。

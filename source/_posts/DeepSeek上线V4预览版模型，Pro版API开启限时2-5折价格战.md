@@ -1,8 +1,8 @@
 ---
 title: DeepSeek上线V4预览版模型，Pro版API开启限时2.5折价格战
 permalink: posts/2026/04/deepseek-v4-pro-api/
-categories: AI资讯
-tags: [DeepSeek]
+categories: 大模型
+tags: [deepseek, deepseek-v4, pricing, model-release]
 date: 2026-04-25 23:17:11
 description:
 cover: https://images.51allai.com/blog/v4-spec_20260425_231923.png

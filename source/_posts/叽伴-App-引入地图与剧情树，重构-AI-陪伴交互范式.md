@@ -2,8 +2,8 @@
 title: 叽伴 App 引入地图与剧情树，重构 AI 陪伴交互范式
 permalink: posts/2026/03/jiban-app-map-story-tree/
 description: "抛弃单一的对话框形态，趣丸集团关联团队通过“世界地图+分支剧情”的 RPG 化改造，推动 AI 陪伴从“单点聊天”向“共创冒险”演进。 交互范式 RPG 化 由“谜境”开发商（上海小煎饼信息科技，系趣丸集团关联实体）研发的“叽伴” App 正在重构 AI 社交玩法。"
-categories: AI资讯
-tags: [叽伴]
+categories: 智能体
+tags: [jiban, jiban-app, companion-ai]
 date: 2026-03-31 21:42:08
 ---
 > 抛弃单一的对话框形态，趣丸集团关联团队通过“世界地图+分支剧情”的 RPG 化改造，推动 AI 陪伴从“单点聊天”向“共创冒险”演进。

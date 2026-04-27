@@ -2,8 +2,8 @@
 title: OpenAI 突发 GPT-5.4，原生接管桌面，API 价格体系重构
 permalink: posts/2026/03/openai-gpt-5-4-desktop/
 description: "OpenAI 放弃传统的单模型迭代节奏，在 GPT-5.3 发布仅两天后突袭发布 GPT-5.4，以“原生计算机操作”和“思维可视化”为核心，试图在深陷国防部合约争议（#QuitGPT）之际通过技术碾压重夺话语权。"
-categories: AI资讯
-tags: [OpenAI,ChatGPT,Agent]
+categories: 大模型
+tags: [openai, gpt-5-4, model-release, pricing]
 date: 2026-03-06 09:53:04
 ---
 > OpenAI 放弃传统的单模型迭代节奏，在 GPT-5.3 发布仅两天后突袭发布 GPT-5.4，以“原生计算机操作”和“思维可视化”为核心，试图在深陷国防部合约争议（#QuitGPT）之际通过技术碾压重夺话语权。

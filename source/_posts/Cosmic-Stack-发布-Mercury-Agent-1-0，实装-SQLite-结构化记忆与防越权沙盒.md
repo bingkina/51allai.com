@@ -1,8 +1,8 @@
 ---
 title: Cosmic Stack 发布 Mercury Agent 1.0，实装 SQLite 结构化记忆与防越权沙盒
 permalink: posts/2026/04/cosmic-stack-mercury-agent-1-0/
-categories: AI资讯
-tags: [Mercury, Agent, OpenClaw]
+categories: 智能体
+tags: [cosmic-stack, mercury, open-source, agent-framework]
 date: 2026-04-26 12:14:24
 description: Mercury Agent 1.0 通过 SQLite + FTS5 实现持久化结构化记忆，内置 34 项安全拦截规则与双端（CLI/Telegram）部署方案，让本地 AI Agent 从「上下文窗口」走向「长期记忆 + 防越权」。 
 cover: https://images.51allai.com/blog/截图2026-04-26_12.13.29@2x_20260426_121558.png

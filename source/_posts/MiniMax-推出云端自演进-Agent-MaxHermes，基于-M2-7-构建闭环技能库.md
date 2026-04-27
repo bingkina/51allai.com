@@ -1,8 +1,8 @@
 ---
 title: MiniMax 推出云端自演进 Agent MaxHermes，基于 M2.7 构建闭环技能库
 permalink: posts/2026/04/minimax-maxhermes-self-evolving/
-categories: AI资讯
-tags: [MiniMax, OpenClaw, Agent]
+categories: 智能体
+tags: [minimax, maxhermes, cloud-agent]
 description: "MiniMax 依托底层 M2.7 模型的代码与推理能力，上线云端 AI 助手 MaxHermes。产品核心在于从“静态工具调用”转向“动态技能自提炼”，并实现 24 小时脱机运行。"
 date: 2026-04-16 14:43:11
 ---

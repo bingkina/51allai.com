@@ -2,8 +2,8 @@
 title: 腾讯公测本地智能体 QClaw，将微信升级为跨端控制中枢
 permalink: posts/2026/03/tencent-qclaw-public-beta/
 description: "腾讯将开源框架 OpenClaw 封装为低门槛产品 QClaw 并开启大规模公测，通过微信小程序打通移动端与 PC 端壁垒，标志着 Local Agent 向非技术人群的普及实质性落地。"
-categories: AI资讯
-tags: [腾讯, QClaw, OpenClaw, Agent]
+categories: 智能体
+tags: [tencent, qclaw, desktop-agent]
 date: 2026-03-18 21:27:14
 ---
 > 腾讯将开源框架 OpenClaw 封装为低门槛产品 QClaw 并开启大规模公测，通过微信小程序打通移动端与 PC 端壁垒，标志着 Local Agent 向非技术人群的普及实质性落地。

@@ -1,8 +1,8 @@
 ---
 title: 深度求索开源 DeepSeek-V4 预览版，混合注意力机制重构百万上下文计算成本
 permalink: posts/2026/04/deepseek-v4-preview/
-categories: AI资讯
-tags: [DeepSeek]
+categories: 大模型
+tags: [deepseek, deepseek-v4, open-source, model-release]
 description: "DeepSeek 推出 1.6 万亿参数的 V4-Pro 与 2840 亿参数的 V4-Flash 预览版，通过底层注意力架构重构大幅度压缩长文本推理开销，核心代码能力直指闭源第一梯队。"
 date: 2026-04-24 12:24:00
 ---

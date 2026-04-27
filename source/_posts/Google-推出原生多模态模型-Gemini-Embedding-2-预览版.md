@@ -2,8 +2,8 @@
 title: Google 推出原生多模态模型 Gemini Embedding 2 预览版
 permalink: posts/2026/03/gemini-embedding-2-preview/
 description: "Google 发布支持文本、图像、音视频及 PDF 同源向量化的嵌入模型 Gemini Embedding 2，原生打通跨模态检索，并支持弹性维度输出。 原生多模态统一向量空间 Gemini Embedding 2（模型 ID：gemini-embedding-2-preview…"
-categories: AI资讯
-tags: [Google, Gemini]
+categories: 大模型
+tags: [google, gemini-embedding, model-release, embedding]
 date: 2026-03-11 11:04:17
 ---
 > Google 发布支持文本、图像、音视频及 PDF 同源向量化的嵌入模型 Gemini Embedding 2，原生打通跨模态检索，并支持弹性维度输出。

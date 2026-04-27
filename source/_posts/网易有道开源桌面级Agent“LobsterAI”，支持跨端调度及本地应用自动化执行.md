@@ -2,8 +2,8 @@
 title: 网易有道开源桌面级Agent“LobsterAI”，支持跨端调度及本地应用自动化执行
 permalink: posts/2026/02/youdao-lobsterai-desktop-agent/
 description: "网易有道推出并开源全场景桌面级Agent“LobsterAI”（有道龙虾），以本地化计算和跨端调度为核心，构建适配中文办公生态的“OpenClaw”替代方案。 核心机制：跨端调度与GUI自动化 时间线：2026年2月11日上线官网开放内测；"
-categories: AI资讯
-tags: [Agent, 网易, OpenClaw]
+categories: 智能体
+tags: [netease, lobsterai, open-source, desktop-agent]
 date: 2026-02-20 19:40:54
 ---
 > 网易有道推出并开源全场景桌面级Agent“LobsterAI”（有道龙虾），以本地化计算和跨端调度为核心，构建适配中文办公生态的“OpenClaw”替代方案。

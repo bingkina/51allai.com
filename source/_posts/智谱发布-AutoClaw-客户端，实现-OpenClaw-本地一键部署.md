@@ -2,8 +2,8 @@
 title: 智谱发布 AutoClaw 客户端，实现 OpenClaw 本地一键部署
 permalink: posts/2026/03/zhipu-autoclaw-local-deploy/
 description: "智谱将开源智能体 OpenClaw 桌面化，通过“免环境配置+预置工作流+专属模型”消除部署门槛，完成 Agent 从开发者工具向标准化端侧应用的转化。 运行环境工程化与多模型路由支持 桌面级封装：提供 macOS 与 Windows 客户端，消除终端命令行操作与 Python…"
-categories: AI资讯
-tags: [智谱, AutoClaw]
+categories: 智能体
+tags: [zhipu, autoclaw, desktop-agent]
 date: 2026-03-10 20:57:18
 ---
 > 智谱将开源智能体 OpenClaw 桌面化，通过“免环境配置+预置工作流+专属模型”消除部署门槛，完成 Agent 从开发者工具向标准化端侧应用的转化。
