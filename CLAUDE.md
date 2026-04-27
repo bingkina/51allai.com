@@ -12,16 +12,17 @@ This is a Hexo 8.1.1 static site blog (site: 51allai.com) hosted on **Cloudflare
 - `npx hexo generate` — build static files to `public/`
 - `npx hexo clean` — clear cache and generated files
 - `npx hexo new "Post Title"` — create a new post from scaffold
-- `npm run publish` — full publish pipeline: clean → generate → algolia index → IndexNow submit → git commit & push (requires `.env` with `HEXO_ALGOLIA_INDEXING_KEY`)
+- `npm run publish` — full publish pipeline: clean → generate → algolia index → IndexNow submit → Baidu submit → git commit & push (requires `.env` with `HEXO_ALGOLIA_INDEXING_KEY`)
 
 ## Architecture
 
 ### Content
 
-- **Posts** live in `source/_posts/` as Markdown files. The default scaffold (`scaffolds/post.md`) sets category to `AI资讯` and expects `tags` in frontmatter.
+- **Posts** live in `source/_posts/` as Markdown files. The default scaffold (`scaffolds/post.md`) sets category to `AI资讯` and expects `tags` in frontmatter. The scaffold also includes an embedded SEO prompt template — authors paste their article content into it and let an AI generate optimized `permalink`, `categories`, `tags`, and `description` values.
 - **Static assets** (avatar, social icons, QR codes) are in `source/`.
 - **Permalink pattern**: `posts/:year/:month/:slug/` (configured in `_config.yml`). However, Hexo 8's `:slug` is overridden by the filename, so each post **must** set an explicit `permalink` field in its frontmatter to get the desired short English slug.
 - **Pretty URLs**: `trailing_index: false` and `trailing_html: false` are set to remove `index.html` and `.html` suffixes, preventing GSC "Duplicate without canonical" issues.
+- **Robots**: `source/robots.txt` allows all crawlers, blocks pagination/search/query pages to save crawl budget, and points to sitemap + atom feed.
 
 ### Theme & Configuration
 
@@ -45,7 +46,7 @@ Six Hexo plugins extend the theme:
 - Hosted on **Cloudflare Pages**. The `source/_redirects` file uses Cloudflare's redirect syntax.
 - Note: `_redirects` must be explicitly listed in `_config.yml` under `include:` because Hexo ignores underscore-prefixed files by default.
 - The site migrated from long Chinese-title URLs (`/posts/YYYY/MM/DD/<中文标题>/`) to short English slugs (`/posts/YYYY/MM/<slug>/`). Old URLs are 301-redirected in `_redirects`. When renaming a post's permalink, add the old → new mapping there.
-- Old WordPress archive URLs (`/archives/<id>`) are handled by `functions/archives/[id].js` — a Cloudflare Pages Function that returns HTTP 410 Gone for old WordPress post IDs (1-3 digit numbers), fixing Google Search Console "soft 404" issues. Non-numeric paths fall through to static asset handling.
+- Old WordPress archive URLs (`/archives/<id>`) are handled by `functions/archives/[id].js` — a Cloudflare Pages Function that returns HTTP 410 Gone for old WordPress post IDs (1-3 digit numbers, max 904), fixing Google Search Console "soft 404" issues. Non-numeric paths fall through to static asset handling.
 
 ### Search & SEO
 
@@ -53,21 +54,22 @@ Six Hexo plugins extend the theme:
 - **Sitemap**: generated at `/sitemap.xml` via `hexo-generator-sitemap`. `updated_option: date` is set so that `lastmod` uses the post's `date` field, not file mtime.
 - **RSS**: Atom feed at `/atom.xml` via `hexo-generator-feed`.
 - **IndexNow**: `hexo-indexnow` plugin generates a key file and URL list during build. The publish pipeline submits URLs to `indexnow.org` via `.tools/submit-indexnow.js` for instant indexing by Bing/Yandex/Google.
+- **Baidu**: Baidu does not support IndexNow, so `.tools/submit-baidu.js` reads URLs from `sitemap.xml` and submits them to Baidu's push API (`data.zz.baidu.com`). The token is configured in `_config.yml` under `baidu_url_submit`.
 - **Analytics**: Google Analytics (`G-47C29C0P6D`) and Baidu Analytics are configured in `_config.vivia.yml`.
-- **Robots**: `source/robots.txt` allows all crawlers, blocks pagination/search/query pages to save crawl budget, and points to sitemap + atom feed.
-
-### Image Hosting
-
-- Images are hosted on **Cloudflare R2** (bucket: `51allai-images`, domain: `https://images.51allai.com`).
-- `.tools/upload-r2.sh` uploads images via `rclone`, renames with timestamps, and copies the resulting Markdown image URL to clipboard. Usage: `image <path-to-image>`.
 
 ### Environment Variables (`.env`)
 
 The `.env` file (gitignored) provides:
-- `ALGOLIA_ADMIN_API_KEY` — Required for `hexo algolia` to write to the Algolia index
+- `HEXO_ALGOLIA_INDEXING_KEY` — Required for `hexo algolia` to write to the Algolia index (used in the publish script)
 - `ALGOLIA_APP_ID` / `ALGOLIA_INDEX_NAME` — Optional, can override `_config.yml` values
 
 Copy `.env.example` to `.env` and fill in real values before running `npm run publish`.
+
+### Deployment & SEO Tools (`.tools/`)
+
+- **`submit-indexnow.js`** — Reads the latest post URLs from `public/sitemap.xml` and submits them to `indexnow.org` for instant indexing by Bing/Yandex/Google. Called by the publish pipeline.
+- **`submit-baidu.js`** — Reads the latest post URLs from `public/sitemap.xml` and submits them to Baidu's active push API (`data.zz.baidu.com`). Baidu does not support IndexNow, so this is a separate script. The token and count are configured in `_config.yml` under `baidu_url_submit`.
+- **`upload-r2.sh`** — Uploads images to Cloudflare R2 (bucket: `51allai-images`, domain: `https://images.51allai.com`) via `rclone`, renames with timestamps, and copies the resulting Markdown image URL to clipboard. Usage: `image <path-to-image>`.
 
 ## Writing Posts
 
@@ -92,8 +94,13 @@ The `description` field is recommended — a 1–2 sentence summary (120-155 cha
 
 Deployment is triggered by git push to the remote, which auto-builds on Cloudflare Pages:
 
-1. Run `npm run publish` locally (sources `.env`, cleans, generates, syncs Algolia index, submits to IndexNow, commits with message "更新博客", pushes)
-2. Cloudflare Pages detects the push and rebuilds/deploy the static site
+1. Run `npm run publish` locally (sources `.env`, cleans, generates, syncs Algolia index, submits to IndexNow + Baidu, commits with message "更新博客", pushes)
+2. Cloudflare Pages detects the push and rebuilds the static site (build command configured in Cloudflare Pages dashboard, typically `npm run build`)
 3. The `_redirects` file and `functions/` directory are processed by Cloudflare Pages at deploy time
 
 There is **no testing framework** configured. The primary quality gate is `check-duplicate-permalinks.js` which fails the build on path conflicts.
+
+## `.env.example`
+
+The repository ships with an `.env.example` template. Copy it to `.env` (gitignored) and fill in real values:
+- `HEXO_ALGOLIA_INDEXING_KEY` — Algolia admin API key for index writes
