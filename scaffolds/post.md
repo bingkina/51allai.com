@@ -2,17 +2,13 @@
 title: {{ title }}
 permalink: posts/YYYY/MM/SLUG/
 date: {{ date }}
-categories: AI资讯
+categories: 
 tags: [{{ tags }}]
 description:
 cover:
 ---
 
 ---
-
-# SEO 元数据生成提示词
-
-> **使用说明**：将下方【当前文章内容】粘贴给 AI（如 Claude），AI 会自动替换上方 `permalink`、`categories`、`tags`、`description` 的值。
 
 # 角色设定
 你是一位拥有10年经验的资深 SEO 优化师和内容管理者。
