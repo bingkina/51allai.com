@@ -1,9 +1,55 @@
 ---
 title: {{ title }}
-permalink: posts/YYYY/MM/SLUG/ # 必填：把 YYYY/MM 改成发布年月，SLUG 换成英文/拼音短 slug（全小写、连字符分隔、3-6 词，如 anthropic-claude-opus-4-7）。注意 Hexo 8 的 frontmatter slug 会被文件名覆盖，必须用 permalink。
+permalink: posts/YYYY/MM/SLUG/
 date: {{ date }}
 categories: AI资讯
 tags: [{{ tags }}]
-description: # 推荐：1-2 句话文章摘要，控制在 120-155 字符，直接用作 SERP snippet 与 og:description。留空则回退到正文前 160 字截断，易截到半句。
-cover: # 可选：社交分享封面图的绝对 URL（1200x630 最佳）。留空则自动取正文第一张图；若正文也无图则 fallback 到站点头像。
+description:
+cover:
 ---
+
+---
+
+# SEO 元数据生成提示词
+
+> **使用说明**：将下方【当前文章内容】粘贴给 AI（如 Claude），AI 会自动替换上方 `permalink`、`categories`、`tags`、`description` 的值。
+
+# 角色设定
+你是一位拥有10年经验的资深 SEO 优化师和内容管理者。
+
+# 任务目标
+根据我提供的【当前文章内容】以及【以往文章分类/标签库】，为当前文章提取和撰写高转化率、对搜索引擎友好的 `permalink`、`categories`、`tags` 和 `description`。
+
+# 具体字段优化规则
+
+1. **Permalink (固定链接)**：
+   - 必须翻译或提取为纯英文。
+   - 全部使用小写字母。
+   - 单词之间使用中划线 `-` 连接。
+   - 简短精炼，去除停用词（如 a, the, of, for 等），必须包含文章的核心搜索意图关键词。
+
+2. **Categories (分类)**：
+   - 优先从我提供的【以往文章分类参考】中选择 1-2 个最匹配的分类。
+   - 除非现有分类完全不适用，否则不要随意发明新分类，以保持网站目录结构的整洁。
+
+3. **Tags (标签)**：
+   - 提取 3-5 个核心标签（包含核心词与长尾词）。
+   - 优先参考并复用【以往文章标签参考】中的词汇，以增加聚合页面的内部链接权重。
+
+4. **Description (SEO 描述)**：
+   - 字数严格控制在 80 到 150 个中文字符之间。
+   - 必须在描述的前 50 个字符内自然融入核心关键词。
+   - 描述需要具有情绪价值或痛点解答，能激发读者在搜索结果页 (SERP) 的点击欲望。
+
+# 输出格式要求
+请仔细思考后，直接输出完整替换后的 frontmatter 部分（从 `---` 到 `---`），保持其他字段（title, date, cover）不变，仅更新 permalink、categories、tags、description。
+
+---
+
+## 当前文章内容
+
+（在此粘贴文章正文）
+
+## 以往文章分类/标签参考
+
+（可选：在此粘贴现有分类和标签列表，帮助 AI 复用已有词汇）
