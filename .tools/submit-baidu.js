@@ -92,11 +92,11 @@ fetch(PUSH_URL, {
     if (data.error) console.error(`  error: ${data.error} — message: ${data.message}`);
   } else if (data.error) {
     console.error(`Baidu Push: Error — ${data.error}: ${data.message}`);
-    process.exit(1);
+    process.exit(0);
   } else {
     console.log('Baidu Push: Response:', JSON.stringify(data));
   }
 }).catch(err => {
   console.error('Baidu Push: Request failed:', err.message);
-  process.exit(1);
+  process.exit(0);
 });
