@@ -79,7 +79,7 @@ Posts use this frontmatter structure:
 title: Post Title
 permalink: posts/YYYY/MM/SLUG/
 date: 2026-04-19 12:00:00
-categories: AI资讯
+categories: 
 tags: [tag1, tag2]
 description: # 推荐：1-2 句话摘要，120-155 字符，用作 SERP snippet 与 og:description
 cover: # 可选：封面图绝对 URL（1200x630 最佳），留空则自动取正文第一张图
@@ -90,6 +90,12 @@ The `permalink` field is **required** — set `YYYY/MM` to the publish year/mont
 
 The `description` field is recommended — a 1–2 sentence summary (120-155 characters) used as the SERP snippet and `og:description`. If left empty, it falls back to truncating the first 160 characters of the post content, which may cut off mid-sentence.
 
+The post scaffold (`scaffolds/post.md`) includes an embedded SEO prompt template — paste article content into it and let an AI generate optimized `permalink`, `categories`, `tags`, and `description` values. Available categories: 多模态、大模型、行业观察、智能体.
+
+### Image Workflow
+
+Use `.tools/upload-r2.sh` to upload images to Cloudflare R2. Usage: `bash .tools/upload-r2.sh <path-to-image>`. The script renames with a timestamp, uploads to `https://images.51allai.com/blog/`, and copies the Markdown image URL to clipboard.
+
 ## Deployment Model
 
 Deployment is triggered by git push to the remote, which auto-builds on Cloudflare Pages:
@@ -99,8 +105,3 @@ Deployment is triggered by git push to the remote, which auto-builds on Cloudfla
 3. The `_redirects` file and `functions/` directory are processed by Cloudflare Pages at deploy time
 
 There is **no testing framework** configured. The primary quality gate is `check-duplicate-permalinks.js` which fails the build on path conflicts.
-
-## `.env.example`
-
-The repository ships with an `.env.example` template. Copy it to `.env` (gitignored) and fill in real values:
-- `HEXO_ALGOLIA_INDEXING_KEY` — Algolia admin API key for index writes
