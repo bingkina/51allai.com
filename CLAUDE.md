@@ -19,6 +19,7 @@ This is a Hexo 8.1.1 static site blog (site: 51allai.com) hosted on **Cloudflare
 ### Content
 
 - **Posts** live in `source/_posts/` as Markdown files. The default scaffold (`scaffolds/post.md`) sets category to `AI资讯` and expects `tags` in frontmatter. The scaffold also includes an embedded SEO prompt template — authors paste their article content into it and let an AI generate optimized `permalink`, `categories`, `tags`, and `description` values.
+- **Drafts**: `scaffolds/draft.md` is a minimal scaffold for draft posts (no permalink, no SEO prompt). Use `npx hexo new draft "Title"` or manually create drafts in `source/_drafts/`.
 - **Static assets** (avatar, social icons, QR codes) are in `source/`.
 - **Permalink pattern**: `posts/:year/:month/:slug/` (configured in `_config.yml`). However, Hexo 8's `:slug` is overridden by the filename, so each post **must** set an explicit `permalink` field in its frontmatter to get the desired short English slug.
 - **Pretty URLs**: `trailing_index: false` and `trailing_html: false` are set to remove `index.html` and `.html` suffixes, preventing GSC "Duplicate without canonical" issues.
@@ -46,6 +47,7 @@ Six Hexo plugins extend the theme:
 - Hosted on **Cloudflare Pages**. The `source/_redirects` file uses Cloudflare's redirect syntax.
 - Note: `_redirects` must be explicitly listed in `_config.yml` under `include:` because Hexo ignores underscore-prefixed files by default.
 - The site migrated from long Chinese-title URLs (`/posts/YYYY/MM/DD/<中文标题>/`) to short English slugs (`/posts/YYYY/MM/<slug>/`). Old URLs are 301-redirected in `_redirects`. When renaming a post's permalink, add the old → new mapping there.
+- **WordPress legacy paths**: Old tag/category URLs (`/archives/tag/...`, `/archives/category/...`) are 301-redirected to matching new tag pages or fallback to `/archives/`. Year archive paths (`/archives/2024/`, etc.) are preserved as static pages via 200 rewrites.
 - Old WordPress archive URLs (`/archives/<id>`) are handled by `functions/archives/[id].js` — a Cloudflare Pages Function that returns HTTP 410 Gone for old WordPress post IDs (1-3 digit numbers, max 904), fixing Google Search Console "soft 404" issues. Non-numeric paths fall through to static asset handling.
 
 ### Search & SEO
@@ -60,7 +62,7 @@ Six Hexo plugins extend the theme:
 ### Environment Variables (`.env`)
 
 The `.env` file (gitignored) provides:
-- `HEXO_ALGOLIA_INDEXING_KEY` — Required for `hexo algolia` to write to the Algolia index (used in the publish script)
+- `HEXO_ALGOLIA_INDEXING_KEY` — Required for `hexo algolia` to write to the Algolia index (read by hexo-algoliasearch 2.x). Set this to your Algolia admin API key.
 - `ALGOLIA_APP_ID` / `ALGOLIA_INDEX_NAME` — Optional, can override `_config.yml` values
 
 Copy `.env.example` to `.env` and fill in real values before running `npm run publish`.
