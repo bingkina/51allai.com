@@ -1,0 +1,19 @@
+diff --git a/node_modules/hexo-algoliasearch/lib/algolia.js b/node_modules/hexo-algoliasearch/lib/algolia.js
+index 14b3e01..f4b443e 100644
+--- a/node_modules/hexo-algoliasearch/lib/algolia.js
++++ b/node_modules/hexo-algoliasearch/lib/algolia.js
+@@ -149,7 +149,13 @@ const algoliaCommand = /*#__PURE__*/function () {
+     }
+     posts = preparePosts(posts, fields, fieldsWithFilters);
+     const chunkedPosts = splitIntoChunks(posts, algoliaChunkSize);
+-    const algoliaClient = (0, _algoliasearch.default)(algoliaAppId, algoliaAdminApiKey);
++    const algoliaClient = (0, _algoliasearch.default)(algoliaAppId, algoliaAdminApiKey, {
++      timeouts: {
++        connect: 30,
++        read: 120,
++        write: 120
++      }
++    });
+     const algoliaIndex = algoliaClient.initIndex(algoliaIndexName);
+     if (args && !args.n) {
+       hexo.log.info('Clearing index on Algolia...');
