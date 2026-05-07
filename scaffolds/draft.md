@@ -1,7 +1,9 @@
 ---
 title: {{ title }}
+permalink: posts/YYYY/MM/SLUG/
 date: {{ date }}
-categories: {{ categories }} 
-tags: {{ tags }}
-image: {{ image }}  
+categories: 
+tags: [{{ tags }}]
+description:
+cover:
 ---
