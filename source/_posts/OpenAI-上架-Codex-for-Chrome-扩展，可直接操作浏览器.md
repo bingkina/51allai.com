@@ -11,6 +11,7 @@ tags:
   - 浏览器自动化
   - Computer Use
 description: OpenAI 正式上架 Codex for Chrome 扩展，支持在已登录态的 Chrome 中操作 Web 应用、测试前端、调用 DevTools。本文整理安装方式、权限机制及与 Claude in Chrome 的对比。
+cover: https://images.51allai.com/blog/codex_chrome_20260508_120628.png
 ---
 
 > OpenAI 将 Codex 的浏览器操作能力从桌面端 Computer Use 延伸到了 Chrome 扩展，主打已登录态的 Web 应用交互，与 Anthropic "Claude in Chrome" 正面竞争。
