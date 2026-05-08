@@ -4,7 +4,6 @@ permalink: posts/2026/05/runninghub-rhtv-canvas-agent-platform
 date: 2026-05-08 20:19:47
 categories:
   - 多模态
-  - 智能体
 tags:
   - RunningHub
   - RHTV
