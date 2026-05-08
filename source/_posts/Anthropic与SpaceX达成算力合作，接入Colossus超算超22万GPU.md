@@ -9,6 +9,7 @@ tags:
   - Colossus
   - 算力基础设施
   - Claude
+date: 2026-05-07 20:22:22
 description: Anthropic宣布与SpaceX签署算力协议，接入Colossus 1超算（超22万GPU、300MW+容量），即时生效。Claude Code及Opus API用量上限同步翻倍，双方还计划合作开发吉瓦级轨道AI算力。
 ---
 
