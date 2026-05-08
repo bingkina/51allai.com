@@ -1,7 +1,7 @@
 ---
 title: OpenAI 上架 Codex for Chrome 扩展，可直接操作浏览器
 date: 2026-05-08 12:07:56
-permalink: openai-codex-chrome-extension
+permalink: posts/2026/05/openai-codex-chrome-extension/
 categories:
   - 智能体
 tags:
