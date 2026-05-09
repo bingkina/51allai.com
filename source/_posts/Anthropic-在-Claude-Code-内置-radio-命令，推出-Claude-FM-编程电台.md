@@ -1,7 +1,7 @@
 ---
 title: Anthropic 在 Claude Code 内置 /radio 命令，推出 Claude FM 编程电台
 date: 2026-05-10 00:23:39
-permalink: anthropic-claude-code-radio-claude-fm
+permalink: anthropic-claude-code-radio-claude-fm/
 categories:
   - 行业观察
 tags:
@@ -14,7 +14,6 @@ description: Anthropic 在 Claude Code 中内置 /radio 命令，一键调出 Cl
 ---
 
 > Anthropic 在 Claude Code 终端内置 `/radio` 命令，一键调出 Claude FM lo-fi 编程电台，将 Lofi Girl 式的专注背景音直接嵌入 AI 编程工作流。
-
 ![Claude FM 像素风吉祥物，橙色 Claude 角色佩戴耳机](https://images.51allai.com/blog/claude-fm-cover_20260510_002450.jpg)
 
 ## /radio 命令：Claude Code 终端内的电台开关
