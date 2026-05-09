@@ -63,13 +63,3 @@ Willison 用 GPT-5.5 做了一个实测：将 copy.fail 网站的内容（一个
 中文科技社区的反应呈现两极。53AI 的报道（2026-05-09）同时指出 Claude Code 近期遭遇用户流失——Codex 的 npm 下载量已达 8610 万次，是 Claude Code 720 万次的 12 倍。AMD AI 总监分析了 6852 个会话、23.5 万次工具调用后发现，Claude Code 的推理深度下降了 67%，不良行为增长 173%。Anthropic 官方承认了三个 bug：默认推理等级从 high 降为 medium、缓存 bug 清除了推理历史、响应长度限制导致代码质量下降约 3%。
 
 格式讨论与产品体验问题叠加，使得 "HTML 取代 Markdown" 的叙事在部分开发者眼中变成了 "Claude Code 你又作" 的又一个佐证。
-
-## 来源引用 (Sources)
-- [Thariq Shihipar - HTML is the new markdown (X)](https://x.com/trq212/status/2052811606032269638)
-- [The unreasonable effectiveness of HTML (GitHub Pages)](https://thariqs.github.io/html-effectiveness/)
-- [Simon Willison - Using Claude Code: The Unreasonable Effectiveness of HTML](https://simonwillison.net/2026/May/8/unreasonable-effectiveness-of-html/)
-- [知乎 - Claude Code隐藏玩法爆火！Anthropic大佬：不要再用Markdown了](https://zhuanlan.zhihu.com/p/2036472276976153030)
-- [搜狐 - Anthropic大佬揭示Claude Code隐藏玩法：Markdown被抛弃](https://m.sohu.com/a/1020335786_121885030)
-- [网易 - Markdown不行了？Agent时代，老掉牙的HTML正在逆袭](https://www.163.com/dy/article/KSH00HO2051100B9.html)
-- [53AI - "Claude Code 你就作吧，我换Codex了"](https://www.53ai.com/news/LargeLanguageModel/2026050994107.html)
-- [@arthaud_ - html for humans, md for agents (X)](https://x.com/arthaud_/status/2052877983967260982)
