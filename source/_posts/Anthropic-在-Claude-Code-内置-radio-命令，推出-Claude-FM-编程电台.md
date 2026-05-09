@@ -1,7 +1,7 @@
 ---
 title: Anthropic 在 Claude Code 内置 /radio 命令，推出 Claude FM 编程电台
 date: 2026-05-10 00:23:39
-permalink: anthropic-claude-code-radio-claude-fm/
+permalink: posts/2026/05/anthropic-claude-code-radio-claude-fm/
 categories:
   - 行业观察
 tags:
