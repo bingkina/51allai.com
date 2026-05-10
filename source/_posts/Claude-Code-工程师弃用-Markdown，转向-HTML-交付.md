@@ -11,7 +11,7 @@ date: 2026-05-10 00:39:02
 categories:
   - 行业观察
 description: Claude Code 团队成员 Thariq Shihipar 公开表示团队已停止使用 Markdown，全面改用 Claude Code 生成 HTML 文件交付内容。本文梳理其 20 个 HTML 示例、Simon Willison 的响应评测，以及 Markdown vs HTML 的适用边界。
-cover:
+cover: https://images.51allai.com/blog/截图2026-05-10_00.37.39@2x_20260510_003856.png
 ---
 
 > Anthropic 的 Claude Code 团队成员 Thariq Shihipar 公开发布 20 个自包含 HTML 示例，论证 AI Agent 输出 HTML 比 Markdown 更有效。Simon Willison 随即撰文跟进实测。格式之争的底层逻辑：从"人写"到"Agent 生成"的交付范式转移。
