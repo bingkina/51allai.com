@@ -17,8 +17,6 @@ cover: https://images.51allai.com/blog/截图2026-05-10_00.37.39@2x_20260510_003
 > Anthropic 的 Claude Code 团队成员 Thariq Shihipar 公开发布 20 个自包含 HTML 示例，论证 AI Agent 输出 HTML 比 Markdown 更有效。Simon Willison 随即撰文跟进实测。格式之争的底层逻辑：从"人写"到"Agent 生成"的交付范式转移。
 ![The unreasonable effectiveness of HTML 首页截图](https://images.51allai.com/blog/截图2026-05-10_00.37.39@2x_20260510_003856.png)
 
-## 事件起因：Thariq Shihipar 的 HTML 宣言
-
 2026 年 5 月 8 日前后，Claude Code 团队成员 Thariq Shihipar（X: @trq212）发布推文："HTML is the new markdown. I've stopped writing markdown files for almost everything, and started using Claude Code to generate HTML instead."
 
 他在个人 GitHub Pages 站点（[thariqs.github.io/html-effectiveness](https://thariqs.github.io/html-effectiveness/)）公开了 20 个 `.html` 文件，覆盖 9 大工作场景，每个文件都是自包含的、可直接在浏览器中打开的独立产物。
