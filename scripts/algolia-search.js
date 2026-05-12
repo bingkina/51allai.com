@@ -214,10 +214,10 @@ hexo.extend.injector.register('body_end', function () {
             : (hit.title || '');
           // 优先用摘要片段，降级截取正文前 100 字
           var snippet = '';
-          if (hit._snippetResult && hit._snippetResult.content && hit._snippetResult.content.value) {
-            snippet = hit._snippetResult.content.value;
-          } else if (hit.content) {
-            snippet = hit.content.substring(0, 100) + '…';
+          if (hit._snippetResult && hit._snippetResult.contentStrippedTruncate && hit._snippetResult.contentStrippedTruncate.value) {
+            snippet = hit._snippetResult.contentStrippedTruncate.value;
+          } else if (hit.contentStrippedTruncate) {
+            snippet = hit.contentStrippedTruncate.substring(0, 100) + '…';
           }
           return '<div class="hit-item">'
             + '<div class="hit-title">'
@@ -229,7 +229,7 @@ hexo.extend.injector.register('body_end', function () {
         },
         empty: '<div style="text-align:center;padding:20px;color:#888;">没有找到相关文章</div>',
       },
-      attributesToSnippet: ['content:50'],
+      attributesToSnippet: ['contentStrippedTruncate:50'],
     }),
   ]);
 

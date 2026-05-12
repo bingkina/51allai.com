@@ -92,7 +92,7 @@ algolia:
     - categories
     - tags
     - date
-    - content
+    - content:strip:truncate,0,500
 
 # SEO 优化 - 站点地图
 sitemap:
