@@ -1,6 +1,6 @@
 ---
 title: RunningHub 推出 RHTV，画布原生 AI 智能体内容创作平台上线
-permalink: posts/2026/05/runninghub-rhtv-canvas-agent-platform
+permalink: posts/2026/05/runninghub-rhtv-canvas-agent-platform/
 date: 2026-05-08 20:19:47
 categories:
   - 多模态

@@ -1,7 +1,7 @@
 ---
 title: DeepSeek大范围开放识图模式
 date: 2026-05-09 19:15:11
-permalink: posts/2026/05/deepseek-vision-mode-release
+permalink: posts/2026/05/deepseek-vision-mode-release/
 categories:
   - 多模态
 tags:
