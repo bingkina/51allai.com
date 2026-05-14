@@ -8,11 +8,6 @@ Disallow: /search/
 Disallow: /search.xml
 Disallow: /*?*
 
-# 允许聚合页被抓取
-Allow: /tags/
-Allow: /categories/
-Allow: /archives/
-
 # 站点地图
 Sitemap: https://51allai.com/sitemap.xml
 Sitemap: https://51allai.com/atom.xml
