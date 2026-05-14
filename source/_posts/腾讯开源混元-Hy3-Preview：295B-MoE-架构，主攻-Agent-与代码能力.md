@@ -3,7 +3,7 @@ title: 腾讯开源混元 Hy3 Preview：295B MoE 架构，主攻 Agent 与代码
 permalink: posts/2026/04/hy3-preview/
 categories: 大模型
 tags: [tencent, hunyuan, open-source, model-release]
-description: "腾讯首席 AI 科学家姚顺雨上任后的首个大语言模型，放弃参数规模竞赛，转向快慢思考融合与低成本实用性。"
+description: "腾讯首席 AI 科学家姚顺雨上任后首个大语言模型 Hy3 Preview，295B 总参数 MoE 架构仅激活21B，快慢思考融合设计，SWE-Bench 与 Terminal-Bench 等智能体评测显著提升，API 输入低至1.2元每百万 Tokens。"
 date: 2026-04-23 21:08:33
 ---
 > 腾讯首席 AI 科学家姚顺雨上任后的首个大语言模型，放弃参数规模竞赛，转向快慢思考融合与低成本实用性。

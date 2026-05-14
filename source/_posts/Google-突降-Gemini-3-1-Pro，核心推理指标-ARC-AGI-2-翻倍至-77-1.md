@@ -1,7 +1,7 @@
 ---
 title: Google 突降 Gemini 3.1 Pro，核心推理指标 ARC-AGI-2 翻倍至 77.1%
 permalink: posts/2026/02/gemini-3-1-pro-arc-agi/
-description: "Google 将上周 Deep Think 模型的核心推理能力正式下放至 3.1 Pro，主攻复杂逻辑推演与智能体（Agentic）工作流，API 侧大幅优化自定义工具调用。"
+description: "Google 将上周 Deep Think 模型的核心推理能力正式下放至 Gemini 3.1 Pro，ARC-AGI-2 得分翻倍至77.1%，原生维持1M Token上下文，API 输入价格下探至$2/M Tokens，新增自定义工具端点。"
 categories: 大模型
 tags: [google, gemini, model-release]
 date: 2026-02-20 10:22:25

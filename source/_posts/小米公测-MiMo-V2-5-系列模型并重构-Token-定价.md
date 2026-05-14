@@ -3,7 +3,7 @@ title: 小米公测 MiMo-V2.5 系列模型并重构 Token 定价
 permalink: posts/2026/04/mimo-v2.5/
 categories: 大模型
 tags: [xiaomi, mimo, model-release]
-description: "距上一代发布仅36天，小米由前 DeepSeek 核心成员主导的新一代多模态大模型落地，主攻百万级上下文、高阶 Agent 自主执行能力，并大幅精简商业 API 定价模型。"
+description: "距上一代发布仅36天小米公测 MiMo-V2.5 系列多模态大模型，由前 DeepSeek 核心成员罗福莉主导，Pro版可在11.5小时内自主无干预产出8192行有效代码，基座版支持100万上下文，同步重构 Token Plan 废除惩罚性计费引入夜间闲时优惠。"
 date: 2026-04-23 19:19:16
 ---
 > 距上一代发布仅36天，小米由前 DeepSeek 核心成员主导的新一代多模态大模型落地，主攻百万级上下文、高阶 Agent 自主执行能力，并大幅精简商业 API 定价模型。

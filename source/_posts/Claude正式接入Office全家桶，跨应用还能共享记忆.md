@@ -10,7 +10,7 @@ tags:
   - Microsoft 365
   - AI办公
   - Copilot
-description: Anthropic 将 Claude 全面接入 Microsoft Office，覆盖 Word、Excel、PowerPoint、Outlook 四款应用，支持跨应用上下文共享。本文梳理接入时间线、技术架构、共享上下文机制及订阅定价。
+description: "Anthropic 将 Claude 全面接入 Microsoft Office 覆盖 Word、Excel、PowerPoint、Outlook 四款应用，跨应用上下文自动传输无需手动复制粘贴，引入预建 Skills 机制，所有输入输出30天内自动删除。"
 cover: https://images.51allai.com/blog/截图2026-05-08_15.12.27@2x_20260508_151322.png
 ---
 > Anthropic 在 2026 年第一季度完成了 Claude 对 Microsoft Office 三件套的全覆盖，并通过跨应用上下文共享功能，让 Claude 在 Excel、PowerPoint、Word 之间保持统一的对话语境。这是 Claude 首次深度嵌入企业办公工作流，直接对标微软自家的 Copilot。

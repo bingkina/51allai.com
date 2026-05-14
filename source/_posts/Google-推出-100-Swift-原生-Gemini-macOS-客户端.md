@@ -3,7 +3,7 @@ title: Google 推出 100% Swift 原生 Gemini macOS 客户端
 permalink: posts/2026/04/gemini-macos-swift-client/
 categories: 智能体
 tags: [google, gemini-desktop, product-update]
-description: "Google 结束桌面端 AI 的网页依赖，推出基于 Apple Silicon 和 macOS 15 构建的原生 Gemini 客户端，核心通过全局快捷键和“屏幕上下文感知”抢占系统级交互入口。"
+description: "Google 结束桌面端 AI 网页依赖，推出100% Swift 构建的原生 Gemini macOS 客户端，基于 Apple Silicon 和 macOS 15 构建，Option+Space 全局快捷键唤醒，Share window 实现屏幕上下文感知与就地分析。"
 date: 2026-04-16 10:54:12
 ---
 > Google 结束桌面端 AI 的网页依赖，推出基于 Apple Silicon 和 macOS 15 构建的原生 Gemini 客户端，核心通过全局快捷键和“屏幕上下文感知”抢占系统级交互入口。

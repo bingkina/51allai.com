@@ -10,7 +10,7 @@ tags:
   - ComfyUI
   - canvas-native
   - product-update
-description: RunningHub 发布 RHTV 平台，将 AI 智能体直接嵌入无限画布，支持自然语言规划 ComfyUI 工作流。集成 1.3 万节点、10 万+社区应用，覆盖图像/视频/音频/3D/文本五模态。
+description: "RunningHub 发布 RHTV 平台将 AI 智能体直接嵌入无限画布而非独立聊天窗口，用户用自然语言描述创意即可自动生成完整 ComfyUI 节点链路，接入13681个可用节点与10万+社区应用，覆盖图像、视频、音频、3D、文本五模态。"
 cover: https://images.51allai.com/blog/截图2026-05-08_20.26.53@2x_20260508_202723.png
 ---
 

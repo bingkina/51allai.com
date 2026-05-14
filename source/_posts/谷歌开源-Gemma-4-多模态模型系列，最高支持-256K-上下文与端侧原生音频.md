@@ -1,7 +1,7 @@
 ---
 title: 谷歌开源 Gemma 4 多模态模型系列，最高支持 256K 上下文与端侧原生音频
 permalink: posts/2026/04/google-gemma-4-multimodal/
-description: "谷歌推出横跨 2B 至 31B 的 Gemma 4 模型矩阵，通过强化原生多模态解析、MoE 架构及显式推理控制（Thinking Mode），确立了从端侧设备到云端服务器的开源 Agent 开发基准。"
+description: "谷歌开源横跨 2B 至 31B 的 Gemma 4 多模态模型矩阵，26B A4B MoE 架构支持256K上下文，原生支持60秒1fps视频输入与五档可配置视觉 Token 预算，内置 Thinking Mode 触发符与 Function Calling 直接对齐 Agent 工作流需求。"
 categories: 大模型
 tags: [google, gemma, open-source, model-release]
 date: 2026-04-03 14:43:16

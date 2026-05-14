@@ -8,7 +8,7 @@ tags:
   - claude-code
   - anthropic
   - product-update
-description: Anthropic 宣布 Claude Code 每周使用限制临时上调 50%，有效期至 7 月 13 日，叠加此前 5 小时限制翻倍调整，短期缓解开发者额度瓶颈。
+description: "Anthropic 宣布 Claude Code 每周使用限制临时上调50%，覆盖 Pro、Max、Team 及 Enterprise 全部付费计划，有效期至2026年7月13日，叠加此前5小时速率限制翻倍调整，短期缓解开发者额度瓶颈问题。"
 ---
 
 > Claude Code 的周使用限制上调 50%，叠加此前 5 小时限制翻倍调整，短期缓解开发者的额度瓶颈。

@@ -1,7 +1,7 @@
 ---
 title: Google NotebookLM 支持幻灯片单页局部修改并开放 PPTX 导出
 permalink: posts/2026/02/notebooklm-slide-edit-pptx-export/
-description: "核心摘要：Google 修正了 NotebookLM 幻灯片生成功能最大的工作流断点，新增通过提示词对单张幻灯片进行局部修改的能力，并首次支持 .pptx 格式导出，产品形态从“一次性生成器”向“实用生产力工具”过渡。"
+description: "Google 修正 NotebookLM 幻灯片生成最大工作流断点，用户可通过自然语言提示词对单张幻灯片进行局部修改无需重新生成整套，首次开放 .pptx 格式原生导出允许拖入 PowerPoint 后续编辑，2月17日起向 AI Pro 与 Ultra 用户推送。"
 categories: 行业观察
 tags: [google, notebooklm, product-update]
 date: 2026-02-18 20:14:59

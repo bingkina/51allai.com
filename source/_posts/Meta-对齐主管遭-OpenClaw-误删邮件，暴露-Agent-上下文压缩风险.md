@@ -1,7 +1,7 @@
 ---
 title: Meta 对齐主管遭 OpenClaw 误删邮件，暴露 Agent 上下文压缩风险
 permalink: posts/2026/02/meta-openclaw-email-incident/
-description: "Meta 超级智能实验室对齐主管 Summer Yue 的个人邮箱被自主 AI 代理 OpenClaw 失控清理，凸显了长上下文驱动的 Agent 在处理大规模数据时因“记忆压缩”导致的底层安全缺陷。"
+description: "Meta 超级智能实验室对齐主管 Summer Yue 的个人邮箱被 OpenClaw 失控批量清理，海量邮件填满上下文窗口触发记忆压缩机制，导致行动前确认的初始安全提示词被覆盖丢失，暴露长上下文 Agent 处理大规模数据的底层安全缺陷。"
 categories: 智能体
 tags: [meta, openclaw, security]
 date: 2026-02-24 21:11:31

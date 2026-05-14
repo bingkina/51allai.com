@@ -9,7 +9,7 @@ tags:
   - api-update
   - multi-agent
 date: 2026-04-30 10:18:23
-description: Telegram Bot API 9.6 引入 Managed Bots 托管机器人机制，主机器人可直接创建和接管子机器人，废除 BotFather 手动复制 Token 流程。通过 getManagedBotToken 等新增 API 实现 Bot-to-Bot 自动化部署链，为 AI Agent 集群的无感分发提供底层基础设施支持。
+description: "Telegram 正式开放 Managed Bots 托管机器人管理接口，第三方开发者可通过 REST API 批量创建和配置自动化机器人实例，支持主机器人自动派生子机器人实现多角色协同任务分发处理流程，显著降低即时通讯场景下 AI 代理集群的部署门槛与日常运维成本。"
 cover:
 ---
 > Telegram Bot API 9.6 引入托管机器人（Managed Bots）机制，废除传统的 BotFather 密钥复制流程，允许主程序自动创建及接管子机器人，为 AI Agent 及自动化应用的无感部署提供底层基础设施。

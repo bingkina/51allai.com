@@ -10,7 +10,7 @@ tags:
   - 开发者工具
   - 编程电台
   - lo-fi
-description: Anthropic 在 Claude Code 中内置 /radio 命令，一键调出 Claude FM lo-fi 编程电台。官方电台、社区音乐插件生态同步活跃，AI 编程工具开始争夺开发者注意力之外的"背景音"场景。
+description: "Anthropic 在 Claude Code 中内置 /radio 命令一键调出 Claude FM lo-fi 编程电台，社区 claude-music 插件提供25+风格电台与 AI DJ 根据会话上下文自动选曲，AI 编程工具开始争夺背景音场景。"
 ---
 
 > Anthropic 在 Claude Code 终端内置 `/radio` 命令，一键调出 Claude FM lo-fi 编程电台，将 Lofi Girl 式的专注背景音直接嵌入 AI 编程工作流。

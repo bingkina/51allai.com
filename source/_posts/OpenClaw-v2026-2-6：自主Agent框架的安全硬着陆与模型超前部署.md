@@ -1,7 +1,7 @@
 ---
 title: OpenClaw v2026.2.6：自主Agent框架的安全硬着陆与模型超前部署
 permalink: posts/2026/02/openclaw-v2026-2-6-safety/
-description: "这是一个标志着 OpenClaw 从“极客玩具”向“生产级基础设施”转型的里程碑版本。核心信号在于对安全性的系统级加固（34项安全提交），以及对下一代模型（Opus 4.6/GPT-5.3）的超前架构兼容。"
+description: "OpenClaw v2026.2.6 标志从极客玩具向生产级基础设施转型的里程碑版本，修复高危 SSRF 漏洞并加固 Windows exec 白名单封堵绕过路径，预埋 Anthropic Opus 4.6 与 OpenAI gpt-5.3-codex 超前兼容支持。"
 date: 2026-02-07 19:03:24
 categories: 智能体
 tags: [openclaw, openclaw, security]

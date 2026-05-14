@@ -9,7 +9,7 @@ tags:
   - companion-ai
 date: 2026-05-03 20:22:22
 categories: 智能体
-description: Anthropic 在 Claude Code v2.1.97 中移除了上线仅 8 天的 Buddy 终端宠物功能，引发开发者社区广泛讨论。本文探讨这一看似玩笑的功能背后，"伴随式多智能体"架构在开发工作流中的工程价值与产品启示。
+description: "Anthropic 在 Claude Code v2.1.97 中移除了上线仅8天的 Buddy 终端宠物功能，其底层骨与魂架构通过确定性数值生成与 LLM 驱动 System Prompt 构成低配版多智能体协同网络，引发社区版本锁定与 MCP 分叉重构潮。"
 cover:
 ---
 > Anthropic 在 Claude Code v2.1.97 版本中移除了作为愚人节彩蛋的 `/buddy` 电子宠物功能，此举引发开发者强烈反弹，并暴露出该功能的“观察者智能体”架构在实际代码审查中的意外效用。

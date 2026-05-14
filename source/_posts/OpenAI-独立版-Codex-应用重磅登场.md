@@ -1,7 +1,7 @@
 ---
 title: OpenAI 独立版 Codex 应用重磅登场
 permalink: posts/2026/02/openai-codex-standalone-app/
-description: "OpenAI 正式发布了专为开发者打造的 Codex 独立桌面应用。这标志着 AI 编程工具从单纯的“代码补全”模式，正式向“多智能体异步协作”转型。在这款应用中，开发者不再是单纯地和 AI “对话”，而是成为了首席架构师。"
+description: "OpenAI 正式发布 Codex 独立桌面应用，内置工作区支持多智能体后台并行处理不同模块、项目级深层上下文感知跨文件逻辑推理、自定义 Skills 封装将框架开发规范转化为 AI 技能，开发者角色从与AI对话式代码补全转向任务委派式异步协作。"
 date: 2026-02-03 22:10:28
 categories: 智能体
 tags: [openai, codex, product-update]

@@ -4,7 +4,7 @@ permalink: posts/2026/05/doubao-seed-2-lite-multimodal-model/
 tags: [Doubao Seed, 全模态模型, 火山引擎, 音频理解, Agent框架]
 date: 2026-05-07 17:59:58
 categories: [大模型]
-description: 火山引擎发布豆包Doubao-Seed-2.0-lite全模态大模型，原生支持文本、图像、音频、视频统一理解与跨模态联合推理，在多项基准测试中超越Gemini-3.1-Pro，面向企业级场景部署。
+description: "火山引擎发布豆包 Doubao-Seed-2.0-lite 新版本全模态大模型，原生支持文本、图像、音频、视频统一理解与跨模态联合推理，19语种精准语音转写与中英双语互译，多项音频理解基准测试超越 Gemini-3.1-Pro，深度适配 OpenClaw 等框架。"
 cover: https://images.51allai.com/blog/截图2026-05-07_18.01.03@2x_20260507_180422.png
 ---
 > 该版本是豆包大模型系列首款全模态理解模型，新增原生音频输入并实现跨模态联合推理，主要面向企业级场景的规模化部署。

@@ -1,7 +1,7 @@
 ---
 title: MiniMax 推出 MaxClaw：OpenClaw 框架的 Serverless 托管部署方案
 permalink: posts/2026/02/minimax-maxclaw-serverless/
-description: "MiniMax 基于开源智能体框架 OpenClaw 推出免运维云端部署服务 MaxClaw，通过底座模型 M2.5 与通讯软件的原生集成，将复杂 Agent 的部署门槛降至 10 秒量级。"
+description: "MiniMax 基于开源智能体框架 OpenClaw 推出免运维云端部署服务 MaxClaw，10秒拉起零运维配置，默认打通 Telegram、Discord 与 Slack 通信协议，由 M2.5 系列模型驱动支撑高频 Agent 调用的商业基础。"
 categories: 智能体
 tags: [minimax, maxclaw, cloud-agent]
 date: 2026-02-26 00:03:17

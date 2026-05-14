@@ -1,7 +1,7 @@
 ---
 title: 字节跳动上线豆包“专家模式”，全端接入豆包大模型2.0 Pro
 permalink: posts/2026/02/doubao-expert-mode-2-0-pro/
-description: "豆包大模型2.0 Pro重点强化深度推理与多模态动态感知能力，核心指标对标GPT-5.2与Gemini 3 Pro，并通过阶梯定价策略降低复杂Agent任务的API调用成本。"
+description: "豆包大模型2.0 Pro重点强化深度推理与多模态动态感知能力，IMO 国际数学奥赛与 CMO 及 ICPC 编程竞赛达金牌级水平，Putnam 基准超越 Gemini 3 Pro，EgoTempo 视频基准测试超越人类基准线，32K内输入定价3.2元每百万 Tokens。"
 categories: 行业观察
 date: 2026-02-14 15:04:11
 tags: [bytedance, doubao, product-update, pricing]

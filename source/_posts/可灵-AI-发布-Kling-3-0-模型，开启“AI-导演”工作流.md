@@ -1,7 +1,7 @@
 ---
 title: 可灵 AI 发布 Kling 3.0 模型，开启“AI 导演”工作流
 permalink: posts/2026/02/kling-3-0-ai-director/
-description: "快手可灵 (Kling) 正式迈入 3.0 时代，核心突破在于从“生成片段”向“生成剧情”进化，首创“智能分镜”与“视觉思维链”技术，试图解决 AI 视频长久以来的连贯性与叙事难题。"
+description: "快手可灵正式迈入 Kling 3.0 时代，首创 AI 导演模式自动调度景别输出多分镜连贯片段，原生支持中日韩英西5种语言口型精准同步与多人场景定向发声，视频时长提升至15秒，Image 3.0 引入视觉思维链支持2K/4K分辨率原生输出。"
 date: 2026-02-05 10:59:40
 categories: 多模态
 tags: [kuaishou, kling, video-generation, model-release]

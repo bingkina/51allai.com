@@ -3,7 +3,7 @@ title: Google AI Studio 并入 Pro/Ultra 订阅，开放核心模型权限
 permalink: posts/2026/04/google-ai-studio-pro-ultra/
 categories: 行业观察
 tags: [google, google-ai-studio, pricing]
-description: "Google 调整 AI 开发者工具商业化策略，将 AI Studio 整合至付费订阅体系，通过配额提升与高阶模型绑定加速应用落地。"
+description: "Google 将 AI Studio 正式整合至 Pro 与 Ultra 付费订阅体系，开发者解锁 Nano Banana Pro 专业图像生成模型与 Gemini Pro 全面访问权限，通过调用配额提升与可预期成本策略加速从原型到工作流应用落地。"
 date: 2026-04-21 10:42:27
 ---
 > Google 调整 AI 开发者工具商业化策略，将 AI Studio 整合至付费订阅体系，通过配额提升与高阶模型绑定加速应用落地。

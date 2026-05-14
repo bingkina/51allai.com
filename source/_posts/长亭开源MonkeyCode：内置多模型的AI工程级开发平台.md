@@ -10,7 +10,7 @@ tags:
 date: 2026-05-13 16:39:33
 categories:
   - 智能体
-description: 长亭科技开源 MonkeyCode，一个内置云端开发环境的 AI 编程平台，集成 GLM-4.7、DeepSeek、Claude 等多模型，注册送 200 元免费算力，支持 SDD 规范驱动开发和私有化部署。
+description: "长亭科技开源 MonkeyCode，浏览器内内置完整云端开发环境无需本地安装，集成 GLM-4.7、DeepSeek、Qwen、Claude 等多模型统一入口，SDD 规范驱动开发强制 AI 按设计流程推进，支持私有化部署与 MonkeyScan 漏洞扫描。"
 ---
 
 > 长亭科技推出内置多模型的 AI 编程平台 MonkeyCode，无需本地安装，浏览器内即可完成代码编写、执行、审查全流程。

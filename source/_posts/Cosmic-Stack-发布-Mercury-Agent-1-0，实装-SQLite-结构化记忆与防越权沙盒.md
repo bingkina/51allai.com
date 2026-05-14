@@ -4,7 +4,7 @@ permalink: posts/2026/04/cosmic-stack-mercury-agent-1-0/
 categories: 智能体
 tags: [cosmic-stack, mercury, open-source, agent-framework]
 date: 2026-04-26 12:14:24
-description: Mercury Agent 1.0 通过 SQLite + FTS5 实现持久化结构化记忆，内置 34 项安全拦截规则与双端（CLI/Telegram）部署方案，让本地 AI Agent 从「上下文窗口」走向「长期记忆 + 防越权」。 
+description: "Mercury Agent 1.0 通过 SQLite 结合 FTS5 实现持久化结构化记忆分10个维度，每60分钟后台自动执行记忆摘要，内置34项安全拦截规则含 Token 熔断器，支持 CLI 与 Telegram 双端24/7全天候运行。"
 cover: https://images.51allai.com/blog/截图2026-04-26_12.13.29@2x_20260426_121558.png
 ---
 > Mercury Agent 提供了一套强调安全边界与持久化记忆的开源双端（CLI/Telegram）代理方案，通过本地数据库机制缓解了长文本上下文丢失，并以硬编码拦截阻断了工具滥用风险。

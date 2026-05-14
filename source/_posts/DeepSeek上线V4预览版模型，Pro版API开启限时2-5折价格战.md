@@ -4,7 +4,7 @@ permalink: posts/2026/04/deepseek-v4-pro-api/
 categories: 大模型
 tags: [deepseek, deepseek-v4, pricing, model-release]
 date: 2026-04-25 23:17:11
-description:
+description: "DeepSeek 正式推出标配100万上下文的 V4 架构模型，Pro 版 API 开启限时2.5折激进价格战进一步拉低 Agent 应用规模化落地成本，强制推进旧接口生态交替，总参数1.6万亿激活49B的MoE架构综合对标闭源第一梯队竞品。"
 cover: https://images.51allai.com/blog/v4-spec_20260425_231923.png
 ---
 > DeepSeek正式推出标配1M上下文的V4架构模型，通过对Pro版API施加激进的限时降价策略，进一步拉低Agent应用的规模化落地成本，并强制推进旧接口的生态交替。

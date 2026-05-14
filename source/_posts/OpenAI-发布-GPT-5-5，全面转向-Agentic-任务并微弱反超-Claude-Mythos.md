@@ -3,7 +3,7 @@ title: OpenAI 发布 GPT-5.5，全面转向 Agentic 任务并微弱反超 Claude
 permalink: posts/2026/04/openai-gpt-5.5-agentic/
 categories: 大模型
 tags: [openai, gpt-5-5, model-release]
-description: "OpenAI 正式发布基础模型 GPT-5.5 及其 Pro 版本，核心技术路径从“对话式应答”转向“自主执行（Agentic）”，重点强化跨工具控制与代码闭环执行能力。"
+description: "OpenAI 正式发布 GPT-5.5 及 Pro 版本，核心技术路径从对话式应答转向自主执行 Agentic 模式，Terminal-Bench 2.0 中微弱反超 Claude Mythos Preview，Token 生成速度提升超20%，API 定价达 GPT-5.4 的两倍。"
 date: 2026-04-24 11:27:58
 ---
 > OpenAI 正式发布基础模型 GPT-5.5 及其 Pro 版本，核心技术路径从“对话式应答”转向“自主执行（Agentic）”，重点强化跨工具控制与代码闭环执行能力。

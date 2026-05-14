@@ -9,7 +9,7 @@ tags:
   - deepseek-v4
   - multimodal
   - vision
-description: DeepSeek 5月9日大范围开放识图模式内测，支持图像理解。技术底座为V4系列，采用OCR2+视觉因果流架构。目前仅纯视觉理解，无图像生成能力。
+description: "DeepSeek 5月9日大范围开放识图模式内测，基于 DeepSeek-OCR2 视觉编码方案与视觉因果流架构，800像素图像仅需约90 tokens 远低于主流方案消耗的870到1100 tokens，首次向终端用户开放原生多模态图像理解能力。"
 cover: https://images.51allai.com/blog/deepseek-vision-mode_20260509_191455_20260509_192244.png
 ---
 

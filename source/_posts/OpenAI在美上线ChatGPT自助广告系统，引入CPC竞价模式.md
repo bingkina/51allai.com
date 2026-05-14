@@ -4,7 +4,7 @@ permalink: posts/2026/05/openai-chatgpt-ads-manager-cpc/
 tags: [openai, chatgpt, advertising, cpc-bidding, commercialization]
 date: 2026-05-07 17:38:21
 categories: 行业观察
-description: OpenAI 正式向美国企业开放 ChatGPT 自助广告平台 Ads Manager 测试版，引入 CPC 按点击付费模式并与原有 CPM 并行。广告仅在免费版和 ChatGPT Go 用户端展示，独立于模型回答逻辑。OpenAI 目标 2026 年广告营收达 25 亿美元，2030 年冲击千亿规模，标志着对话式 AI 确立"信息+商业化"双轨变现路径。
+description: "OpenAI 在美国正式上线 ChatGPT 自助广告系统引入 CPC 点击竞价模式，广告主通过自助门户创建管理投放计划设置每日预算与出价策略上限，AI 引擎根据用户对话上下文智能匹配推送相关广告内容，探索对话式交互场景下全新的商业化变现路径。"
 cover: https://images.51allai.com/blog/Screenshot_2026-02-09_at_10.57.07_AM_20260507_174105.png
 ---
 > OpenAI正式向美国企业开放Ads Manager测试版，标志着生成式AI交互界面正式确立“信息+商业化”双轨变现路径，对话式搜索的流量定价体系初步成型。

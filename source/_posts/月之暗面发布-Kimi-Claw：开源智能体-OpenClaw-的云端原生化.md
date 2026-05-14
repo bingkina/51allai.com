@@ -1,7 +1,7 @@
 ---
 title: 月之暗面发布 Kimi Claw：开源智能体 OpenClaw 的云端原生化
 permalink: posts/2026/02/moonshot-kimi-claw-cloud-native/
-description: "Moonshot AI 推出基于 K2.5 模型驱动的云端智能体服务 Kimi Claw，通过免部署、24/7 在线及原生集成 5000+ 社区技能，消除本地 AI 助手的硬件与技术门槛。"
+description: "Moonshot AI 推出基于 K2.5 模型驱动的云端智能体服务 Kimi Claw，免部署24/7全天候在线，40GB专属云端存储支撑大规模工作流，系统级集成超5000个社区 Skills，支持 BYOC 混合部署保留本地系统级控制权。"
 categories: 智能体
 tags: [moonshot, kimi-claw, cloud-agent]
 date: 2026-02-16 13:22:16

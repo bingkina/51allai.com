@@ -4,7 +4,7 @@ permalink: posts/2026/05/xai-grok-4-3-always-on-reasoning/
 tags: [Grok, xAI, 全时推理, 大模型对比, API定价]
 date: 2026-05-06 18:55:12
 categories: 大模型
-description: xAI发布Grok 4.3大模型，强制开启全时推理模式，上下文窗口扩至100万token，API价格下调近半。一文解析其架构演进、实测表现及对Agent工作流的影响。
+description: "xAI 发布 Grok 4.3 大模型强制开启全时推理模式不可关闭，上下文窗口扩至100万 token，Artificial Analysis 的 GDPval-AA 评估 ELO 得分1500较前代暴涨321分，API 价格下调近半以极端性价比冲击 Agent 工作流市场。"
 cover:
 ---
 > Grok 4.3 将“推理”设为不可关闭的常驻状态，并在上下文长度提升至 100 万 token 的同时大幅削减 API 定价，以极端的性价比冲击 Agent 工作流及低成本模型市场。

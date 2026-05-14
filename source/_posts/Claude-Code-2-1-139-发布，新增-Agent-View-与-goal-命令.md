@@ -4,7 +4,7 @@ permalink: posts/2026/05/claude-code-2-1-139-release/
 tags: [claude-code, anthropic, agent-view, product-update]
 date: 2026-05-12 20:27:07
 categories: [智能体]
-description: Anthropic 发布 Claude Code 2.1.139，引入 Agent View 统一会话管理和 /goal 目标驱动工作流，修复认证死锁、MCP 内存泄漏等 30 余项缺陷。
+description: "Anthropic 发布 Claude Code 2.1.139，引入 Agent View 统一会话管理和 /goal 目标驱动工作流，Hook 系统新增 args 和 continueOnBlock 字段，修复认证死锁、MCP 内存泄漏等30余项缺陷。"
 cover:
 ---
 

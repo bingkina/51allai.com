@@ -1,7 +1,7 @@
 ---
 title: Google 发布图像生成模型 Nano Banana 2：整合实时搜索并强化文本与主体一致性
 permalink: posts/2026/02/google-nano-banana-2/
-description: "Google 正式上线 Nano Banana 2（Gemini 3.1 Flash Image），通过引入 Gemini 实时搜索能力解决生成保真度问题，并在多语言文本渲染及多对象一致性上取得核心突破。"
+description: "Google 正式上线 Nano Banana 2（Gemini 3.1 Flash Image），打通 Gemini 实时搜索解决生成保真度，单次维持5角色14对象视觉一致性，支持512px至4K十种宽高比，全面集成 SynthID 水印与 C2PA 溯源元数据。"
 categories: 多模态
 tags: [google, nano-banana, image-generation, model-release]
 date: 2026-02-27 19:34:40

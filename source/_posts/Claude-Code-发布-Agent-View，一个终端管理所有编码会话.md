@@ -9,7 +9,7 @@ tags:
   - Anthropic
   - Agent View
   - 多任务管理
-description: Anthropic 为 Claude Code 推出 Agent View（研究预览），v2.1.139 起可用。一个终端界面管理所有并行编码会话，支持分派、监控、Peek 回复和 Attach 切换。本文整理功能细节、快捷键与限制。
+description: "Anthropic 为 Claude Code 推出 Agent View 研究预览，运行 claude agents 即可管理所有并行编码会话，支持 Dispatch 分派、Peek 预览回复和 Attach 接入切换三种操作模式，后台由独立 supervisor 进程托管。"
 ---
 
 > Claude Code 原生内置多任务管理面板，开发者无需再开多个终端或依赖 tmux 来并行调度 AI 编码会话。

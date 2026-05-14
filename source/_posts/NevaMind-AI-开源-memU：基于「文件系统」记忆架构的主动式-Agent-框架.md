@@ -1,7 +1,7 @@
 ---
 title: NevaMind-AI 开源 memU：基于「文件系统」记忆架构的主动式 Agent 框架
 permalink: posts/2026/02/nevamind-memu-file-memory/
-description: "该项目通过引入结构化的长期记忆与定时任务循环，将传统的“问答式”LLM 交互转变为具备自主发起对话能力的 7×24 小时伴侣型 Agent，旨在解决当前 Agent 缺乏上下文连续性及被动响应的行业痛点。"
+description: "NevaMind AI 开源 memU 框架通过文件系统层级管理记忆，文件夹对应话题类别自动聚类、文件对应具体事实，结合 Cron Jobs 定时触发器实现7×24小时主动交互，数据本地存储降低 LLM API Token 消耗，原生支持 Discord、Telegram、Slack。"
 date: 2026-02-05 19:32:12
 categories: 智能体
 tags: [nevmind, memu, open-source, agent-framework]

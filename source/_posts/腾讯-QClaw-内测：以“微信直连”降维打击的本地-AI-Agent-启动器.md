@@ -1,7 +1,7 @@
 ---
 title: 腾讯 QClaw 内测：以“微信直连”降维打击的本地 AI Agent 启动器
 permalink: posts/2026/03/tencent-qclaw-beta/
-description: "腾讯电脑管家团队推出的 OpenClaw（开源 AI 智能体，俗称“小龙虾”）封装版本，核心杀手锏是打通了微信/QQ 双端接口，让用户能通过聊天窗口远程指挥本地电脑上的 AI 干活。"
+description: "腾讯电脑管家团队推出 OpenClaw 封装版本 QClaw，核心杀手锏打通微信与 QQ 双端接口让用户通过聊天窗口远程指挥本地电脑 AI 干活，支持 Windows 与 Mac 双端一键安装无需配环境，内置 Kimi、MiniMax、GLM、DeepSeek 等主流国产大模型。"
 categories: 智能体
 tags: [tencent, qclaw, desktop-agent]
 date: 2026-03-09 20:25:08

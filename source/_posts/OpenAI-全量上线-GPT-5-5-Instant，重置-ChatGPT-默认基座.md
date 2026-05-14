@@ -4,7 +4,7 @@ permalink: posts/2026/05/openai-gpt-5-5-instant-chatgpt-default-model/
 tags: [openai, gpt-5-5, model-release, product-update, chatgpt]
 date: 2026-05-06 18:46:54
 categories: [大模型]
-description: OpenAI 正式发布 GPT-5.5 Instant，全面替代 GPT-5.3 Instant 成为 ChatGPT 默认模型。高风险领域幻觉率骤降 52.5%，输出更精简，支持跨平台记忆溯源，开发者可通过 API 直接调用。
+description: "GPT-5.5 Instant 全面替代 GPT-5.3 Instant 成为 ChatGPT 默认模型，医疗法律金融等高风险领域幻觉率骤降52.5%，强制剥离冗长排版与表情符号输出更精简，支持跨平台记忆溯源可视化面板，开发者可通过 API 直接调用。"
 cover: https://images.51allai.com/blog/截图2026-05-06_18.48.00@2x_20260506_184837.png
 ---
 > GPT-5.5 Instant 正式取代 GPT-5.3 Instant 成为 ChatGPT 默认模型，核心更新为大幅压降高风险领域幻觉率并剔除冗余回复格式。

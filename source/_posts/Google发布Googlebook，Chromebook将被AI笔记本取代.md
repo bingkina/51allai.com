@@ -10,7 +10,7 @@ tags:
 date: 2026-05-14 00:09:56
 categories:
   - 行业观察
-description: Google在Android Show上发布Googlebook，首款为Gemini原生设计的AI笔记本，联合Acer、Asus、Dell、HP、Lenovo五家厂商，预计2026年秋季上市，将逐步取代Chromebook产品线。
+description: "Google 在 The Android Show 发布首款为 Gemini 原生设计的 AI 笔记本 Googlebook，联合 Acer、Asus、Dell、HP、Lenovo 五家 PC 厂商推出多种尺寸形态，2026年秋季上市将逐步取代 Chromebook 产品线。"
 cover: https://images.51allai.com/blog/googlebook-cover_20260514_000948.jpg
 ---
 

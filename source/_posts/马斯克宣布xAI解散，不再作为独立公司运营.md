@@ -10,7 +10,7 @@ tags:
 date: 2026-05-08 00:17:48
 categories:
   - 行业观察
-description: 马斯克5月6日宣布xAI不再作为独立公司运营，整体并入SpaceX更名为SpaceXAI。11位联合创始人全部离职，合并后实体估值1.25万亿美元，预计6月启动IPO。
+description: "马斯克5月6日宣布 xAI 不再作为独立公司运营，整体并入 SpaceX 并更名为 SpaceXAI，创立时11位联合创始人已全部离开，合并后实体估值1.25万亿美元，去除子公司汇报层级简化财务披露结构，为 SpaceX 预计6月启动 IPO 做准备。"
 cover:
 ---
 

@@ -1,7 +1,7 @@
 ---
 title: OpenClaw创始人加入OpenAI，项目主体转入独立基金会
 permalink: posts/2026/02/openclaw-founder-joins-openai/
-description: "爆火开源智能体OpenClaw创始人Peter Steinberger正式加盟OpenAI主导个人智能体研发，标志着巨头AI战略重心正从“大模型对话”向“多智能体执行”发生实质性转移。"
+description: "OpenClaw 创始人 Peter Steinberger 拒绝 Meta 招募正式加盟 OpenAI 主导下一代个人智能体研发，开源项目转入独立基金会保持独立，目标构建连非技术用户都能使用的消费级 Agent，此前每月自费1至2万美元维持运转。"
 categories: 行业观察
 tags: [openai, openclaw, ecosystem]
 date: 2026-02-16 11:24:56

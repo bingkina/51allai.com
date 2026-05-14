@@ -9,7 +9,7 @@ tags:
   - workflow-automation
   - adobe-firefly
 date: 2026-04-30 00:37:18
-description: Anthropic 为 Claude 推出 Adobe 官方连接器，打通 Photoshop、Premiere、Firefly 等 8 款创意软件、50 余项专业工具的 API 调用权限。Claude 可通过自然语言跨应用自动编排设计、剪辑、排版管线，从"内容生成器"进化为"工作流调度器"，彻底重构设计师的创意交付流程。
+description: "Anthropic 为 Claude 引入 Adobe 官方连接器，打通 Photoshop、Illustrator、InDesign 等八款核心创意应用，AI 可直接操作图层、矢量路径与排版元素实现跨应用设计工作流自动编排，设计师通过自然语言即可驱动复杂创意管线。"
 cover: https://images.51allai.com/blog/截图2026-04-30_00.36.28@2x_20260430_003804.png
 ---
 > 大模型在创意管线中的角色由单一的“内容生成器”转向“工作流调度器”，通过自然语言直接调用专业软件底层功能。

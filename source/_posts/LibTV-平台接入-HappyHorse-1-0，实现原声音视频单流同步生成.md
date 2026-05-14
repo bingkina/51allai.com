@@ -4,7 +4,7 @@ permalink: posts/2026/04/libtv-happyhorse-1-0/
 categories: 多模态
 tags: [libtv, happyhorse, video-generation, audio-generation]
 date: 2026-04-27 19:51:30
-description:
+description: "LibTV 平台正式上线 HappyHorse 1.0 视频音频生成模型，依托150亿参数统一架构首次在应用端打通视频画面与高保真音频的联合生成全链路，实现原声音频与视频画面的单流同步输出能力，彻底重构传统影视制作中的后期配音与拟音工作流。"
 cover: https://images.51allai.com/blog/20260427-194949_20260427_195203.jpeg
 ---
 > LibTV 平台正式上线 HappyHorse 1.0 模型，依托 150 亿参数的统一架构，该模型在应用端首次打通视频画面与高保真音频的联合生成链路，重构传统影视后期的配音与拟音工作流。

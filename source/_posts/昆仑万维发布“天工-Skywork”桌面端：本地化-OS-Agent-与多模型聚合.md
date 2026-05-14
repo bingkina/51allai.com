@@ -1,7 +1,7 @@
 ---
 title: 昆仑万维发布“天工 Skywork”桌面端：本地化 OS Agent 与多模型聚合
 permalink: posts/2026/02/kunlun-skywork-desktop-agent/
-description: "此举标志着昆仑万维从单一模型厂商向“AI 操作系统（OS Agent）”平台转型，主打“本地沙盒隐私安全”与“Claude/Gemini 模型聚合”，意在抢占 Windows 生态的系统级办公入口。"
+description: "昆仑万维发布天工 Skywork 桌面端标志从单一模型厂商向 AI 操作系统平台转型，本地虚拟机隔离环境确保数据不上传云端，聚合 Claude Opus 与 Gemini 等外部 SOTA 模型支持 Auto 路由，Doc转Excel等跨格式工作流自动化。"
 date: 2026-02-04 21:02:01
 categories: 智能体
 tags: [kunlun, skywork, desktop-agent]

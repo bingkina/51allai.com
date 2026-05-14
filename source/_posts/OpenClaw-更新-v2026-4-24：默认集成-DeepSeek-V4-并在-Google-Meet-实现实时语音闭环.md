@@ -4,7 +4,7 @@ permalink: posts/2026/04/openclaw-deepseek-google-meet/
 categories: 智能体
 tags: [openclaw, openclaw, agent-framework, product-update]
 date: 2026-04-26 11:45:11
-description: OpenClaw 更新 v2026.4.24，将默认底层模型切换为 DeepSeek V4 Flash
+description: "OpenClaw v2026.4.24 将默认底层模型切换为 DeepSeek V4 Flash，修复 DeepSeek 连续工具调用上下文截断问题，新增 Google Meet 实时语音循环插件支持会议副产物自动导出，浏览器控制引入视口坐标点击作为 DOM 定位兜底方案。"
 cover:
 ---
 > 开源 AI Agent 框架 OpenClaw 释出最新版本，将默认底层模型切换为 DeepSeek V4 Flash，并重构多模态会议与浏览器自动化底层，标志着本地化 Agent 的核心工作流从“异步指令流”向“实时多模态干预”演进。
