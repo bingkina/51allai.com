@@ -1,7 +1,7 @@
 ---
 title: Moonshot 推出 Kimi WebBridge，让 AI Agent 直接操控浏览器
 date: 2026-05-15 10:32:33
-permalink: moonshot-kimi-webbridge-browser-agent
+permalink: posts/2026/05/moonshot-kimi-webbridge-browser-agent/
 categories:
   - 智能体
 tags:
