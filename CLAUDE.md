@@ -8,11 +8,12 @@ This is a Hexo 8.1.1 static site blog (site: 51allai.com) hosted on **Cloudflare
 
 ## Common Commands
 
-- `npx hexo server` — start local dev server (default: http://localhost:4000)
-- `npx hexo generate` — build static files to `public/`
-- `npx hexo clean` — clear cache and generated files
+- `npm run server` or `npx hexo server` — start local dev server (default: http://localhost:4000)
+- `npm run build` or `npx hexo generate` — build static files to `public/`
+- `npm run clean` or `npx hexo clean` — clear cache and generated files
 - `npx hexo new "Post Title"` — create a new post from scaffold
 - `npm run publish` — full publish pipeline: clean → generate → algolia index → IndexNow submit → Baidu submit → git commit & push (requires `.env` with `HEXO_ALGOLIA_INDEXING_KEY`)
+- `npm install` — installs dependencies and automatically applies patches via `patch-package` (postinstall hook). There's one patch: `patches/hexo-algoliasearch+2.0.1.patch` which increases Algolia API timeouts (connect: 30s, read/write: 120s) to prevent timeout errors on large content uploads.
 
 ## Architecture
 
