@@ -3,6 +3,7 @@ title: DeepSeek V4-Pro 限时折扣改为永久降价
 permalink: posts/2026/05/deepseek-v4-pro-discount-permanent/
 tags: [deepseek, deepseek-v4, pricing, product-update]
 categories: [行业观察]
+ate: 2026-05-23 12:49:59
 description: DeepSeek 宣布 V4-Pro 限时 75% 折扣结束后，价格永久锁定在原定价的 1/4。本文梳理 V4-Pro 最新定价表及与 V4-Flash 的对比，分析对 Agent 场景成本规划的影响。
 cover: https://images.51allai.com/blog/HI7xPnWbgAAW4UO_20260523_121740.jpeg
 ---
