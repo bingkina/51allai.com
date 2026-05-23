@@ -5,7 +5,7 @@ tags: [google, deepwiki, code-documentation, gemini]
 date: 2026-05-23 23:53:52
 categories: [行业观察]
 description: Google 公开预览基于 Gemini 的 Code Wiki，可自动为 GitHub 仓库生成并持续更新文档。学术界独立评测显示多智能体框架在 Claude Sonnet 4 上领先 DeepWiki 4.73%，代码文档自动化进入产品竞争阶段。
-cover:https://images.51allai.com/blog/截图2026-05-23_23.50.43@2x_20260523_235611.png
+cover: https://images.51allai.com/blog/截图2026-05-23_23.50.43@2x_20260523_235611.png
 ---
 
 > Code Wiki，基于 Gemini 自动生成并持续更新 GitHub 仓库文档。同一赛道上，Cognition 的 DeepWiki 已先发运行。学术界 ACL 2026 收录的独立评测显示，多智能体代码文档框架在 Claude Sonnet 4 上质量得分 68.79%，领先 DeepWiki 基线 4.73%。AI 代码文档生成从玩具进入产品竞争阶段。
