@@ -1,15 +1,39 @@
+# OS / filesystem
 .DS_Store
 Thumbs.db
-db.json
+
+# Logs
 *.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Node dependencies
 node_modules/
+
+# Hexo generated files and cache
 public/
+db.json
 .deploy*/
+.hexo/
+.cache/
+
+# Local Hexo multi-config
 _multiconfig.yml
 
-# 机密配置，不入仓
+# Environment and secrets
 .env
-.env.local
+.env.*
+!.env.example
 
-# Claude Code worktrees（本地协作目录，不入仓，避免 CF Pages 当作子模块克隆失败）
+# Local editor / agent state
+.vscode/
+.idea/
+*.swp
+*.swo
+.claude/settings.local.json
 .claude/worktrees/
+
+# Cloudflare / Wrangler local state
+.wrangler/
