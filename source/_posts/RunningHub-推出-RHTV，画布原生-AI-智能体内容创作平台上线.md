@@ -5,9 +5,9 @@ date: 2026-05-08 20:19:47
 categories:
   - 多模态
 tags:
-  - RunningHub
-  - RHTV
-  - ComfyUI
+  - runninghub
+  - rhtv
+  - comfyui
   - canvas-native
   - product-update
 description: "RunningHub 发布 RHTV 平台将 AI 智能体直接嵌入无限画布而非独立聊天窗口，用户用自然语言描述创意即可自动生成完整 ComfyUI 节点链路，接入13681个可用节点与10万+社区应用，覆盖图像、视频、音频、3D、文本五模态。"

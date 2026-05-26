@@ -2,11 +2,11 @@
 title: 上海电信推出1元25万Token套餐
 permalink: posts/2026/05/shanghai-telecom-token-pricing/
 tags:
-  - 上海电信
-  - Token
+  - shanghai-telecom
+  - token
   - pricing
-  - AI商业化
-  - 运营商
+  - commercialization
+  - telecom
 date: 2026-05-16 23:45:36
 categories:
   - 行业观察

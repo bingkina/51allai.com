@@ -6,7 +6,7 @@ tags:
   - qoderwork
   - desktop-agent
   - design-desk
-  - AI设计
+  - ai-design
 date: 2026-05-21 19:08:11
 categories:
   - 智能体

@@ -5,10 +5,10 @@ permalink: posts/2026/05/moonshot-kimi-webbridge-browser-agent/
 categories:
   - 智能体
 tags:
-  - Kimi WebBridge
-  - Moonshot AI
-  - 浏览器自动化
-  - Agent框架
+  - kimi-webbridge
+  - moonshot
+  - browser-automation
+  - agent-framework
 description: Moonshot AI 发布 Kimi WebBridge 浏览器扩展，基于 Chrome DevTools Protocol 实现本地 Agent 对浏览器的直接控制，支持 Claude Code、Cursor、Codex 等第三方 Agent 接入，页面内容和登录态全程不离开用户设备。
 ---
 

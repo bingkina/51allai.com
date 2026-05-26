@@ -8,8 +8,8 @@ tags:
   - china-mobile
   - moma
   - model-aggregator
-  - 九天大模型
-  - 国产算力
+  - jiutian
+  - domestic-compute
 description: "中国移动在2026移动云大会发布 MoMA 模型服务平台，统一 API 网关一次接入即可调用平台全部超300款大模型资源，基于华为昇腾等国产芯片自研推理引擎使吞吐量提升20%时延降低40%单位 Token 成本压降约30%，日流量已突破1亿次。"
 ---
 

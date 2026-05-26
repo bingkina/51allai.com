@@ -5,10 +5,10 @@ permalink: posts/2026/05/karpathy-joins-anthropic/
 categories:
   - AI资讯
 tags:
-  - Anthropic
-  - Karpathy
-  - OpenAI
-  - 人才流动
+  - anthropic
+  - karpathy
+  - openai
+  - talent
 description: OpenAI创始成员、特斯拉前AI负责人Andrej Karpathy于2026年5月19日在X平台宣布加入Anthropic，专注前沿大语言模型研发。本文梳理其履历、行业背景及Eureka Labs去向。
 ---
 

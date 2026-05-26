@@ -4,10 +4,10 @@ permalink: posts/2026/05/byte-ui-tars-2-gui-agent/
 categories:
   - 智能体
 tags:
-  - UI-TARS
-  - GUI Agent
-  - 字节跳动
-  - 开源
+  - ui-tars
+  - gui-agent
+  - bytedance
+  - open-source
   - desktop-agent
 description: "字节跳动 Seed 团队开源 UI-TARS-2，通过端到端多轮强化学习训练 GUI 智能体，Online-Mind2Web 得分88.2刷新SOTA，超越 Claude/OpenAI CUA 基线，配套桌面应用获31.8k GitHub star。"
 cover: https://images.51allai.com/blog/截图2026-05-10_21.07.33@2x_20260510_211024.png

@@ -6,9 +6,9 @@ categories:
 tags:
   - google
   - gemini
-  - SheerID
-  - 学生认证
-  - 订阅清退
+  - sheerid
+  - student-verification
+  - subscription
 description: Google 通过 SheerID 对 Gemini AI Pro 学生订阅启动二次验证，2026 年初清退超 7000 个虚假账号。本文梳理漏洞曝光、清退时间线、二次验证流程与申诉渠道。
 date: 2026-05-15 11:15:24
 ---

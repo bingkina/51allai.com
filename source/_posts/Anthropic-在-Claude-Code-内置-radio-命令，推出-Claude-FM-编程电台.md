@@ -5,10 +5,10 @@ permalink: posts/2026/05/anthropic-claude-code-radio-claude-fm/
 categories:
   - 行业观察
 tags:
-  - Claude Code
-  - Anthropic
-  - 开发者工具
-  - 编程电台
+  - claude-code
+  - anthropic
+  - developer-tools
+  - coding-radio
   - lo-fi
 description: "Anthropic 在 Claude Code 中内置 /radio 命令一键调出 Claude FM lo-fi 编程电台，社区 claude-music 插件提供25+风格电台与 AI DJ 根据会话上下文自动选曲，AI 编程工具开始争夺背景音场景。"
 ---

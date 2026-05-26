@@ -6,10 +6,10 @@ categories:
   - 智能体
 tags:
   - codex
-  - Chrome
-  - OpenAI
-  - 浏览器自动化
-  - Computer Use
+  - chrome
+  - openai
+  - browser-automation
+  - computer-use
 description: "OpenAI 正式上架 Codex for Chrome 扩展，支持在已登录态浏览器中操作 Web 应用测试前端调试与调用 DevTools，每次访问新网站前请求用户确认，与 Claude in Chrome 形成开发者工具与通用自动化代理的差异化竞争格局。"
 cover: https://images.51allai.com/blog/codex_chrome_20260508_120628.png
 ---

@@ -2,11 +2,11 @@
 title: 长亭开源MonkeyCode：内置多模型的AI工程级开发平台
 permalink: posts/2026/05/chaitin-monkeycode-ai-dev-platform/
 tags:
-  - MonkeyCode
-  - 长亭科技
-  - AI编程
-  - 开源
-  - 多模型
+  - monkeycode
+  - chaitin
+  - ai-coding
+  - open-source
+  - model-aggregator
 date: 2026-05-13 16:39:33
 categories:
   - 智能体

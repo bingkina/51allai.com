@@ -5,10 +5,10 @@ date: 2026-05-12 14:13:44
 categories:
   - 智能体
 tags:
-  - Claude Code
-  - Anthropic
-  - Agent View
-  - 多任务管理
+  - claude-code
+  - anthropic
+  - agent-view
+  - multi-task
 description: "Anthropic 为 Claude Code 推出 Agent View 研究预览，运行 claude agents 即可管理所有并行编码会话，支持 Dispatch 分派、Peek 预览回复和 Attach 接入切换三种操作模式，后台由独立 supervisor 进程托管。"
 ---
 

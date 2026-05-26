@@ -2,11 +2,11 @@
 title: Claude Code 工程师弃用 Markdown，转向 HTML 交付
 permalink: posts/2026/05/claude-code-engineers-switch-html-from-markdown/
 tags:
-  - Claude Code
-  - Markdown
-  - HTML
-  - Anthropic
-  - AI开发工具
+  - claude-code
+  - markdown
+  - html
+  - anthropic
+  - developer-tools
 date: 2026-05-10 00:39:02
 categories:
   - 行业观察

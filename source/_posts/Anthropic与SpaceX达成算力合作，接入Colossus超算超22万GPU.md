@@ -4,11 +4,11 @@ permalink: posts/2026/05/anthropic-spacex-colossus-compute-deal/
 categories:
   - 大模型
 tags:
-  - Anthropic
-  - SpaceX
-  - Colossus
-  - 算力基础设施
-  - Claude
+  - anthropic
+  - spacex
+  - colossus
+  - compute-infrastructure
+  - claude
 date: 2026-05-07 20:22:22
 description: "Anthropic 与 SpaceX 签署算力协议接入 Colossus 1 超算，超22万张 GPU 提供 300MW+ 计算能力，Claude Code 及 Opus API 用量限额即时翻倍，双方计划合作开发吉瓦级轨道 AI 算力容量。"
 ---

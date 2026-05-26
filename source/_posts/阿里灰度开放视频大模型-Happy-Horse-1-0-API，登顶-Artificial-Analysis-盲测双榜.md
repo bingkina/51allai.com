@@ -2,7 +2,12 @@
 title: 阿里灰度开放视频大模型 Happy Horse 1.0 API，登顶 Artificial Analysis 盲测双榜
 permalink: posts/2026/04/alibaba-happy-horse-1-0-api-artificial-analysis/
 categories: 多模态
-tags: [阿里巴巴, 通义大模型, video-generation, model-release, seedance]
+tags:
+  - alibaba
+  - qwen
+  - video-generation
+  - model-release
+  - seedance
 date: 2026-04-28 00:18:32
 description: 阿里视频大模型 Happy Horse 1.0 API 灰度开放，以 150 亿参数单流架构实现音画同步生成，在 Artificial Analysis 盲测中 Elo 评分达 1382，超越字节 Seedance 2.0 登顶文生视频与图生视频双榜。
 cover: https://images.51allai.com/blog/截图2026-04-28_00.17.21@2x_20260428_001949.png

@@ -2,11 +2,11 @@
 title: 马斯克宣布xAI解散，不再作为独立公司运营
 permalink: posts/2026/05/musk-dissolve-xai-merge-spacex/
 tags:
-  - xAI
-  - SpaceX
-  - Grok
-  - 马斯克
-  - 企业并购
+  - xai
+  - spacex
+  - grok
+  - elon-musk
+  - merger
 date: 2026-05-08 00:17:48
 categories:
   - 行业观察

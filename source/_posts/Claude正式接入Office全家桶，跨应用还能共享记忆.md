@@ -5,11 +5,11 @@ date: 2026-05-08 15:04:46
 categories:
   - 行业观察
 tags:
-  - Claude
-  - Anthropic
-  - Microsoft 365
-  - AI办公
-  - Copilot
+  - claude
+  - anthropic
+  - microsoft-365
+  - productivity
+  - copilot
 description: "Anthropic 将 Claude 全面接入 Microsoft Office 覆盖 Word、Excel、PowerPoint、Outlook 四款应用，跨应用上下文自动传输无需手动复制粘贴，引入预建 Skills 机制，所有输入输出30天内自动删除。"
 cover: https://images.51allai.com/blog/截图2026-05-08_15.12.27@2x_20260508_151322.png
 ---

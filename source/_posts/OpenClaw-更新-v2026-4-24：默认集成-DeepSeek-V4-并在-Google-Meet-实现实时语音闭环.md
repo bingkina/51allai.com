@@ -2,7 +2,10 @@
 title: OpenClaw 更新 v2026.4.24：默认集成 DeepSeek V4 并在 Google Meet 实现实时语音闭环
 permalink: posts/2026/04/openclaw-deepseek-google-meet/
 categories: 智能体
-tags: [openclaw, openclaw, agent-framework, product-update]
+tags:
+  - openclaw
+  - agent-framework
+  - product-update
 date: 2026-04-26 11:45:11
 description: "OpenClaw v2026.4.24 将默认底层模型切换为 DeepSeek V4 Flash，修复 DeepSeek 连续工具调用上下文截断问题，新增 Google Meet 实时语音循环插件支持会议副产物自动导出，浏览器控制引入视口坐标点击作为 DOM 定位兜底方案。"
 cover:

@@ -77,12 +77,48 @@
 /archives/tag/%E8%85%BE%E8%AE%AF%E6%B7%B7%E5%85%83  /tags/%E6%B7%B7%E5%85%83/  301
 # xiaomi → 小米
 /archives/tag/xiaomi  /tags/%E5%B0%8F%E7%B1%B3/  301
-# agent → Agent（大小写）
-/archives/tag/agent  /tags/Agent/  301
-# comet → Comet
-/archives/tag/comet  /tags/Comet/  301
-# anthropic → Anthropic
-/archives/tag/anthropic  /tags/Anthropic/  301
+# agent → agent-framework
+/archives/tag/agent  /tags/agent-framework/  301
+# comet → comet
+/archives/tag/comet  /tags/comet/  301
+# anthropic → anthropic
+/archives/tag/anthropic  /tags/anthropic/  301
+
+# ---------------------------------------------------------------
+# 2a. 标签体系清洗后的旧标签页 301
+#    新标签统一使用小写英文 slug，避免大小写、中英文别名和空格标签重复生成。
+# ---------------------------------------------------------------
+/tags/Anthropic/  /tags/anthropic/  301
+/tags/OpenAI/  /tags/openai/  301
+/tags/Claude-Code/  /tags/claude-code/  301
+/tags/Claude/  /tags/claude/  301
+/tags/Agent-View/  /tags/agent-view/  301
+/tags/Grok/  /tags/grok/  301
+/tags/xAI/  /tags/xai/  301
+/tags/UI-TARS/  /tags/ui-tars/  301
+/tags/Doubao-Seed/  /tags/doubao-seed/  301
+/tags/Kimi-WebBridge/  /tags/kimi-webbridge/  301
+/tags/Moonshot-AI/  /tags/moonshot/  301
+/tags/Chrome/  /tags/chrome/  301
+/tags/Computer-Use/  /tags/computer-use/  301
+/tags/GPT-Realtime-2/  /tags/gpt-realtime-2/  301
+/tags/%E5%BC%80%E5%8F%91%E8%80%85%E5%B7%A5%E5%85%B7/  /tags/developer-tools/  301
+/tags/AI%E5%BC%80%E5%8F%91%E5%B7%A5%E5%85%B7/  /tags/developer-tools/  301
+/tags/%E6%B5%8F%E8%A7%88%E5%99%A8%E8%87%AA%E5%8A%A8%E5%8C%96/  /tags/browser-automation/  301
+/tags/Agent%E6%A1%86%E6%9E%B6/  /tags/agent-framework/  301
+/tags/%E5%BC%80%E6%BA%90/  /tags/open-source/  301
+/tags/%E5%AD%97%E8%8A%82%E8%B7%B3%E5%8A%A8/  /tags/bytedance/  301
+/tags/%E8%85%BE%E8%AE%AF/  /tags/tencent/  301
+/tags/%E9%98%BF%E9%87%8C%E5%B7%B4%E5%B7%B4/  /tags/alibaba/  301
+/tags/%E9%80%9A%E4%B9%89%E5%A4%A7%E6%A8%A1%E5%9E%8B/  /tags/qwen/  301
+/tags/AI%E5%95%86%E4%B8%9A%E5%8C%96/  /tags/commercialization/  301
+/tags/API%E5%AE%9A%E4%BB%B7/  /tags/pricing/  301
+/tags/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9FAgent/  /tags/desktop-agent/  301
+/tags/%E8%AF%AD%E9%9F%B3%E6%A8%A1%E5%9E%8B/  /tags/voice-model/  301
+/tags/%E5%AE%9E%E6%97%B6API/  /tags/realtime-api/  301
+/tags/%E5%85%A8%E6%A8%A1%E6%80%81%E6%A8%A1%E5%9E%8B/  /tags/multimodal/  301
+/tags/%E7%81%AB%E5%B1%B1%E5%BC%95%E6%93%8E/  /tags/volcengine/  301
+/tags/%E9%9F%B3%E9%A2%91%E7%90%86%E8%A7%A3/  /tags/audio-understanding/  301
 
 # 其余老 tag/category 兜底到新站归档索引
 /archives/tag/*       /archives/  301

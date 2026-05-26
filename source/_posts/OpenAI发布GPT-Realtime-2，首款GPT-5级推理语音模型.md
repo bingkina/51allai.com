@@ -5,10 +5,10 @@ permalink: posts/2026/05/openai-gpt-realtime-2-voice-model/
 categories:
   - 大模型
 tags:
-  - OpenAI
-  - GPT-Realtime-2
-  - 语音模型
-  - 实时API
+  - openai
+  - gpt-realtime-2
+  - voice-model
+  - realtime-api
 description: OpenAI 发布 GPT-Realtime-2，首款搭载 GPT-5 级推理能力的实时语音模型。上下文窗口从 32K 扩至 128K，Big Bench Audio 得分 96.6%，支持工具调用与多级推理调节，API 定价为音频输入 $32/M tokens、输出 $64/M tokens。
 ---
 > OpenAI 将 GPT-5 级推理能力引入实时语音 API，上下文窗口从 32K 扩至 128K，并配套推出实时翻译和语音转录两款辅助模型，首次构建完整的语音 Agent 工具链。

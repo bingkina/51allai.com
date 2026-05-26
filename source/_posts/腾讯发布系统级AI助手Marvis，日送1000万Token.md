@@ -6,9 +6,8 @@ categories:
   - 智能体
 tags:
   - desktop-agent
-  - 腾讯
-  - Marvis
-  - 操作系统Agent
+  - tencent
+  - marvis
 description: 腾讯应用宝团队发布操作系统级 AI Agent Marvis（马维斯），支持 Windows/Mac/安卓三端，无需邀请码直接开放。内置 6 个协同智能体，提供效率模式与隐私模式，每日 1000 万免费 Token。
 cover:
 ---

@@ -2,10 +2,10 @@
 title: BANNED BY ANTHROPIC：用户请愿站上线，Anthropic 封号潮引争议
 permalink: posts/2026/05/banned-by-anthropic-petition-ban-wave/
 tags:
-  - Anthropic
-  - Claude
-  - 内容审核
-  - 用户申诉
+  - anthropic
+  - claude
+  - content-moderation
+  - user-appeal
 categories:
   - 行业观察
 date: 2026-05-10 00:11:48
