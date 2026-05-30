@@ -377,325 +377,43 @@
     border-color: var(--green);
   }
 
-  /* History */
-  .history {
-    margin-top: 32px;
-  }
-
-  .history-header {
+  /* QR code */
+  .qr-panel {
+    margin-top: 48px;
+    min-height: 260px;
     display: flex;
-    justify-content: space-between;
-    align-items: baseline;
-    margin-bottom: 16px;
-    padding-bottom: 12px;
-    border-bottom: 1px solid var(--line);
-  }
-
-  .history-title {
-    font-family: var(--display);
-    font-size: 22px;
-    font-weight: 500;
-    font-style: italic;
-  }
-
-  .history-count {
-    font-family: var(--mono);
-    font-size: 12px;
-    color: var(--ink-muted);
-  }
-
-  .clear-btn {
-    font-family: var(--mono);
-    font-size: 11px;
-    background: transparent;
-    border: none;
-    color: var(--ink-muted);
-    cursor: pointer;
-    text-decoration: underline;
-    padding: 4px 8px;
-  }
-
-  .clear-btn:hover {
-    color: var(--accent);
-  }
-
-  .history-toolbar {
-    display: flex;
-    align-items: center;
-    gap: 6px;
-    flex-wrap: wrap;
-  }
-
-  .tool-btn {
-    font-family: var(--mono);
-    font-size: 11px;
-    font-weight: 500;
-    letter-spacing: 0.04em;
-    padding: 6px 12px;
-    background: transparent;
-    border: 1px solid var(--line-strong);
-    border-radius: 3px;
-    color: var(--ink-soft);
-    cursor: pointer;
-    transition: all 0.15s;
-    display: inline-flex;
-    align-items: center;
-    gap: 5px;
-  }
-
-  .tool-btn:hover {
-    border-color: var(--ink);
-    color: var(--ink);
-    background: var(--bg-card);
-  }
-
-  .tool-btn:disabled {
-    opacity: 0.4;
-    cursor: not-allowed;
-  }
-
-  .tool-btn:disabled:hover {
-    border-color: var(--line-strong);
-    color: var(--ink-soft);
-    background: transparent;
-  }
-
-  .tool-icon {
-    font-size: 13px;
-    line-height: 1;
-    color: var(--accent);
-    font-weight: 600;
-  }
-
-  .toolbar-separator {
-    width: 1px;
-    height: 16px;
-    background: var(--line);
-    margin: 0 4px;
-  }
-
-  /* Import dialog */
-  .import-dialog {
-    position: fixed;
-    inset: 0;
-    background: rgba(26, 26, 26, 0.5);
-    display: none;
     align-items: center;
     justify-content: center;
-    z-index: 200;
-    padding: 24px;
   }
 
-  .import-dialog.show {
-    display: flex;
-  }
-
-  .import-panel {
-    background: var(--bg-card);
-    border: 1px solid var(--line);
+  .qr-frame {
+    width: min(240px, 100%);
+    height: 240px;
+    flex: 0 0 auto;
     border-radius: 4px;
-    padding: 32px;
-    max-width: 460px;
-    width: 100%;
-  }
-
-  .import-panel h3 {
-    font-family: var(--display);
-    font-size: 24px;
-    font-weight: 500;
-    margin-bottom: 8px;
-  }
-
-  .import-panel p {
-    font-size: 13px;
-    color: var(--ink-soft);
-    margin-bottom: 20px;
-    line-height: 1.6;
-  }
-
-  .import-summary {
-    background: var(--bg);
-    border: 1px solid var(--line);
-    border-radius: 3px;
-    padding: 14px 16px;
-    margin-bottom: 20px;
-    font-family: var(--mono);
-    font-size: 12px;
-    color: var(--ink-soft);
-    line-height: 1.8;
-  }
-
-  .import-summary .num {
-    font-family: var(--display);
-    font-size: 18px;
-    font-weight: 600;
-    color: var(--accent);
-  }
-
-  .import-mode-options {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 8px;
-    margin-bottom: 20px;
-  }
-
-  .mode-option {
-    border: 1px solid var(--line-strong);
-    border-radius: 3px;
-    padding: 14px;
-    cursor: pointer;
-    transition: all 0.15s;
-    text-align: left;
-    background: transparent;
-    font-family: inherit;
-  }
-
-  .mode-option:hover {
-    border-color: var(--ink);
-  }
-
-  .mode-option.selected {
-    border-color: var(--accent);
-    background: var(--accent-soft);
-  }
-
-  .mode-option .mode-title {
-    font-size: 13px;
-    font-weight: 600;
-    margin-bottom: 4px;
-    color: var(--ink);
-  }
-
-  .mode-option .mode-desc {
-    font-size: 11px;
-    color: var(--ink-muted);
-    line-height: 1.5;
-    font-family: var(--mono);
-  }
-
-  .dialog-actions {
-    display: flex;
-    gap: 8px;
-    justify-content: flex-end;
-  }
-
-  .dialog-btn {
-    padding: 10px 18px;
-    font-family: var(--mono);
-    font-size: 12px;
-    font-weight: 500;
-    letter-spacing: 0.04em;
-    border: 1px solid var(--line-strong);
-    background: transparent;
-    color: var(--ink);
-    border-radius: 3px;
-    cursor: pointer;
-    transition: all 0.15s;
-  }
-
-  .dialog-btn:hover {
-    border-color: var(--ink);
-  }
-
-  .dialog-btn.primary {
-    background: var(--ink);
-    color: var(--bg-card);
-    border-color: var(--ink);
-  }
-
-  .dialog-btn.primary:hover {
-    background: #000;
-  }
-
-  .history-item {
-    background: var(--bg-card);
-    border: 1px solid var(--line);
-    border-radius: 3px;
-    padding: 14px 18px;
-    margin-bottom: 8px;
-    display: flex;
-    align-items: center;
-    gap: 16px;
-    transition: border-color 0.15s;
-  }
-
-  .history-item:hover {
-    border-color: var(--ink);
-  }
-
-  .history-info {
-    flex: 1;
-    min-width: 0;
-  }
-
-  .history-tags {
-    display: flex;
-    gap: 6px;
-    margin-bottom: 6px;
-    flex-wrap: wrap;
-  }
-
-  .tag {
-    font-family: var(--mono);
-    font-size: 10px;
-    padding: 2px 8px;
-    border-radius: 2px;
-    background: var(--bg);
-    color: var(--ink-soft);
-    border: 1px solid var(--line);
-  }
-
-  .tag.source { color: var(--accent); border-color: var(--accent-soft); background: var(--accent-soft); }
-  .tag.medium { color: var(--green); border-color: rgba(45, 93, 58, 0.2); background: rgba(45, 93, 58, 0.06); }
-
-  .history-url {
-    font-family: var(--mono);
-    font-size: 11px;
-    color: var(--ink-muted);
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-  }
-
-  .history-actions {
-    display: flex;
-    gap: 4px;
-    flex-shrink: 0;
-  }
-
-  .icon-btn {
-    width: 28px;
-    height: 28px;
-    background: transparent;
-    border: 1px solid var(--line);
-    border-radius: 3px;
-    cursor: pointer;
     display: flex;
     align-items: center;
     justify-content: center;
-    color: var(--ink-soft);
-    transition: all 0.15s;
-    font-size: 13px;
+    padding: 16px;
+    background: var(--ink);
   }
 
-  .icon-btn:hover {
-    border-color: var(--ink);
-    color: var(--ink);
+  .qr-frame canvas {
+    width: 208px;
+    height: 208px;
+    max-width: 100%;
+    max-height: 100%;
+    aspect-ratio: 1 / 1;
+    display: block;
+    image-rendering: pixelated;
   }
 
-  .icon-btn.copied {
-    background: var(--green);
-    color: white;
-    border-color: var(--green);
-  }
-
-  .empty-state {
+  .qr-placeholder {
+    font-family: var(--mono);
+    font-size: 11px;
+    line-height: 1.7;
     text-align: center;
-    padding: 40px 20px;
-    color: var(--ink-muted);
-    font-size: 13px;
-    font-style: italic;
-    font-family: var(--display);
+    color: rgba(255, 255, 255, 0.45);
   }
 
   /* Toast */
@@ -875,36 +593,15 @@
 
         <div class="actions">
           <button class="btn" id="btn-clear">清空</button>
-          <button class="btn" id="btn-save" disabled>保存到历史</button>
           <button class="btn btn-primary" id="btn-copy" disabled>复制链接</button>
         </div>
-      </div>
-    </div>
 
-    <!-- 历史记录 -->
-    <div class="history">
-      <div class="history-header">
-        <div>
-          <span class="history-title">Recent Builds</span>
-          <span class="history-count" id="history-count">· 0 条记录</span>
+        <div class="qr-panel">
+          <div class="qr-frame">
+            <canvas id="qr-code" aria-label="生成 URL 二维码"></canvas>
+            <div class="qr-placeholder" id="qr-placeholder">生成有效链接后<br>二维码显示在这里</div>
+          </div>
         </div>
-        <div class="history-toolbar">
-          <button class="tool-btn" id="btn-export-json" title="导出为 JSON 备份文件">
-            <span class="tool-icon">↓</span> JSON
-          </button>
-          <button class="tool-btn" id="btn-export-csv" title="导出为 CSV 表格">
-            <span class="tool-icon">↓</span> CSV
-          </button>
-          <button class="tool-btn" id="btn-import" title="从 JSON 备份文件导入">
-            <span class="tool-icon">↑</span> 导入
-          </button>
-          <input type="file" id="import-file" accept=".json,application/json" style="display:none;" />
-          <span class="toolbar-separator"></span>
-          <button class="clear-btn" id="btn-clear-history">清空全部</button>
-        </div>
-      </div>
-      <div id="history-list">
-        <div class="empty-state">尚无历史记录 · 生成的链接会保留在浏览器中</div>
       </div>
     </div>
 
@@ -920,51 +617,24 @@
       </div>
       <div>
         <h4>数据存储与备份</h4>
-        历史记录保存在浏览器 LocalStorage 中，不上传任何服务器。建议定期点击 <code>JSON</code> 导出备份；切换设备或浏览器时用 <code>导入</code> 恢复。<code>CSV</code> 导出可在 Excel/Numbers 中查看。
+        链接与二维码只在当前浏览器中实时生成，不上传任何服务器。点击 <code>复制链接</code> 后可直接用于社媒、广告后台或短链工具。
       </div>
     </div>
   </div>
 
   <div class="toast" id="toast">已复制到剪贴板</div>
 
-  <!-- 导入确认对话框 -->
-  <div class="import-dialog" id="import-dialog">
-    <div class="import-panel">
-      <h3>导入历史记录</h3>
-      <p id="import-desc">检测到备份文件，请选择导入方式：</p>
-      <div class="import-summary" id="import-summary"></div>
-      <div class="import-mode-options">
-        <button class="mode-option selected" data-mode="merge">
-          <div class="mode-title">合并导入</div>
-          <div class="mode-desc">保留现有记录，<br>追加新条目并去重</div>
-        </button>
-        <button class="mode-option" data-mode="replace">
-          <div class="mode-title">完全替换</div>
-          <div class="mode-desc">清空现有记录，<br>仅保留导入的内容</div>
-        </button>
-      </div>
-      <div class="dialog-actions">
-        <button class="dialog-btn" id="import-cancel">取消</button>
-        <button class="dialog-btn primary" id="import-confirm">确认导入</button>
-      </div>
-    </div>
-  </div>
-
 <script>
 (() => {
   const $ = id => document.getElementById(id);
-  const STORAGE_KEY = 'utm_builder_history_v1';
-  const MAX_HISTORY = 50;
 
   const fields = ['base-url', 'utm-source', 'utm-medium', 'utm-campaign', 'utm-term', 'utm-content'];
   const inputs = Object.fromEntries(fields.map(f => [f, $(f)]));
   const output = $('output');
+  const qrCode = $('qr-code');
+  const qrPlaceholder = $('qr-placeholder');
   const btnCopy = $('btn-copy');
-  const btnSave = $('btn-save');
   const btnClear = $('btn-clear');
-  const btnClearHistory = $('btn-clear-history');
-  const historyList = $('history-list');
-  const historyCount = $('history-count');
   const toast = $('toast');
 
   // Time display
@@ -1025,7 +695,7 @@
       $('stat-params').textContent = '0';
       $('stat-status').textContent = '—';
       btnCopy.disabled = true;
-      btnSave.disabled = true;
+      renderQr('');
       return;
     }
 
@@ -1034,7 +704,7 @@
       $('stat-status').textContent = '错误';
       $('stat-status').style.color = '#f0a08e';
       btnCopy.disabled = true;
-      btnSave.disabled = true;
+      renderQr('');
       return;
     }
 
@@ -1065,10 +735,339 @@
     $('stat-status').style.fontFamily = 'var(--display)';
 
     btnCopy.disabled = !ready;
-    btnSave.disabled = !ready;
+    renderQr(ready ? fullUrl : '');
   };
 
   const escapeHtml = (s) => s.replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+
+  const QR = (() => {
+    const VERSION = 10;
+    const SIZE = VERSION * 4 + 17;
+    const DATA_CODEWORDS = 274;
+    const ECC_CODEWORDS = 18;
+    const BLOCK_LENGTHS = [68, 68, 69, 69];
+
+    const gfExp = new Array(512);
+    const gfLog = new Array(256);
+    let x = 1;
+    for (let i = 0; i < 255; i++) {
+      gfExp[i] = x;
+      gfLog[x] = i;
+      x <<= 1;
+      if (x & 0x100) x ^= 0x11d;
+    }
+    for (let i = 255; i < 512; i++) gfExp[i] = gfExp[i - 255];
+
+    const mul = (a, b) => (a && b) ? gfExp[gfLog[a] + gfLog[b]] : 0;
+
+    const generator = (degree) => {
+      let poly = [1];
+      for (let i = 0; i < degree; i++) {
+        const next = new Array(poly.length + 1).fill(0);
+        poly.forEach((coef, j) => {
+          next[j] ^= coef;
+          next[j + 1] ^= mul(coef, gfExp[i]);
+        });
+        poly = next;
+      }
+      return poly.slice(1);
+    };
+
+    const reedSolomon = (data) => {
+      const gen = generator(ECC_CODEWORDS);
+      const ecc = new Array(ECC_CODEWORDS).fill(0);
+      data.forEach(byte => {
+        const factor = byte ^ ecc.shift();
+        ecc.push(0);
+        gen.forEach((coef, i) => {
+          ecc[i] ^= mul(coef, factor);
+        });
+      });
+      return ecc;
+    };
+
+    const appendBits = (bits, value, length) => {
+      for (let i = length - 1; i >= 0; i--) bits.push((value >>> i) & 1);
+    };
+
+    const makeCodewords = (text) => {
+      const bytes = Array.from(new TextEncoder().encode(text));
+      if (bytes.length > DATA_CODEWORDS - 4) {
+        throw new Error('URL 太长，无法生成二维码');
+      }
+
+      const bits = [];
+      appendBits(bits, 0x4, 4);
+      appendBits(bits, bytes.length, 16);
+      bytes.forEach(byte => appendBits(bits, byte, 8));
+
+      const capacityBits = DATA_CODEWORDS * 8;
+      appendBits(bits, 0, Math.min(4, capacityBits - bits.length));
+      while (bits.length % 8 !== 0) bits.push(0);
+
+      const data = [];
+      for (let i = 0; i < bits.length; i += 8) {
+        data.push(bits.slice(i, i + 8).reduce((acc, bit) => (acc << 1) | bit, 0));
+      }
+      for (let pad = 0; data.length < DATA_CODEWORDS; pad ^= 1) {
+        data.push(pad ? 0x11 : 0xec);
+      }
+
+      const blocks = [];
+      let offset = 0;
+      BLOCK_LENGTHS.forEach(length => {
+        const block = data.slice(offset, offset + length);
+        blocks.push({ data: block, ecc: reedSolomon(block) });
+        offset += length;
+      });
+
+      const result = [];
+      for (let i = 0; i < Math.max(...BLOCK_LENGTHS); i++) {
+        blocks.forEach(block => {
+          if (i < block.data.length) result.push(block.data[i]);
+        });
+      }
+      for (let i = 0; i < ECC_CODEWORDS; i++) {
+        blocks.forEach(block => result.push(block.ecc[i]));
+      }
+      return result;
+    };
+
+    const makeMatrix = (text) => {
+      const modules = Array.from({ length: SIZE }, () => new Array(SIZE).fill(false));
+      const reserved = Array.from({ length: SIZE }, () => new Array(SIZE).fill(false));
+
+      const set = (row, col, dark, isReserved = true) => {
+        if (row < 0 || row >= SIZE || col < 0 || col >= SIZE) return;
+        modules[row][col] = Boolean(dark);
+        if (isReserved) reserved[row][col] = true;
+      };
+
+      const drawFinder = (row, col) => {
+        for (let r = -1; r <= 7; r++) {
+          for (let c = -1; c <= 7; c++) {
+            const rr = row + r;
+            const cc = col + c;
+            if (rr < 0 || rr >= SIZE || cc < 0 || cc >= SIZE) continue;
+            const dark = r >= 0 && r <= 6 && c >= 0 && c <= 6 &&
+              (r === 0 || r === 6 || c === 0 || c === 6 || (r >= 2 && r <= 4 && c >= 2 && c <= 4));
+            set(rr, cc, dark);
+          }
+        }
+      };
+
+      const drawAlignment = (row, col) => {
+        for (let r = -2; r <= 2; r++) {
+          for (let c = -2; c <= 2; c++) {
+            set(row + r, col + c, Math.max(Math.abs(r), Math.abs(c)) !== 1);
+          }
+        }
+      };
+
+      drawFinder(0, 0);
+      drawFinder(0, SIZE - 7);
+      drawFinder(SIZE - 7, 0);
+
+      for (let i = 8; i < SIZE - 8; i++) {
+        set(6, i, i % 2 === 0);
+        set(i, 6, i % 2 === 0);
+      }
+
+      [6, 28, 50].forEach(row => {
+        [6, 28, 50].forEach(col => {
+          if (reserved[row][col]) return;
+          drawAlignment(row, col);
+        });
+      });
+
+      set(SIZE - 8, 8, true);
+      reserveFormatAndVersion(reserved);
+
+      const codewords = makeCodewords(text);
+      const bits = codewords.flatMap(byte => Array.from({ length: 8 }, (_, i) => (byte >>> (7 - i)) & 1));
+      let bitIndex = 0;
+      let upward = true;
+      for (let col = SIZE - 1; col > 0; col -= 2) {
+        if (col === 6) col--;
+        for (let i = 0; i < SIZE; i++) {
+          const row = upward ? SIZE - 1 - i : i;
+          for (let j = 0; j < 2; j++) {
+            const cc = col - j;
+            if (reserved[row][cc]) continue;
+            modules[row][cc] = Boolean(bits[bitIndex++] || 0);
+          }
+        }
+        upward = !upward;
+      }
+
+      let best = null;
+      for (let mask = 0; mask < 8; mask++) {
+        const candidate = modules.map(row => row.slice());
+        for (let row = 0; row < SIZE; row++) {
+          for (let col = 0; col < SIZE; col++) {
+            if (!reserved[row][col] && maskBit(mask, row, col)) candidate[row][col] = !candidate[row][col];
+          }
+        }
+        drawFormat(candidate, mask);
+        drawVersion(candidate);
+        const score = penalty(candidate);
+        if (!best || score < best.score) best = { matrix: candidate, score };
+      }
+      return best.matrix;
+    };
+
+    const reserveFormatAndVersion = (reserved) => {
+      for (let i = 0; i <= 8; i++) {
+        if (i !== 6) {
+          reserved[8][i] = true;
+          reserved[i][8] = true;
+        }
+      }
+      for (let i = 0; i < 8; i++) {
+        reserved[8][SIZE - 1 - i] = true;
+        reserved[SIZE - 1 - i][8] = true;
+      }
+      for (let i = 0; i < 6; i++) {
+        for (let j = 0; j < 3; j++) {
+          reserved[i][SIZE - 11 + j] = true;
+          reserved[SIZE - 11 + j][i] = true;
+        }
+      }
+    };
+
+    const maskBit = (mask, row, col) => [
+      (row + col) % 2 === 0,
+      row % 2 === 0,
+      col % 3 === 0,
+      (row + col) % 3 === 0,
+      (Math.floor(row / 2) + Math.floor(col / 3)) % 2 === 0,
+      ((row * col) % 2 + (row * col) % 3) === 0,
+      (((row * col) % 2 + (row * col) % 3) % 2) === 0,
+      (((row + col) % 2 + (row * col) % 3) % 2) === 0
+    ][mask];
+
+    const formatBits = (mask) => {
+      let data = (1 << 3) | mask;
+      let rem = data << 10;
+      for (let i = 14; i >= 10; i--) {
+        if ((rem >>> i) & 1) rem ^= 0x537 << (i - 10);
+      }
+      return ((data << 10) | rem) ^ 0x5412;
+    };
+
+    const drawFormat = (matrix, mask) => {
+      const bits = formatBits(mask);
+      const bit = i => ((bits >>> i) & 1) === 1;
+      for (let i = 0; i <= 5; i++) matrix[8][i] = bit(i);
+      matrix[8][7] = bit(6);
+      matrix[8][8] = bit(7);
+      matrix[7][8] = bit(8);
+      for (let i = 9; i < 15; i++) matrix[14 - i][8] = bit(i);
+      for (let i = 0; i < 8; i++) matrix[SIZE - 1 - i][8] = bit(i);
+      for (let i = 8; i < 15; i++) matrix[8][SIZE - 15 + i] = bit(i);
+      matrix[SIZE - 8][8] = true;
+    };
+
+    const drawVersion = (matrix) => {
+      let rem = VERSION << 12;
+      for (let i = 17; i >= 12; i--) {
+        if ((rem >>> i) & 1) rem ^= 0x1f25 << (i - 12);
+      }
+      const bits = (VERSION << 12) | rem;
+      for (let i = 0; i < 18; i++) {
+        const bit = ((bits >>> i) & 1) === 1;
+        const row = Math.floor(i / 3);
+        const col = SIZE - 11 + (i % 3);
+        matrix[row][col] = bit;
+        matrix[col][row] = bit;
+      }
+    };
+
+    const penalty = (matrix) => {
+      let score = 0;
+      const addRuns = (line) => {
+        let runColor = line[0];
+        let run = 1;
+        for (let i = 1; i < SIZE; i++) {
+          if (line[i] === runColor) {
+            run++;
+          } else {
+            if (run >= 5) score += 3 + run - 5;
+            runColor = line[i];
+            run = 1;
+          }
+        }
+        if (run >= 5) score += 3 + run - 5;
+      };
+      for (let i = 0; i < SIZE; i++) {
+        addRuns(matrix[i]);
+        addRuns(matrix.map(row => row[i]));
+      }
+      for (let row = 0; row < SIZE - 1; row++) {
+        for (let col = 0; col < SIZE - 1; col++) {
+          const color = matrix[row][col];
+          if (matrix[row][col + 1] === color && matrix[row + 1][col] === color && matrix[row + 1][col + 1] === color) score += 3;
+        }
+      }
+      const pattern = '10111010000';
+      const reverse = '00001011101';
+      for (let i = 0; i < SIZE; i++) {
+        const row = matrix[i].map(v => v ? '1' : '0').join('');
+        const col = matrix.map(r => r[i] ? '1' : '0').join('');
+        for (let j = 0; j <= SIZE - 11; j++) {
+          if (row.slice(j, j + 11) === pattern || row.slice(j, j + 11) === reverse) score += 40;
+          if (col.slice(j, j + 11) === pattern || col.slice(j, j + 11) === reverse) score += 40;
+        }
+      }
+      const dark = matrix.flat().filter(Boolean).length;
+      score += Math.floor(Math.abs(dark * 20 - SIZE * SIZE * 10) / (SIZE * SIZE)) * 10;
+      return score;
+    };
+
+    const draw = (canvas, text) => {
+      const matrix = makeMatrix(text);
+      const size = 208;
+      const quiet = 4;
+      const modules = matrix.length + quiet * 2;
+      const scale = Math.floor(size / modules);
+      const imageSize = modules * scale;
+      canvas.width = imageSize;
+      canvas.height = imageSize;
+      const ctx = canvas.getContext('2d');
+      ctx.fillStyle = '#ffffff';
+      ctx.fillRect(0, 0, imageSize, imageSize);
+      ctx.fillStyle = '#1a1a1a';
+      matrix.forEach((row, r) => {
+        row.forEach((dark, c) => {
+          if (dark) ctx.fillRect((c + quiet) * scale, (r + quiet) * scale, scale, scale);
+        });
+      });
+    };
+
+    return { draw };
+  })();
+
+  const renderQr = (url) => {
+    const ctx = qrCode.getContext('2d');
+    ctx.clearRect(0, 0, qrCode.width || 240, qrCode.height || 240);
+
+    if (!url) {
+      qrCode.style.display = 'none';
+      qrPlaceholder.style.display = 'block';
+      qrPlaceholder.innerHTML = '生成有效链接后<br>二维码显示在这里';
+      return;
+    }
+
+    qrPlaceholder.style.display = 'none';
+    qrCode.style.display = 'block';
+    try {
+      QR.draw(qrCode, url);
+    } catch (err) {
+      qrCode.style.display = 'none';
+      qrPlaceholder.style.display = 'block';
+      qrPlaceholder.textContent = err.message || '二维码生成失败';
+    }
+  };
 
   // Toast
   const showToast = (msg) => {
@@ -1109,31 +1108,6 @@
     renderOutput();
   });
 
-  // Save
-  btnSave.addEventListener('click', () => {
-    const url = buildPlainUrl();
-    const source = inputs['utm-source'].value.trim();
-    const medium = inputs['utm-medium'].value.trim();
-    const campaign = inputs['utm-campaign'].value.trim() || '';
-
-    const history = loadHistory();
-    // Avoid duplicates
-    if (history.some(h => h.url === url)) {
-      showToast('该链接已存在于历史');
-      return;
-    }
-    history.unshift({
-      url,
-      source,
-      medium,
-      campaign,
-      ts: Date.now()
-    });
-    saveHistory(history.slice(0, MAX_HISTORY));
-    renderHistory();
-    showToast('已保存到历史记录');
-  });
-
   // Presets
   document.querySelectorAll('.presets').forEach(group => {
     const targetId = group.dataset.target;
@@ -1156,307 +1130,8 @@
   // Live update
   fields.forEach(f => inputs[f].addEventListener('input', renderOutput));
 
-  // History persistence
-  const loadHistory = () => {
-    try {
-      return JSON.parse(localStorage.getItem(STORAGE_KEY) || '[]');
-    } catch (_) {
-      return [];
-    }
-  };
-
-  const saveHistory = (h) => {
-    localStorage.setItem(STORAGE_KEY, JSON.stringify(h));
-  };
-
-  const renderHistory = () => {
-    const history = loadHistory();
-    historyCount.textContent = `· ${history.length} 条记录`;
-
-    if (history.length === 0) {
-      historyList.innerHTML = '<div class="empty-state">尚无历史记录 · 生成的链接会保留在浏览器中</div>';
-      return;
-    }
-
-    historyList.innerHTML = history.map((item, idx) => `
-      <div class="history-item">
-        <div class="history-info">
-          <div class="history-tags">
-            <span class="tag source">${escapeHtml(item.source)}</span>
-            <span class="tag medium">${escapeHtml(item.medium)}</span>
-            ${item.campaign ? `<span class="tag">${escapeHtml(item.campaign)}</span>` : ''}
-          </div>
-          <div class="history-url" title="${escapeHtml(item.url)}">${escapeHtml(item.url)}</div>
-        </div>
-        <div class="history-actions">
-          <button class="icon-btn" data-action="copy" data-idx="${idx}" title="复制">⎘</button>
-          <button class="icon-btn" data-action="load" data-idx="${idx}" title="载入到表单">↑</button>
-          <button class="icon-btn" data-action="delete" data-idx="${idx}" title="删除">×</button>
-        </div>
-      </div>
-    `).join('');
-
-    // bind action buttons
-    historyList.querySelectorAll('.icon-btn').forEach(btn => {
-      btn.addEventListener('click', () => {
-        const action = btn.dataset.action;
-        const idx = parseInt(btn.dataset.idx, 10);
-        const history = loadHistory();
-        const item = history[idx];
-        if (!item) return;
-
-        if (action === 'copy') {
-          navigator.clipboard.writeText(item.url).then(() => {
-            btn.classList.add('copied');
-            btn.textContent = '✓';
-            setTimeout(() => {
-              btn.classList.remove('copied');
-              btn.textContent = '⎘';
-            }, 1200);
-            showToast('链接已复制');
-          });
-        } else if (action === 'load') {
-          // parse url back into form
-          try {
-            const u = new URL(item.url);
-            inputs['base-url'].value = u.origin + u.pathname;
-            inputs['utm-source'].value = u.searchParams.get('utm_source') || '';
-            inputs['utm-medium'].value = u.searchParams.get('utm_medium') || '';
-            inputs['utm-campaign'].value = u.searchParams.get('utm_campaign') || '';
-            inputs['utm-term'].value = u.searchParams.get('utm_term') || '';
-            inputs['utm-content'].value = u.searchParams.get('utm_content') || '';
-            renderOutput();
-            // sync preset active state
-            document.querySelectorAll('.presets').forEach(group => {
-              const targetId = group.dataset.target;
-              const v = $(targetId).value.trim();
-              group.querySelectorAll('.preset-btn').forEach(b => b.classList.toggle('active', b.dataset.value === v));
-            });
-            window.scrollTo({ top: 0, behavior: 'smooth' });
-            showToast('已载入到表单');
-          } catch (_) {}
-        } else if (action === 'delete') {
-          history.splice(idx, 1);
-          saveHistory(history);
-          renderHistory();
-        }
-      });
-    });
-  };
-
-  btnClearHistory.addEventListener('click', () => {
-    if (loadHistory().length === 0) return;
-    if (confirm('确定要清空所有历史记录吗？此操作不可恢复。')) {
-      saveHistory([]);
-      renderHistory();
-      showToast('历史记录已清空');
-    }
-  });
-
-  // ===== 导出 JSON =====
-  $('btn-export-json').addEventListener('click', () => {
-    const history = loadHistory();
-    if (history.length === 0) {
-      showToast('暂无记录可导出');
-      return;
-    }
-    const payload = {
-      app: 'utm-builder',
-      version: 1,
-      exportedAt: new Date().toISOString(),
-      count: history.length,
-      records: history
-    };
-    const blob = new Blob([JSON.stringify(payload, null, 2)], { type: 'application/json' });
-    downloadBlob(blob, `utm-history-${dateStamp()}.json`);
-    showToast(`已导出 ${history.length} 条记录`);
-  });
-
-  // ===== 导出 CSV =====
-  $('btn-export-csv').addEventListener('click', () => {
-    const history = loadHistory();
-    if (history.length === 0) {
-      showToast('暂无记录可导出');
-      return;
-    }
-    // CSV 表头
-    const headers = ['创建时间', 'utm_source', 'utm_medium', 'utm_campaign', 'utm_term', 'utm_content', '落地页', '完整链接'];
-    const rows = history.map(item => {
-      const parsed = parseUrl(item.url);
-      return [
-        new Date(item.ts).toLocaleString('zh-CN'),
-        item.source || '',
-        item.medium || '',
-        item.campaign || '',
-        parsed.term || '',
-        parsed.content || '',
-        parsed.base || '',
-        item.url
-      ];
-    });
-    const csv = [headers, ...rows].map(row => row.map(csvCell).join(',')).join('\r\n');
-    // BOM 让 Excel 正确识别中文 UTF-8
-    const blob = new Blob(['\ufeff' + csv], { type: 'text/csv;charset=utf-8' });
-    downloadBlob(blob, `utm-history-${dateStamp()}.csv`);
-    showToast(`已导出 ${history.length} 条记录`);
-  });
-
-  const parseUrl = (url) => {
-    try {
-      const u = new URL(url);
-      return {
-        base: u.origin + u.pathname,
-        term: u.searchParams.get('utm_term') || '',
-        content: u.searchParams.get('utm_content') || ''
-      };
-    } catch (_) {
-      return { base: '', term: '', content: '' };
-    }
-  };
-
-  const csvCell = (v) => {
-    const s = String(v ?? '');
-    // 任何包含逗号、引号、换行的字段都需要用双引号包裹，内部双引号转义为两个双引号
-    if (/[",\r\n]/.test(s)) {
-      return '"' + s.replace(/"/g, '""') + '"';
-    }
-    return s;
-  };
-
-  const dateStamp = () => {
-    const d = new Date();
-    const pad = n => String(n).padStart(2, '0');
-    return `${d.getFullYear()}${pad(d.getMonth()+1)}${pad(d.getDate())}-${pad(d.getHours())}${pad(d.getMinutes())}`;
-  };
-
-  const downloadBlob = (blob, filename) => {
-    const url = URL.createObjectURL(blob);
-    const a = document.createElement('a');
-    a.href = url;
-    a.download = filename;
-    document.body.appendChild(a);
-    a.click();
-    document.body.removeChild(a);
-    setTimeout(() => URL.revokeObjectURL(url), 100);
-  };
-
-  // ===== 导入 JSON =====
-  let pendingImport = null;
-  let importMode = 'merge';
-
-  $('btn-import').addEventListener('click', () => {
-    $('import-file').click();
-  });
-
-  $('import-file').addEventListener('change', (e) => {
-    const file = e.target.files[0];
-    if (!file) return;
-    const reader = new FileReader();
-    reader.onload = (ev) => {
-      try {
-        const data = JSON.parse(ev.target.result);
-        let records;
-        // 支持两种格式：完整 payload 或纯数组
-        if (Array.isArray(data)) {
-          records = data;
-        } else if (data && Array.isArray(data.records)) {
-          records = data.records;
-        } else {
-          throw new Error('格式不正确');
-        }
-        // 校验每条记录的最小字段
-        const valid = records.filter(r =>
-          r && typeof r.url === 'string' && r.url.startsWith('http')
-        );
-        if (valid.length === 0) {
-          showToast('文件中没有有效记录');
-          return;
-        }
-        pendingImport = valid;
-        showImportDialog(valid.length, file.name);
-      } catch (err) {
-        showToast('文件解析失败：' + (err.message || '未知错误'));
-      }
-    };
-    reader.readAsText(file);
-    // reset input so same file can be selected again
-    e.target.value = '';
-  });
-
-  const showImportDialog = (count, filename) => {
-    const current = loadHistory().length;
-    $('import-summary').innerHTML = `
-      文件名：${escapeHtml(filename)}<br>
-      包含记录：<span class="num">${count}</span> 条<br>
-      当前已有：<span class="num">${current}</span> 条
-    `;
-    // reset to default mode
-    importMode = 'merge';
-    document.querySelectorAll('.mode-option').forEach(b => {
-      b.classList.toggle('selected', b.dataset.mode === 'merge');
-    });
-    $('import-dialog').classList.add('show');
-  };
-
-  document.querySelectorAll('.mode-option').forEach(btn => {
-    btn.addEventListener('click', () => {
-      importMode = btn.dataset.mode;
-      document.querySelectorAll('.mode-option').forEach(b => {
-        b.classList.toggle('selected', b === btn);
-      });
-    });
-  });
-
-  $('import-cancel').addEventListener('click', () => {
-    $('import-dialog').classList.remove('show');
-    pendingImport = null;
-  });
-
-  $('import-dialog').addEventListener('click', (e) => {
-    if (e.target === $('import-dialog')) {
-      $('import-cancel').click();
-    }
-  });
-
-  $('import-confirm').addEventListener('click', () => {
-    if (!pendingImport) return;
-    const incoming = pendingImport;
-    let final;
-    if (importMode === 'replace') {
-      final = incoming.slice(0, MAX_HISTORY);
-    } else {
-      // merge: 现有记录在前，新记录追加，按 url 去重
-      const existing = loadHistory();
-      const seen = new Set(existing.map(r => r.url));
-      const merged = [...existing];
-      let added = 0;
-      incoming.forEach(r => {
-        if (!seen.has(r.url)) {
-          merged.push(r);
-          seen.add(r.url);
-          added++;
-        }
-      });
-      // 按时间倒序
-      merged.sort((a, b) => (b.ts || 0) - (a.ts || 0));
-      final = merged.slice(0, MAX_HISTORY);
-      saveHistory(final);
-      renderHistory();
-      $('import-dialog').classList.remove('show');
-      pendingImport = null;
-      showToast(`合并完成 · 新增 ${added} 条`);
-      return;
-    }
-    saveHistory(final);
-    renderHistory();
-    $('import-dialog').classList.remove('show');
-    pendingImport = null;
-    showToast(`已替换为 ${final.length} 条记录`);
-  });
-
   // initial render
   renderOutput();
-  renderHistory();
 })();
 </script>
 </body>
