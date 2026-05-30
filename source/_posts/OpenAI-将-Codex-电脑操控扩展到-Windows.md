@@ -7,7 +7,7 @@ categories: 智能体
 description: "OpenAI 将 Codex Computer Use 扩展到 Windows，Codex 现在可在前台操作 Windows 桌面应用，并支持从 ChatGPT 手机端或 Mac 远程查看和控制 Windows 设备上的任务。"
 cover: https://images.51allai.com/blog/codex-mobile_20260515_104234.png
 ---
-> OpenAI 在 2026 年 5 月 29 日更新 Codex app 26.527，把 Computer Use 带到 Windows。这里需要先纠正一个容易混淆的说法：这次更新的是 OpenAI Codex，不是 Apple Xcode。Windows 版现在能让 Codex 在前台看屏幕、点击、输入，并把手机端远程控制接到 Windows 设备上。
+> OpenAI 在 2026 年 5 月 29 日更新 Codex app 26.527，把 Computer Use 带到 Windows。这次更新的是 OpenAI Codex，不是 Apple Xcode。Windows 版现在能让 Codex 在前台看屏幕、点击、输入，并把手机端远程控制接到 Windows 设备上。
 ![ChatGPT 应用与 Codex 应用图标并排](https://images.51allai.com/blog/codex-mobile_20260515_104234.png)
 
 ## 更新内容：Windows 终于补上 Computer Use
