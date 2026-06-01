@@ -4,7 +4,6 @@ permalink: posts/2026/06/minimax-m3-open-weight-frontier-model/
 tags: [minimax, minimax-m3, open-source, model-release, multimodal]
 date: 2026-06-01 11:20:08
 categories:
-  - 大模型
   - 智能体
 description: "MiniMax M3 发布，官方称其同时覆盖编程智能体、百万上下文和原生多模态三项能力；API 已开放，权重与技术报告预计约 10 天内发布。"
 cover: https://filecdn.minimax.chat/public/m3-msa-arch-1780248342289.png
