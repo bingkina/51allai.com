@@ -1,0 +1,33 @@
+{
+  "issuer": "https://51allai.com",
+  "resource": "https://51allai.com/",
+  "authorization_servers": [
+    "https://51allai.com/"
+  ],
+  "scopes_supported": [
+    "content.read"
+  ],
+  "bearer_methods_supported": [
+    "header"
+  ],
+  "service_documentation": "https://51allai.com/auth.md",
+  "agent_auth": {
+    "skill": "https://51allai.com/auth.md",
+    "register_uri": "https://51allai.com/auth.md#step-3---registration-status",
+    "identity_types_supported": [
+      "anonymous"
+    ],
+    "anonymous": {
+      "credential_types_supported": [
+        "none"
+      ]
+    },
+    "credential_types_supported": [
+      "none"
+    ],
+    "scopes_supported": [
+      "content.read"
+    ],
+    "events_supported": []
+  }
+}

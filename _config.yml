@@ -20,7 +20,7 @@ archive_dir: archives
 category_dir: categories
 code_dir: downloads/code
 i18n_dir: ':lang'
-skip_render: ['404.html']
+skip_render: ['404.html', 'auth.md']
 new_post_name: ':title.md'
 default_layout: post
 titlecase: false
@@ -61,6 +61,7 @@ pagination_dir: page
 include:
   - _redirects
   - _headers
+  - .well-known/*
 exclude: null
 ignore: null
 theme: vivia

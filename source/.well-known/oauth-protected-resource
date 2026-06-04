@@ -1,0 +1,14 @@
+{
+  "resource": "https://51allai.com/",
+  "resource_name": "51AllAI",
+  "resource_logo_uri": "https://51allai.com/avatar.png",
+  "authorization_servers": [
+    "https://51allai.com/"
+  ],
+  "scopes_supported": [
+    "content.read"
+  ],
+  "bearer_methods_supported": [
+    "header"
+  ]
+}
