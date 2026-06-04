@@ -60,6 +60,7 @@ pagination_dir: page
 # 强制包含 _redirects：Hexo 默认忽略下划线前缀的文件，需显式声明
 include:
   - _redirects
+  - _headers
 exclude: null
 ignore: null
 theme: vivia
