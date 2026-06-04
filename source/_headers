@@ -20,6 +20,10 @@
   Content-Type: application/json
   Access-Control-Allow-Origin: *
 
+/.well-known/http-message-signatures-directory
+  Content-Type: application/http-message-signatures-directory+json
+  Cache-Control: max-age=86400
+
 /api/openapi.json
   Content-Type: application/openapi+json
 

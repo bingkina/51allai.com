@@ -26,6 +26,7 @@ _multiconfig.yml
 .env
 .env.*
 !.env.example
+.web-bot-auth/
 
 # Local editor / agent state
 .vscode/
