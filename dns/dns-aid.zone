@@ -1,0 +1,25 @@
+; DNS-AID publication records for 51allai.com.
+; Publish these records in the authoritative DNS zone for 51allai.com.
+; The DNS-AID draft is still an Internet-Draft; Cloudflare DNS may require
+; unassigned SvcParamKeys to be entered as keyNNNNN= values until IANA assigns
+; final names for endpoint/cap/well-known parameters.
+;
+; DNSSEC requirement:
+; - Enable DNSSEC for 51allai.com in Cloudflare DNS.
+; - Add the DS record that Cloudflare provides at the registrar.
+; - Verify with: dig +dnssec _index._agents.51allai.com HTTPS
+; - A validating resolver should return authenticated data (AD) for the RRset.
+
+$ORIGIN 51allai.com.
+$TTL 300
+
+; Organization-level DNS-AID index entrypoint.
+_index._agents 300 IN HTTPS 1 51allai.com. alpn="h2,h3" port=443 endpoint="/.well-known/dns-aid" mandatory=alpn,port
+
+; Alias-style protocol entrypoints for common agent discovery probes.
+_mcp._agents   300 IN SVCB  0 _index._agents.51allai.com.
+_a2a._agents   300 IN SVCB  0 _index._agents.51allai.com.
+
+; Conservative TXT fallback for resolvers or dashboards that do not yet accept
+; experimental DNS-AID SVCB/HTTPS parameters.
+_index._agents 300 IN TXT "v=DNS-AID1; endpoint=https://51allai.com/.well-known/dns-aid; alpn=h2,h3"

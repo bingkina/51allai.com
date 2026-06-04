@@ -1,0 +1,41 @@
+{
+  "version": "DNS-AID1",
+  "domain": "51allai.com",
+  "updated": "2026-06-05",
+  "entrypoints": {
+    "index": "https://51allai.com/.well-known/dns-aid",
+    "apiCatalog": "https://51allai.com/.well-known/api-catalog",
+    "mcpServerCard": "https://51allai.com/.well-known/mcp/server-card.json",
+    "agentSkills": "https://51allai.com/.well-known/agent-skills/index.json"
+  },
+  "records": [
+    {
+      "owner": "_index._agents.51allai.com",
+      "type": "HTTPS",
+      "priority": 1,
+      "target": "51allai.com",
+      "params": {
+        "alpn": ["h2", "h3"],
+        "port": 443,
+        "endpoint": "/.well-known/dns-aid",
+        "mandatory": ["alpn", "port"]
+      }
+    },
+    {
+      "owner": "_mcp._agents.51allai.com",
+      "type": "SVCB",
+      "priority": 0,
+      "target": "_index._agents.51allai.com"
+    },
+    {
+      "owner": "_a2a._agents.51allai.com",
+      "type": "SVCB",
+      "priority": 0,
+      "target": "_index._agents.51allai.com"
+    }
+  ],
+  "dnssec": {
+    "required": true,
+    "validation": "Enable DNSSEC at the authoritative provider, publish the DS record at the registrar, and verify that validating resolvers return AD for _index._agents.51allai.com HTTPS."
+  }
+}
