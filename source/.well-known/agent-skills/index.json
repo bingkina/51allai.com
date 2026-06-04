@@ -7,6 +7,13 @@
       "description": "Implement an Agent Skills Discovery index for a website using the RFC v0.2.0 well-known URI format.",
       "url": "https://isitagentready.com/.well-known/agent-skills/agent-skills/SKILL.md",
       "digest": "sha256:2cdda60ea052eb8af4ae8a4d96dc0d173151d5386ee724a4e98f93ed21adbae5"
+    },
+    {
+      "name": "auth-md",
+      "type": "skill-md",
+      "description": "Implement Auth.md support for agent registration discovery, including /auth.md and OAuth well-known metadata with agent_auth.",
+      "url": "https://isitagentready.com/.well-known/agent-skills/auth-md/SKILL.md",
+      "digest": "sha256:1794fff49d4ae401e782230c9aed1a268ce094b3200a02c5f7c98e72b21f1222"
     }
   ]
 }

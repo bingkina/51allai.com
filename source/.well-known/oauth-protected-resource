@@ -1,9 +1,11 @@
 {
   "resource": "https://51allai.com/",
+  "issuer": "https://51allai.com",
   "resource_name": "51AllAI",
   "resource_logo_uri": "https://51allai.com/avatar.png",
+  "service_documentation": "https://51allai.com/auth.md",
   "authorization_servers": [
-    "https://51allai.com/"
+    "https://51allai.com"
   ],
   "scopes_supported": [
     "content.read"

@@ -2,7 +2,7 @@
   "issuer": "https://51allai.com",
   "resource": "https://51allai.com/",
   "authorization_servers": [
-    "https://51allai.com/"
+    "https://51allai.com"
   ],
   "scopes_supported": [
     "content.read"
@@ -20,6 +20,9 @@
       "anonymous"
     ],
     "anonymous": {
+      "register_uri": "https://51allai.com/auth.md#step-3---registration-status",
+      "claim_uri": "https://51allai.com/auth.md#step-4---claim-and-revocation",
+      "revocation_uri": "https://51allai.com/auth.md#step-4---claim-and-revocation",
       "credential_types_supported": [
         "none"
       ],

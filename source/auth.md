@@ -27,6 +27,7 @@ The structured metadata is the source of truth for agent access posture:
 - `claim_uri`: claim instructions for credential flows, currently a not-applicable section.
 - `revocation_uri`: revocation instructions for credential flows, currently a not-applicable section.
 - `identity_types_supported`: supported agent identity types.
+- `anonymous.register_uri`, `anonymous.claim_uri`, and `anonymous.revocation_uri`: method-level registration, claim, and revocation instructions for anonymous public access.
 - `anonymous.credential_types_supported`: supported credential classes for anonymous public access.
 - `scopes_supported`: site-level scopes agents may rely on.
 
