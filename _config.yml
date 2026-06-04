@@ -62,6 +62,7 @@ include:
   - _redirects
   - _headers
   - .well-known/*
+  - .well-known/agent-skills/index.json
 exclude: null
 ignore: null
 theme: vivia
