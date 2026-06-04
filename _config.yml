@@ -63,6 +63,7 @@ include:
   - _headers
   - .well-known/*
   - .well-known/agent-skills/index.json
+  - .well-known/mcp/server-card.json
 exclude: null
 ignore: null
 theme: vivia

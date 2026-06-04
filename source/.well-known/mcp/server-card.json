@@ -1,0 +1,22 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/mcp-server-card/v1.json",
+  "version": "1.0",
+  "protocolVersion": "2025-06-18",
+  "serverInfo": {
+    "name": "51allai-public-content",
+    "title": "51AllAI Public Content Discovery",
+    "version": "1.0.0"
+  },
+  "description": "Discovery metadata for 51AllAI public AI news, analysis, feeds, and search surfaces.",
+  "iconUrl": "https://51allai.com/avatar.png",
+  "documentationUrl": "https://51allai.com/api/docs/",
+  "transport": {
+    "type": "streamable-http",
+    "endpoint": "https://51allai.com/mcp"
+  },
+  "capabilities": {},
+  "authentication": {
+    "required": false,
+    "schemes": []
+  }
+}

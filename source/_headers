@@ -8,6 +8,10 @@
 /.well-known/agent-skills/index.json
   Content-Type: application/json
 
+/.well-known/mcp/server-card.json
+  Content-Type: application/json
+  Access-Control-Allow-Origin: *
+
 /api/openapi.json
   Content-Type: application/openapi+json
 
