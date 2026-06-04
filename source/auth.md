@@ -24,8 +24,10 @@ The structured metadata is the source of truth for agent access posture:
 
 - `skill`: this file.
 - `register_uri`: registration instructions for this public content site.
+- `claim_uri`: claim instructions for credential flows, currently a not-applicable section.
+- `revocation_uri`: revocation instructions for credential flows, currently a not-applicable section.
 - `identity_types_supported`: supported agent identity types.
-- `credential_types_supported`: supported credential classes for the identity type.
+- `anonymous.credential_types_supported`: supported credential classes for anonymous public access.
 - `scopes_supported`: site-level scopes agents may rely on.
 
 ## Step 2 - Pick a Method
@@ -58,6 +60,11 @@ Useful entry points:
 Claim ceremony is not applicable because this site does not issue agent credentials for public content.
 
 Credential revocation is not applicable because the supported credential type is `none`. If an agent receives a 401 for a URL that was previously public, discard any cached assumption and rediscover from Step 1.
+
+Metadata URLs:
+
+- Claim URI: `https://51allai.com/auth.md#step-4---claim-and-revocation`
+- Revocation URI: `https://51allai.com/auth.md#step-4---claim-and-revocation`
 
 ## Step 5 - Use
 

@@ -14,13 +14,17 @@
   "agent_auth": {
     "skill": "https://51allai.com/auth.md",
     "register_uri": "https://51allai.com/auth.md#step-3---registration-status",
+    "claim_uri": "https://51allai.com/auth.md#step-4---claim-and-revocation",
+    "revocation_uri": "https://51allai.com/auth.md#step-4---claim-and-revocation",
     "identity_types_supported": [
       "anonymous"
     ],
     "anonymous": {
       "credential_types_supported": [
         "none"
-      ]
+      ],
+      "claim_supported": false,
+      "revocation_supported": false
     },
     "credential_types_supported": [
       "none"
