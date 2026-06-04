@@ -1,0 +1,28 @@
+{
+  "linkset": [
+    {
+      "anchor": "https://51allai.com/",
+      "service-desc": [
+        {
+          "href": "https://51allai.com/api/openapi.json",
+          "type": "application/openapi+json",
+          "title": "51AllAI Public Content Discovery OpenAPI"
+        }
+      ],
+      "service-doc": [
+        {
+          "href": "https://51allai.com/api/docs/",
+          "type": "text/html",
+          "title": "51AllAI Public Content Discovery Documentation"
+        }
+      ],
+      "status": [
+        {
+          "href": "https://51allai.com/api/status",
+          "type": "application/json",
+          "title": "51AllAI Public Content Discovery Status"
+        }
+      ]
+    }
+  ]
+}

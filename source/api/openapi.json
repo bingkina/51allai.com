@@ -1,0 +1,172 @@
+{
+  "openapi": "3.1.0",
+  "info": {
+    "title": "51AllAI Public Content Discovery API",
+    "version": "1.0.0",
+    "description": "Machine-readable discovery surface for 51AllAI public content, feeds, search index, authorization metadata, and API catalog metadata."
+  },
+  "servers": [
+    {
+      "url": "https://51allai.com"
+    }
+  ],
+  "paths": {
+    "/": {
+      "get": {
+        "summary": "Site entry point",
+        "description": "Returns the 51AllAI homepage. Clients that send Accept: text/markdown can receive a Markdown representation via the site middleware.",
+        "responses": {
+          "200": {
+            "description": "Homepage HTML or Markdown representation."
+          }
+        }
+      }
+    },
+    "/atom.xml": {
+      "get": {
+        "summary": "Atom feed",
+        "description": "Returns the latest public 51AllAI posts as an Atom feed.",
+        "responses": {
+          "200": {
+            "description": "Atom feed.",
+            "content": {
+              "application/atom+xml": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/search.xml": {
+      "get": {
+        "summary": "Search index",
+        "description": "Returns the local Hexo search index for public posts.",
+        "responses": {
+          "200": {
+            "description": "Search index XML.",
+            "content": {
+              "application/xml": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/.well-known/api-catalog": {
+      "get": {
+        "summary": "API catalog",
+        "description": "Returns the RFC 9727 API catalog as an RFC 9264 Linkset JSON document.",
+        "responses": {
+          "200": {
+            "description": "API catalog linkset.",
+            "content": {
+              "application/linkset+json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Linkset"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/.well-known/oauth-authorization-server": {
+      "get": {
+        "summary": "OAuth authorization server metadata",
+        "description": "Returns public agent-readiness authorization metadata for anonymous content access.",
+        "responses": {
+          "200": {
+            "description": "Authorization server metadata.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/.well-known/oauth-protected-resource": {
+      "get": {
+        "summary": "OAuth protected resource metadata",
+        "description": "Returns public protected-resource metadata for anonymous content access.",
+        "responses": {
+          "200": {
+            "description": "Protected resource metadata.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/status": {
+      "get": {
+        "summary": "API status",
+        "description": "Returns static health metadata for the public content discovery API.",
+        "responses": {
+          "200": {
+            "description": "Status response.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Status"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "Linkset": {
+        "type": "object",
+        "required": [
+          "linkset"
+        ],
+        "properties": {
+          "linkset": {
+            "type": "array",
+            "items": {
+              "type": "object"
+            }
+          }
+        }
+      },
+      "Status": {
+        "type": "object",
+        "required": [
+          "status",
+          "service",
+          "updated"
+        ],
+        "properties": {
+          "status": {
+            "type": "string"
+          },
+          "service": {
+            "type": "string"
+          },
+          "updated": {
+            "type": "string",
+            "format": "date"
+          }
+        }
+      }
+    }
+  }
+}

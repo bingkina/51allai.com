@@ -1,2 +1,12 @@
 /
   Link: </about/>; rel="service-doc"; type="text/html"; title="51AllAI About", </atom.xml>; rel="alternate"; type="application/atom+xml"; title="51AllAI Atom Feed", </search.xml>; rel="search"; type="application/xml"; title="51AllAI Search Index"
+
+/.well-known/api-catalog
+  Content-Type: application/linkset+json
+  Link: </.well-known/api-catalog>; rel="self"; type="application/linkset+json", </api/openapi.json>; rel="service-desc"; type="application/openapi+json", </api/docs/>; rel="service-doc"; type="text/html", </api/status>; rel="status"; type="application/json"
+
+/api/openapi.json
+  Content-Type: application/openapi+json
+
+/api/status
+  Content-Type: application/json
