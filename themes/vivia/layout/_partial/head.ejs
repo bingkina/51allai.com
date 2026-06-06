@@ -96,10 +96,10 @@
 
   <link rel="canonical" href="<%= canonicalUrl %>">
 
-  <% if (page.prev) { %>
+  <% if (page.prev && page.prev_link) { %>
     <link rel="prev" href="<%= config.url.replace(/\/$/, '') + url_for(page.prev_link) %>">
   <% } %>
-  <% if (page.next) { %>
+  <% if (page.next && page.next_link) { %>
     <link rel="next" href="<%= config.url.replace(/\/$/, '') + url_for(page.next_link) %>">
   <% } %>
 

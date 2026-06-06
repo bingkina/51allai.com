@@ -4,8 +4,8 @@ permalink: posts/2026/05/xiaomi-mimo-v25-api-price-cut/
 tags: [xiaomi, mimo, pricing, model-release]
 date: 2026-05-27 12:19:48
 categories: 大模型
-description: 小米 MiMo API 于 2026 年 5 月 27 日永久降价，V2.5 Pro 缓存命中输入降至每百万 Token 0.025 元，Token Plan 用量同步提高 5-8 倍。
-cover: https://platform.xiaomimimo.com/static/KxrVbPwOMofb91xhtzucgLxBnVg.06649fad.png
+description: 小米 MiMo API 于 2026 年 5 月 27 日永久降价，V2.5 Pro 缓存命中输入降至每百万 Token 0.025 元，Token Plan 用量同步提高 5-8 倍，缓存计费成为长上下文 Agent 成本竞争焦点。
+cover: https://images.51allai.com/blog/image_20260603_123034.png
 ---
 
 > 小米 MiMo-V2.5 系列 API 在 2026 年 5 月 27 日 0 点完成一次永久调价。核心变化不是单一模型促销，而是价格表、Token Plan 和缓存计费规则同时重写：V2.5 Pro 国内缓存命中输入价降到每百万 Token 0.025 元，V2.5 降到 0.02 元；官方称最高降幅达到 99%。

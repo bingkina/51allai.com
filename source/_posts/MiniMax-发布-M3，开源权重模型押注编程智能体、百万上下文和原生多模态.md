@@ -5,8 +5,8 @@ tags: [minimax, minimax-m3, open-source, model-release, multimodal]
 date: 2026-06-01 11:20:08
 categories:
   - 智能体
-description: "MiniMax M3 发布，官方称其同时覆盖编程智能体、百万上下文和原生多模态三项能力；API 已开放，权重与技术报告预计约 10 天内发布。"
-cover: https://filecdn.minimax.chat/public/m3-msa-arch-1780248342289.png
+description: "MiniMax M3 发布，官方称其同时覆盖编程智能体、百万上下文和原生多模态三项能力；API 已开放，权重与技术报告预计约 10 天内发布。本文梳理可用性、价格、MSA 架构和开源状态边界。"
+cover: https://images.51allai.com/blog/image_20260603_123034.png
 ---
 
 > MiniMax M3 已在官方页面和第三方 API 平台上线。官方把它定位为首个同时覆盖编程智能体、百万上下文和原生多模态的开源权重前沿模型，但截至发稿，权重与技术报告仍是“约 10 天内发布”的承诺，不能等同于权重已经公开可下载。

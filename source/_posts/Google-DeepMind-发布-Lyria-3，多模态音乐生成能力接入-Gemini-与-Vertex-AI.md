@@ -1,7 +1,7 @@
 ---
 title: Google DeepMind 发布 Lyria 3，多模态音乐生成能力接入 Gemini 与 Vertex AI
 permalink: posts/2026/02/deepmind-lyria-3-gemini-vertex/
-description: "标题：Google DeepMind 发布 Lyria 3，多模态音乐生成能力接入 Gemini 与 Vertex AI DeepMind 推出第三代高保真音乐生成大模型 Lyria 3，首次实现“图/文/视频到音频”的直连生成，并同步作为可编程基础设施开放 API。"
+description: "Google DeepMind 推出第三代高保真音乐生成大模型 Lyria 3，首次实现图文视频到音频的直连生成，并同步接入 Gemini 与 Vertex AI，作为可编程音频基础设施开放给消费者和开发者。"
 categories: 多模态
 tags: [google, lyria, audio-generation, model-release]
 date: 2026-02-19 19:41:11

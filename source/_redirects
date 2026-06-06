@@ -2,6 +2,7 @@
 # 3. Hexo 长 URL → 短 slug URL（2026-04 URL 迁移）
 #    存量 36 篇文章从 /posts/YYYY/MM/DD/<中文长 URL>/ 迁至 /posts/YYYY/MM/<slug>/
 # ---------------------------------------------------------------
+/posts/2026/04/MiMo-V2.5/  /posts/2026/04/mimo-v2.5/  301
 /posts/2026/04/16/Anthropic-%E5%8F%91%E5%B8%83-Claude-Opus-4-7-%E4%B8%8E%E9%87%8D%E6%9E%84%E7%89%88-Claude-Code/  /posts/2026/04/anthropic-claude-opus-4-7/  301
 /posts/2026/02/19/Google-DeepMind-%E5%8F%91%E5%B8%83-Lyria-3%EF%BC%8C%E5%A4%9A%E6%A8%A1%E6%80%81%E9%9F%B3%E4%B9%90%E7%94%9F%E6%88%90%E8%83%BD%E5%8A%9B%E6%8E%A5%E5%85%A5-Gemini-%E4%B8%8E-Vertex-AI/  /posts/2026/02/deepmind-lyria-3-gemini-vertex/  301
 /posts/2026/02/18/Google-NotebookLM-%E6%94%AF%E6%8C%81%E5%B9%BB%E7%81%AF%E7%89%87%E5%8D%95%E9%A1%B5%E5%B1%80%E9%83%A8%E4%BF%AE%E6%94%B9%E5%B9%B6%E5%BC%80%E6%94%BE-PPTX-%E5%AF%BC%E5%87%BA/  /posts/2026/02/notebooklm-slide-edit-pptx-export/  301

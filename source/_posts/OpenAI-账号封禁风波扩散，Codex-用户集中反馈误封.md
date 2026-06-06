@@ -4,7 +4,7 @@ permalink: posts/2026/06/openai-account-ban-wave-codex/
 tags: [openai, codex, security, product-update]
 date: 2026-06-05 23:32:03
 categories: [行业观察]
-description: OpenAI 账号封禁反馈在 Codex 用户社区集中出现，部分用户称误封后已恢复。本文梳理已确认信息、官方规则和仍待核实的风险边界。
+description: OpenAI 账号封禁反馈在 Codex 用户社区集中出现，部分用户称误封后已恢复。本文梳理已确认信息、官方规则、仍待核实的风险边界，以及开发者账号风控自查建议。
 cover: https://images.51allai.com/blog/ChatGPT_Image_2026年6月5日_23_37_19_20260605_233826.png
 ---
 
