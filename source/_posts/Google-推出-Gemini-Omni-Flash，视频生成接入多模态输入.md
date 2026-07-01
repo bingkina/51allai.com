@@ -5,7 +5,6 @@ tags: [google, gemini, gemini-omni, video-generation, model-release]
 date: 2026-07-01 10:10:46
 categories:
   - 多模态
-  - 大模型
 description: Gemini Omni Flash 是 Google 新的多模态视频生成模型，支持文本、图片、视频和音频输入，并先落地 Flow、Gemini 和 YouTube Shorts。本文梳理可用渠道、编辑能力、内部评测口径和第三方验证缺口。
 cover: https://images.51allai.com/blog/截图2026-07-01_10.03.01@2x_20260701_101708.png
 ---
