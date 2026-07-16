@@ -3,7 +3,7 @@ title: OpenAI创始成员Karpathy宣布加入Anthropic，专注前沿LLM研发
 date: 2026-05-20 00:49:29
 permalink: posts/2026/05/karpathy-joins-anthropic/
 categories:
-  - AI资讯
+  - 行业观察
 tags:
   - anthropic
   - karpathy
