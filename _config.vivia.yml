@@ -8,7 +8,7 @@ rss: /atom.xml
 home:
   style: detail           # default, detail
 
-favicon:                         # Keep empty to use the theme's light/dark favicon variants
+favicon: https://51allai.com/icon.png
 
 # Banner
 banner:
