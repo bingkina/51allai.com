@@ -1,12 +1,7 @@
 <navbar id="navbar">
   <nav id="title-nav">
     <a href="<%- url_for("/") %>">
-      <div id="vivia-logo">
-        <div class="dot"></div>
-        <div class="dot"></div>
-        <div class="dot"></div>
-        <div class="dot"></div>
-      </div>
+      <img id="vivia-logo" src="<%- url_for(theme.favicon || '/icon.png') %>" alt="<%= config.title %>">
       <div><%- config.title %> </div>
     </a>
   </nav>
