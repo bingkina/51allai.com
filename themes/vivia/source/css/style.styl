@@ -25,6 +25,21 @@ body, #container
   overflow-x: hidden
   height: 100%    // make sidebar's sticky work
 
+#content-body
+  min-width: 0
+
+// Keep responsive AdSense placements from widening the mobile content grid.
+.google-auto-placed
+.adsbygoogle
+  box-sizing: border-box
+  min-width: 0 !important
+  max-width: 100% !important
+  width: 100% !important
+  overflow: hidden !important
+  iframe
+    min-width: 0 !important
+    max-width: 100% !important
+
 body
   font: font-size font-sans
   -webkit-text-size-adjust: 100%
@@ -85,17 +100,20 @@ body
     #content-body
       grid-column: 1
   @media mq-mobile
-    grid-template-columns: auto auto
+    grid-template-columns: minmax(0, 1fr)
+    #nav
+      grid-column-end: 2
     #sidebar-wrapper
       grid-row: 3
       grid-column-start: 1
-      grid-column-end: 3
+      grid-column-end: 2
       margin-top: 48px
     #content-body
       grid-column-start: 1
-      grid-column-end: 3
+      grid-column-end: 2
     #footer-wrapper
       grid-row: 4
+      grid-column-end: 2
   @media mq-tablet
     grid-template-columns: auto auto
     #sidebar-wrapper
