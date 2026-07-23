@@ -13,6 +13,7 @@
 - 部署：推送到 Git 后由 Cloudflare Pages 构建发布。
 - SEO：依赖 sitemap、Atom feed、IndexNow、百度主动推送、结构化数据、canonical URL、Open Graph 和 Twitter Card。
 - 搜索：Algolia 远程索引 + `hexo-generator-search` 本地 `search.xml`。
+- Agent 访问：Cloudflare Pages 中间件支持通过 `Accept: text/markdown` 获取 Markdown，并提供 WebMCP、公开 API 目录和 `.well-known` 发现元数据。
 
 ## 项目结构
 
@@ -35,7 +36,11 @@
 │   └── seo-enhance.js           # 首图/懒加载/og:image 辅助
 ├── source/                      # Hexo 源内容与静态资源
 │   ├── _posts/                  # 已发布文章 Markdown
+│   ├── _drafts/                 # 草稿文章（普通 build 默认不生成）
 │   ├── _redirects               # Cloudflare Pages 重定向规则
+│   ├── _headers                 # Cloudflare Pages 响应头规则
+│   ├── .well-known/             # API、授权、MCP、Agent Skills、DNS-AID 等发现元数据
+│   ├── api/                     # 公开 API 描述、文档与静态状态
 │   ├── robots.txt
 │   ├── search/index.md
 │   ├── about/index.md
@@ -45,7 +50,12 @@
 │   ├── source/css/              # Stylus 样式
 │   └── scripts/                 # 主题自身脚本
 ├── functions/                   # Cloudflare Pages Functions
+│   ├── _middleware.js           # 根据 Accept 头协商 HTML/Markdown 响应
+│   ├── markdown-negotiation.js  # HTML 转 Markdown 与响应头处理
 │   └── archives/[id].js         # 旧 WordPress 数字归档 URL 返回 410
+├── dns/
+│   └── dns-aid.zone             # Agent 服务发现所需的 DNS-AID 记录参考
+├── test/                        # Node.js 内置测试：Markdown、API、WebMCP、DNS-AID
 ├── .tools/                      # 发布辅助脚本
 │   ├── submit-indexnow.js
 │   ├── submit-baidu.js
@@ -81,6 +91,12 @@ npm run build
 生成静态文件到 `public/`。这是最重要的本地质量检查命令。
 
 ```bash
+node --test test/*.test.mjs
+```
+
+运行仓库内的 Node.js 测试，覆盖 Markdown 内容协商、API catalog、WebMCP 和 DNS-AID。
+
+```bash
 npm run clean
 ```
 
@@ -101,9 +117,10 @@ npm run publish
 
 ## 测试与验证
 
-本仓库没有独立测试框架。主要验证方式是 Hexo 构建：
+本仓库使用 Node.js 内置测试，并以 Hexo 构建作为主要集成验证：
 
 ```bash
+node --test test/*.test.mjs
 npm run build
 ```
 
@@ -114,12 +131,15 @@ npm run build
 - 修改 Hexo 配置、主题模板、脚本、文章 frontmatter 后，至少运行 `npm run build`。
 - 修改页面交互或样式后，运行 `npm run server`，在浏览器检查首页、文章页、归档页、标签页和移动端布局。
 - 修改 `functions/archives/[id].js` 后，应按 Cloudflare Pages Functions 语义检查 `/archives/<数字>` 返回 410，非数字归档路径继续交给静态资源或 `_redirects`。
+- 修改 `functions/_middleware.js` 或 `functions/markdown-negotiation.js` 后，至少运行 `test/markdown-negotiation.test.mjs`，并确认普通 HTML 请求不变、`Accept: text/markdown` 请求返回 Markdown。
+- 修改 `themes/vivia/source/js/webmcp.js` 后，至少运行 `test/webmcp.test.mjs`。
+- 修改 `source/.well-known/`、`source/api/`、`source/_headers` 或 `dns/dns-aid.zone` 后，运行对应的 API catalog 或 DNS-AID 测试，并确认 `_config.yml` 的 `include:` 仍会复制这些以下划线或点开头的文件。
 - 修改 `_redirects` 后，应确认旧 URL 到新 URL 的 301/200 规则顺序没有被更宽泛的规则提前吞掉。
 - 修改 `.tools/submit-*.js` 只在需要验证发布推送时运行；这些脚本会访问外部服务。
 
 ## 内容写作约定
 
-正式文章位于 `source/_posts/`。推荐 frontmatter：
+正式文章位于 `source/_posts/`，草稿位于 `source/_drafts/`。普通 `npm run build` 不包含草稿；需要检查草稿时使用 `npx hexo generate --draft`。推荐 frontmatter：
 
 ```yaml
 ---
@@ -184,7 +204,7 @@ Markdown：
 
 - `_config.yml` 中 `pretty_urls.trailing_index: false` 和 `trailing_html: false` 用于减少重复 URL，不要随意改动。
 - `_config.yml` 的 `updated_option: date` 让 sitemap `lastmod` 使用文章发布日期，避免批量改文件导致搜索引擎误判全部更新。
-- `source/_redirects` 必须列在 `_config.yml` 的 `include:` 中，因为 Hexo 默认忽略下划线开头文件。
+- `source/_redirects`、`source/_headers` 和所需的 `source/.well-known/` 文件必须列在 `_config.yml` 的 `include:` 中，因为 Hexo 默认会忽略下划线或点开头的路径。
 - Algolia 写入密钥应来自 `.env` 的 `HEXO_ALGOLIA_INDEXING_KEY`，不要把管理密钥写入仓库配置。
 - `scripts/seo-enhance.js` 会给正文图片注入首图优先级和懒加载属性，修改图片 HTML 处理时要避免破坏 LCP 优化。
 - `scripts/related-posts.js` 只按共享标签计算相关文章，因为本站分类维度区分度较低。
@@ -202,7 +222,7 @@ Markdown：
 
 - 开始修改前先检查 `git status --short`，不要覆盖用户未提交的改动。
 - 查找文件优先使用 `rg` / `rg --files`。
-- 修改内容、配置、脚本后优先运行 `npm run build` 验证。
+- 修改内容、配置、脚本后优先运行相关的 `node --test` 测试和 `npm run build` 验证。
 - 不要手工编辑 `public/` 生成物，除非任务明确要求检查构建输出。
 - 不要提交、推送或发布，除非用户明确要求。
 - 对 SEO、URL、重定向、发布脚本的改动要保守，优先保持现有行为。
