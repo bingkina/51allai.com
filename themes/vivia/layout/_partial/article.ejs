@@ -1,11 +1,17 @@
 <% let cover = post.photos && post.photos.length %> 
 <% let description = post.description && post.description.length %>
+<% let coverImage = post.cover || (cover ? post.photos[0] : first_content_image(post.content)) %>
 
-<article id="<%= post.layout %>-<%= post.slug %>" class="h-entry article article-type-<%= post.layout %>" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-  <% if (is_post() || theme.home.style == 'detail') { %>
+<article id="<%= post.layout %>-<%= post.slug %>" class="h-entry article article-type-<%= post.layout %><% if (index) { %> home-story<% if (position === 0) { %> lead-story<% } %><% if (!coverImage) { %> no-cover<% } %><% } %>" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <% if (!index) { %>
     <%- partial('post/gallery') %>
   <% } %> 
   <div class="article-inner">
+    <% if (index && coverImage) { %>
+      <a class="article-cover" href="<%- url_for(post.path) %>" aria-label="阅读：<%- post.title %>">
+        <img src="<%- url_for(coverImage) %>" alt="<%- post.title %>" loading="<%= position === 0 ? 'eager' : 'lazy' %>" decoding="async"<% if (position === 0) { %> fetchpriority="high"<% } %>>
+      </a>
+    <% } %>
     <div class="article-main">
       <header class="article-header">
         <%- partial('post/title', {class_name: 'p-name article-title'}) %>
@@ -15,17 +21,19 @@
             <%- partial('post/category') %>  
           </div>
         </div>
-        <%- partial('post/tag') %>
+        <% if (!index) { %>
+          <%- partial('post/tag') %>
+        <% } %>
       </header>
       <div class="e-content article-entry" itemprop="articleBody">
-        <% if (post.excerpt && index){ %>
-          <%- post.excerpt %>
-        <% } else if (is_home() && !post.excerpt && theme.home.style != 'detail') { %>
+        <% if (index) { %>
           <div class="truncate-text">
             <% if(description){ %>
               <%- strip_html(post.description) %>
+            <% } else if (post.excerpt) { %>
+              <%- strip_html(post.excerpt) %>
             <% } else{ %>
-              <%- truncate(strip_html(post.content), {length: 500}) %>
+              <%- truncate(strip_html(post.content), {length: 180}) %>
             <% } %>
           </div>
         <% } else { %>
@@ -33,17 +41,15 @@
         <% } %>
       </div>
 
-      <% if (theme.home.style == 'detail') { %> 
+      <% if (index) { %>
         <footer class="article-footer">
-          <% if(post.excerpt && index) { %> 
-            <a href="<%- url_for(post.path) %>#more" class="article-more-link">
-              <%= __('read_more') %><i class="fa-solid fa-angle-right"></i>
-            </a>
-          <% } %> 
+          <a href="<%- url_for(post.path) %>" class="article-more-link">
+            阅读全文<span aria-hidden="true">→</span>
+          </a>
         </footer>
       <% } %>   
     </div>
-    
+
     <% if (theme.home.style != 'detail' && is_home()) { %> 
     <a class="right-panel <% if (cover) { %> with-pic <% } else { %> non-pic <% } %> "
       <% if (cover) { %> style="background-image: url(<%- url_for(post.photos[0]) %>)" <% } %>

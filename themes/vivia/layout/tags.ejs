@@ -1,0 +1,35 @@
+<%
+  const allTags = [];
+  site.tags.each(function(tag) {
+    allTags.push(tag);
+  });
+  allTags.sort(function(a, b) {
+    return b.length - a.length || a.name.localeCompare(b.name, 'zh-CN');
+  });
+%>
+
+<section class="tag-index-page" aria-labelledby="tag-index-title">
+  <header class="tag-index-header">
+    <p class="tag-index-kicker">TOPICS</p>
+    <div class="tag-index-heading">
+      <div>
+        <h1 id="tag-index-title">标签</h1>
+        <p>从模型、产品到行业趋势，按主题浏览全部内容。</p>
+      </div>
+      <span class="tag-index-total"><%- allTags.length %> 个主题</span>
+    </div>
+  </header>
+
+  <% if (allTags.length) { %>
+    <div class="tag-index-grid">
+      <% allTags.forEach(function(tag) { %>
+        <a class="tag-index-item" href="<%- url_for(tag.path) %>">
+          <span class="tag-index-name"><%- tag.name %></span>
+          <span class="tag-index-count" aria-label="<%- tag.length %> 篇文章"><%- tag.length %></span>
+        </a>
+      <% }); %>
+    </div>
+  <% } else { %>
+    <p class="tag-index-empty">暂时还没有标签。</p>
+  <% } %>
+</section>

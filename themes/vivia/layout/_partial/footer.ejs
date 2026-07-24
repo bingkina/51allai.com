@@ -6,7 +6,8 @@
     <% if (theme.copyright){ %>
       <%- render(theme.copyright, 'pug'); %>
     <% } %>
-    &copy; <%= date(new Date(), 'YYYY') %> <%= theme.author || config.author || config.title %><br>
-    <%= __('powered_by') %> <a href="https://hexo.io/" target="_blank">Hexo</a> & Theme <a href="https://github.com/saicaca/hexo-theme-vivia">Vivia</a>
+    <strong><%= theme.author || config.author || config.title %></strong>
+    <span>记录 AI 的现在，理解技术的下一步。</span>
+    <small>&copy; <%= date(new Date(), 'YYYY') %> · <a href="<%- url_for('/atom.xml') %>">RSS 订阅</a> &amp; <a href="<%- url_for('/sitemap.xml') %>">Sitemap</a></small>
   </div>
 </footer>

@@ -1,6 +1,8 @@
-<% page.posts.each(function(post){ %>
-  <%- partial('_partial/article', {post: post, index: true}) %>
-<% }) %>
+<section class="story-feed" aria-label="文章列表">
+  <% page.posts.each(function(post, position){ %>
+    <%- partial('_partial/article', {post: post, index: true, position: position}) %>
+  <% }) %>
+</section>
 <% if (page.total > 1){ %>
   <nav id="page-nav">
     <!-- 在第二页时 page.prev_link 不知为何无法返回正确的链接 -->

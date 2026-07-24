@@ -1,7 +1,8 @@
 # Header
 menu:                      # Links in the navigation bar
-  Home: /
-  Archives: /archives/
+  首页: /
+  文章归档: /archives/
+  标签: /tags/
 #  About: /about
 rss: /atom.xml
 
@@ -48,7 +49,6 @@ sidebar:
       - profile
     sticky:                # Stick to the top of the page
       - recent_posts
-      - tag
       - category
       - archive
 

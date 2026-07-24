@@ -1,34 +1,50 @@
-<navbar id="navbar">
+<header id="navbar">
   <nav id="title-nav">
-    <a href="<%- url_for("/") %>">
-      <img id="vivia-logo" src="<%- url_for(theme.favicon || '/icon.png') %>" alt="<%= config.title %>">
-      <div><%- config.title %> </div>
+    <a href="<%- url_for("/") %>" aria-label="<%= config.title %> 首页">
+      <img id="vivia-logo" src="<%- url_for(theme.avatar || theme.favicon || '/icon.png') %>" alt="<%= config.title %>">
+      <div class="brand-lockup">
+        <strong><%- config.title %></strong>
+        <span>AI 科技资讯</span>
+      </div>
     </a>
   </nav>
-  <nav id="main-nav">
+  <nav id="main-nav" aria-label="主要导航">
+    <%
+      const currentPath = (page.path || '').replace(/^\/+/, '').replace(/index\.html$/, '');
+      function isCurrentMenuItem(menuPath) {
+        const normalizedMenuPath = menuPath.replace(/^\/+|\/+$/g, '');
+        if (!normalizedMenuPath) {
+          return is_home();
+        }
+        return currentPath === normalizedMenuPath + '/' ||
+          currentPath.indexOf(normalizedMenuPath + '/') === 0;
+      }
+    %>
     <% for (var i in theme.menu){ %>
-      <a class="main-nav-link" href="<%- url_for(theme.menu[i]) %>"><%= i %></a>
+      <% const isCurrent = isCurrentMenuItem(theme.menu[i]); %>
+      <a class="main-nav-link<% if (isCurrent) { %> active<% } %>" href="<%- url_for(theme.menu[i]) %>"<% if (isCurrent) { %> aria-current="page"<% } %>><%= i %></a>
     <% } %>
   </nav>
-  <nav id="sub-nav">
-    <a id="theme-btn" class="nav-icon">
+  <nav id="sub-nav" aria-label="辅助导航">
+    <button id="theme-btn" class="nav-icon" type="button" aria-label="切换到浅色模式" title="切换显示模式">
       <span class="light-mode-icon"><%- partial('_icon/wb_sunny') %></span>
       <span class="dark-mode-icon"><%- partial('_icon/dark_mode') %></span>
-    </a>
+    </button>
     <% if (theme.rss){ %>
       <a id="nav-rss-link" class="nav-icon mobile-hide" href="<%- url_for(theme.rss) %>" title="<%= __('rss_feed') %>">
         <%- partial('_icon/rss_feed') %>
       </a>
     <% } %>
-    <div id="nav-menu-btn" class="nav-icon">
+    <button id="nav-menu-btn" class="nav-icon" type="button" aria-label="打开导航菜单" aria-expanded="false" aria-controls="nav-dropdown">
       <%- partial('_icon/menu') %>
-    </div>
+    </button>
   </nav>
-</navbar>
-<div id="nav-dropdown" class="hidden">
+</header>
+<div id="nav-dropdown" class="hidden" aria-hidden="true">
   <div id="dropdown-link-list">
     <% for (var i in theme.menu){ %>
-      <a class="nav-dropdown-link" href="<%- url_for(theme.menu[i]) %>"><%= i %></a>
+      <% const isCurrent = isCurrentMenuItem(theme.menu[i]); %>
+      <a class="nav-dropdown-link<% if (isCurrent) { %> active<% } %>" href="<%- url_for(theme.menu[i]) %>"<% if (isCurrent) { %> aria-current="page"<% } %>><%= i %></a>
     <% } %>
     <% if (theme.rss) { %>
       <a class="nav-dropdown-link" href="<%- url_for(theme.rss) %>" title="<%= __('rss_feed') %>">RSS</a>
@@ -39,6 +55,10 @@
   let dropdownBtn = document.getElementById("nav-menu-btn");
   let dropdownEle = document.getElementById("nav-dropdown");
   dropdownBtn.onclick = function() {
-    dropdownEle.classList.toggle("hidden");
+    const isOpen = dropdownBtn.getAttribute("aria-expanded") === "true";
+    dropdownBtn.setAttribute("aria-expanded", String(!isOpen));
+    dropdownBtn.setAttribute("aria-label", isOpen ? "打开导航菜单" : "关闭导航菜单");
+    dropdownEle.setAttribute("aria-hidden", String(isOpen));
+    dropdownEle.classList.toggle("hidden", isOpen);
   }
 </script>

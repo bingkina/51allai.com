@@ -1,0 +1,755 @@
+// 51ALLAI editorial redesign.
+// This file intentionally loads last so the upstream Vivia theme stays easy to compare and update.
+
+:root
+  --primary: #7c3aed
+  --primary-strong: #5b21b6
+  --secondary: #4f46e5
+  --accent: #db2777
+  --page-background: #f7f5fc
+  --card-background: #ffffff
+  --surface-muted: #f1edfa
+  --surface-raised: #ffffff
+  --main-title: #151226
+  --article-text: #302b3e
+  --article-meta: #625d72
+  --text-muted: #625d72
+  --border-subtle: #e6e0f0
+  --focus-ring: #7c3aed
+  --btn-text-content: #6d28d9
+  --btn-text-neutral-text: #4f4a5f
+  --btn-text-light-text: #5b21b6
+  --btn-text-hover: #f1edfa
+  --btn-text-active: #e8e0f7
+  --btn-bg: #f1edfa
+  --btn-hover: #e8e0f7
+  --btn-active: #ddd0f2
+  --btn-content: #5b21b6
+  --btn-content-hover: #4c1d95
+  --card-btn-bg: #ffffff
+  --card-btn-hover: #f1edfa
+  --card-btn-active: #e8e0f7
+  --info-name: #151226
+  --info-sub: #625d72
+  --widget-title: #151226
+  --link: #6d28d9
+  --link-hover-bg: #f1edfa
+  --link-active-bg: #e8e0f7
+  --blockquote-bg: #f6f2fc
+  --tag-dot: #7c3aed
+  --badge-bg: #ede9fe
+  --text-on-light: #5b21b6
+  --nav-dropdown-bg: #ffffff
+  --selection-bg: #ddd6fe
+  --shadow-card: 0 16px 48px rgba(45, 28, 76, 0.07)
+  --shadow-hover: 0 20px 56px rgba(45, 28, 76, 0.12)
+
+:root[theme='light']
+  --primary: #7c3aed
+  --primary-strong: #5b21b6
+  --secondary: #4f46e5
+  --accent: #db2777
+  --page-background: #f7f5fc
+  --card-background: #ffffff
+  --surface-muted: #f1edfa
+  --surface-raised: #ffffff
+  --main-title: #151226
+  --article-text: #302b3e
+  --article-meta: #625d72
+  --text-muted: #625d72
+  --border-subtle: #e6e0f0
+  --focus-ring: #7c3aed
+  --btn-text-content: #6d28d9
+  --btn-text-neutral-text: #4f4a5f
+  --btn-text-light-text: #5b21b6
+  --btn-text-hover: #f1edfa
+  --btn-text-active: #e8e0f7
+  --btn-bg: #f1edfa
+  --btn-hover: #e8e0f7
+  --btn-active: #ddd0f2
+  --btn-content: #5b21b6
+  --btn-content-hover: #4c1d95
+  --card-btn-bg: #ffffff
+  --card-btn-hover: #f1edfa
+  --card-btn-active: #e8e0f7
+  --info-name: #151226
+  --info-sub: #625d72
+  --widget-title: #151226
+  --link: #6d28d9
+  --link-hover-bg: #f1edfa
+  --link-active-bg: #e8e0f7
+  --blockquote-bg: #f6f2fc
+  --tag-dot: #7c3aed
+  --badge-bg: #ede9fe
+  --text-on-light: #5b21b6
+  --nav-dropdown-bg: #ffffff
+  --selection-bg: #ddd6fe
+
+:root[theme='dark']
+  --primary: #a78bfa
+  --primary-strong: #c4b5fd
+  --secondary: #818cf8
+  --accent: #f472b6
+  --page-background: #090d18
+  --card-background: #111827
+  --surface-muted: #182033
+  --surface-raised: #151d2d
+  --main-title: #f8fafc
+  --article-text: #d8deea
+  --article-meta: #aeb8cc
+  --text-muted: #aeb8cc
+  --border-subtle: #293248
+  --focus-ring: #c4b5fd
+  --btn-text-content: #c4b5fd
+  --btn-text-neutral-text: #c5cddd
+  --btn-text-light-text: #ddd6fe
+  --btn-text-hover: #202940
+  --btn-text-active: #29344e
+  --btn-bg: #202940
+  --btn-hover: #29344e
+  --btn-active: #34405d
+  --btn-content: #ddd6fe
+  --btn-content-hover: #ffffff
+  --card-btn-bg: #111827
+  --card-btn-hover: #202940
+  --card-btn-active: #29344e
+  --info-name: #f8fafc
+  --info-sub: #aeb8cc
+  --widget-title: #f8fafc
+  --link: #c4b5fd
+  --link-hover-bg: #202940
+  --link-active-bg: #29344e
+  --blockquote-bg: #182033
+  --tag-dot: #a78bfa
+  --badge-bg: #2e2652
+  --text-on-light: #ddd6fe
+  --nav-dropdown-bg: #111827
+  --selection-bg: #443870
+  --shadow-card: 0 18px 56px rgba(0, 0, 0, 0.22)
+  --shadow-hover: 0 22px 64px rgba(0, 0, 0, 0.32)
+
+html
+  scroll-behavior: smooth
+
+body
+  color: var(--article-text)
+  font-family: Roboto, "PingFang SC", "Noto Sans CJK SC", "Microsoft YaHei", sans-serif
+  line-height: 1.65
+  background:
+    radial-gradient(circle at 8% 0%, rgba(124, 58, 237, 0.10), transparent 28rem),
+    var(--page-background)
+
+a, button
+  touch-action: manipulation
+
+button
+  font: inherit
+
+a:focus-visible,
+button:focus-visible
+  outline: 3px solid var(--focus-ring)
+  outline-offset: 3px
+
+.skip-link
+  position: fixed
+  top: 12px
+  left: 12px
+  z-index: 1000
+  padding: 10px 16px
+  border-radius: 10px
+  color: white
+  background: var(--primary-strong)
+  transform: translateY(-160%)
+  transition: transform 180ms ease-out
+  &:focus
+    transform: translateY(0)
+
+#main-grid
+  max-width: 1280px
+  grid-template-columns: minmax(0, 1fr) 296px
+  grid-gap: 24px
+  padding: 0 24px
+  &.right-sidebar
+    grid-template-columns: minmax(0, 1fr) 296px
+  #content-body
+    grid-column: 1
+  #sidebar-wrapper
+    grid-column: 2
+  #content-body
+    overflow: visible
+    outline: none
+  @media mq-tablet
+    padding: 0 20px
+    grid-gap: 20px
+  @media mq-mobile
+    padding: 0 14px
+    grid-gap: 16px
+
+:root #nav
+  height: 88px
+  position: relative
+  z-index: 100
+
+#navbar
+  height: 72px
+  display: flex
+  align-items: center
+  justify-content: space-between
+  position: sticky
+  margin: 0 auto
+  top: 8px
+  z-index: 100
+  border: 1px solid var(--border-subtle)
+  border-radius: 18px
+  background: rgba(255, 255, 255, 0.88)
+  box-shadow: 0 8px 32px rgba(45, 28, 76, 0.08)
+  backdrop-filter: blur(16px)
+  -webkit-backdrop-filter: blur(16px)
+
+:root[theme='dark'] #navbar
+  background: rgba(17, 24, 39, 0.88)
+
+#title-nav
+  margin-left: 8px
+  a
+    height: 56px
+    padding: 0 14px
+    gap: 12px
+    #vivia-logo
+      width: 36px
+      height: 36px
+      margin-right: 0
+      border-radius: 10px
+  .brand-lockup
+    display: flex
+    flex-direction: column
+    line-height: 1.1
+    strong
+      color: var(--main-title)
+      font-size: 17px
+      letter-spacing: 0.02em
+    span
+      color: var(--text-muted)
+      font-size: 11px
+      font-weight: 500
+      margin-top: 4px
+
+#main-nav
+  gap: 4px
+
+.main-nav-link
+  position: relative
+  height: 44px
+  padding: 0 18px
+  font-size: 15px
+  &.active
+    color: var(--primary)
+    background: var(--surface-muted)
+    &:after
+      content: ""
+      position: absolute
+      left: 18px
+      right: 18px
+      bottom: 5px
+      height: 2px
+      border-radius: 2px
+      background: var(--primary)
+
+.nav-dropdown-link.active
+  color: var(--primary)
+  background: var(--surface-muted)
+
+#sub-nav
+  margin-right: 10px
+  .nav-icon
+    border: 0
+    background: transparent
+    padding: 0
+
+#nav-dropdown
+  position: relative
+  z-index: 90
+  margin: -8px 8px 0
+  border: 1px solid var(--border-subtle)
+  box-shadow: var(--shadow-card)
+  .nav-dropdown-link
+    min-height: 44px
+    box-sizing: border-box
+
+.article
+  margin-bottom: 20px
+
+.article-inner
+  border: 1px solid var(--border-subtle)
+  border-radius: 22px
+  box-shadow: var(--shadow-card)
+  transition: background 180ms ease-out, border-color 180ms ease-out, box-shadow 180ms ease-out
+
+.home-story
+  .article-inner
+    display: grid
+    grid-template-columns: minmax(280px, 38%) minmax(0, 1fr)
+    background: var(--card-background)
+    overflow: hidden
+  .article-cover
+    align-self: start
+    min-height: 0
+    aspect-ratio: 5 / 2
+    margin: 28px 0 0 28px
+    display: block
+    overflow: hidden
+    box-sizing: border-box
+    border: 1px solid var(--border-subtle)
+    border-radius: 16px
+    background: var(--surface-muted)
+    box-shadow: 0 10px 30px rgba(25, 18, 45, 0.08)
+    img
+      width: 100%
+      height: 100%
+      aspect-ratio: 5 / 2
+      display: block
+      object-fit: cover
+      transition: transform 300ms ease-out
+  .article-main
+    z-index: 1
+    margin-right: 0
+    padding: 0
+    border-radius: 0
+  .article-header
+    padding: 28px 32px 0
+  .article-entry
+    padding: 0 32px
+  .article-title
+    font-family: "Songti SC", "Noto Serif CJK SC", STSong, Georgia, serif
+    font-size: clamp(26px, 3vw, 38px)
+    line-height: 1.22
+    letter-spacing: -0.02em
+  .truncate-text
+    -webkit-line-clamp: 2
+    line-clamp: 2
+    margin: 14px 0 8px
+    color: var(--text-muted)
+    font-size: 16px
+    line-height: 1.75
+  .article-footer
+    margin: 0
+    padding: 0 32px 24px
+  .article-more-link
+    float: none
+    width: fit-content
+    min-height: 44px
+    padding: 0
+    gap: 10px
+    color: var(--primary)
+    font-weight: 700
+    &:hover
+      padding-right: 8px
+      background: transparent
+
+.home-story:not(.no-cover)
+  .article-cover
+    grid-column: 1
+    grid-row: 1
+  .article-main
+    display: contents
+  .article-header
+    grid-column: 2
+    grid-row: 1
+  .article-entry
+    grid-column: 1 / -1
+    grid-row: 2
+    padding: 0 28px
+  .article-footer
+    grid-column: 1 / -1
+    grid-row: 3
+    padding: 0 28px 20px
+
+.home-story.no-cover
+  .article-inner
+    grid-template-columns: minmax(0, 1fr)
+    min-height: 286px
+    background:
+      linear-gradient(120deg, rgba(124, 58, 237, 0.06), transparent 55%),
+      var(--card-background)
+  .article-main
+    display: flex
+    flex-direction: column
+    justify-content: center
+    background: transparent
+  .article-header
+    padding: 30px 36px 0
+  .article-entry
+    width: 100%
+    max-width: none
+    box-sizing: border-box
+    padding: 0 36px
+  .article-title
+    max-width: 780px
+    font-size: clamp(30px, 3.5vw, 42px)
+  .truncate-text
+    -webkit-line-clamp: 2
+    line-clamp: 2
+    margin-top: 12px
+  .article-footer
+    padding: 0 36px 24px
+
+@media (hover: hover)
+  .home-story .article-inner:hover
+    border-color: rgba(124, 58, 237, 0.32)
+    box-shadow: var(--shadow-hover)
+    .article-cover img
+      transform: scale(1.025)
+.article-main
+  background: var(--card-background)
+
+.article-header
+  .main-title-dot
+    display: none
+
+.article-title
+  font-family: "Songti SC", "Noto Serif CJK SC", STSong, Georgia, serif
+  letter-spacing: -0.02em
+
+.meta-info-bar
+  font-size: 14px
+
+.article-tag-list-link,
+.widget-tag-list-link
+  min-height: 34px
+  border: 1px solid var(--border-subtle)
+
+.article:not(.home-story) .article-entry
+  max-width: 760px
+  margin-left: auto
+  margin-right: auto
+
+.article-entry
+  font-size: 17px
+  line-height: 1.78
+  p, table
+    line-height: 1.78
+  h2
+    margin-top: 2em
+    font-family: "Songti SC", "Noto Serif CJK SC", STSong, Georgia, serif
+    font-size: 1.65em
+  h3
+    margin-top: 1.8em
+    font-size: 1.3em
+  blockquote
+    border-left: 4px solid var(--primary)
+    padding: 4px 24px
+  img, video
+    border: 1px solid var(--border-subtle)
+    border-radius: 14px
+
+.article-gallery
+  border-radius: 22px 22px 0 0
+  margin-bottom: -22px
+  img
+    aspect-ratio: 5 / 2
+
+#sidebar .sticky
+  top: 96px
+
+.widget,
+.info-card
+  border: 1px solid var(--border-subtle)
+  border-radius: 20px
+  box-shadow: none
+
+.info-card
+  padding: 20px
+  text-align: left
+  .avatar
+    width: 64px
+    height: 64px
+    margin: 0 0 16px
+    border-radius: 16px
+    img
+      width: 100%
+      height: 100%
+      object-fit: cover
+  .info
+    padding: 0
+  .dot
+    width: 32px
+    margin: 8px 0 12px
+  .link-list
+    justify-content: flex-start
+    margin-top: 14px
+    .link-btn
+      width: 44px
+      height: 44px
+
+.widget-title
+  font-size: 17px
+  &:before
+    width: 3px
+    height: 16px
+    margin-left: 0
+
+.recent-link,
+.category-link,
+.archive-link
+  min-height: 44px
+
+.tag-index-page
+  overflow: hidden
+  border: 1px solid var(--border-subtle)
+  border-radius: 24px
+  color: var(--article-text)
+  background: var(--card-background)
+  box-shadow: var(--shadow-card)
+
+.tag-index-header
+  padding: 40px 44px 32px
+  border-bottom: 1px solid var(--border-subtle)
+  background:
+    radial-gradient(circle at 92% 12%, rgba(124, 58, 237, 0.14), transparent 16rem),
+    var(--card-background)
+
+.tag-index-kicker
+  margin: 0 0 10px
+  color: var(--primary)
+  font-size: 13px
+  font-weight: 700
+  letter-spacing: 0.16em
+
+.tag-index-heading
+  display: flex
+  align-items: flex-end
+  justify-content: space-between
+  gap: 24px
+  h1
+    margin: 0
+    color: var(--main-title)
+    font-family: "Songti SC", "Noto Serif CJK SC", STSong, Georgia, serif
+    font-size: clamp(40px, 5vw, 58px)
+    font-weight: 700
+    line-height: 1.12
+  p
+    margin: 12px 0 0
+    color: var(--text-muted)
+    font-size: 16px
+
+.tag-index-total
+  flex: 0 0 auto
+  padding: 7px 12px
+  border-radius: 999px
+  color: var(--primary-strong)
+  background: var(--badge-bg)
+  font-size: 14px
+  font-weight: 700
+
+.tag-index-grid
+  display: grid
+  grid-template-columns: repeat(3, minmax(0, 1fr))
+  gap: 12px
+  padding: 28px 44px 44px
+
+.tag-index-item
+  min-width: 0
+  min-height: 52px
+  display: flex
+  align-items: center
+  justify-content: space-between
+  gap: 12px
+  box-sizing: border-box
+  padding: 12px 14px 12px 16px
+  border: 1px solid var(--border-subtle)
+  border-radius: 14px
+  color: var(--article-text)
+  background: var(--surface-raised)
+  transition: border-color 160ms ease, background-color 160ms ease, transform 160ms ease
+  &:hover
+    border-color: var(--primary)
+    color: var(--primary-strong)
+    background: var(--surface-muted)
+    transform: translateY(-2px)
+
+.tag-index-name
+  overflow: hidden
+  text-overflow: ellipsis
+  white-space: nowrap
+  font-weight: 600
+
+.tag-index-count
+  min-width: 30px
+  height: 30px
+  display: inline-flex
+  align-items: center
+  justify-content: center
+  flex: 0 0 auto
+  box-sizing: border-box
+  padding: 0 8px
+  border-radius: 9px
+  color: var(--primary-strong)
+  background: var(--badge-bg)
+  font-size: 13px
+  font-weight: 700
+
+.tag-index-empty
+  margin: 0
+  padding: 40px 44px
+  color: var(--text-muted)
+
+#page-nav
+  margin: 24px auto 40px
+  .page-nav-btn,
+  .page-number,
+  .space
+    min-width: 44px
+    min-height: 44px
+
+#article-nav
+  .article-nav-btn
+    min-height: 64px
+    box-sizing: border-box
+    border: 1px solid var(--border-subtle)
+
+#footer
+  height: auto
+  min-height: 0
+  display: block
+  box-sizing: border-box
+  padding: 20px 28px
+  border: 1px solid var(--border-subtle)
+  border-bottom: 0
+  border-radius: 22px 22px 0 0
+  #footer-info
+    display: grid
+    grid-template-columns: auto 1fr auto
+    align-items: center
+    gap: 16px
+    width: 100%
+    white-space: nowrap
+    strong
+      color: var(--main-title)
+    span
+      color: var(--text-muted)
+    small
+      color: var(--text-muted)
+
+.back-to-top-btn
+  width: 48px
+  height: 48px
+  bottom: 32px
+  border: 1px solid var(--border-subtle)
+  border-radius: 14px
+  box-shadow: var(--shadow-card)
+
+@media mq-tablet
+  #main-grid,
+  #main-grid.right-sidebar
+    grid-template-columns: minmax(0, 1fr)
+    #content-body
+      grid-column: 1
+    #sidebar-wrapper
+      grid-column: 1
+  #sidebar
+    .sticky
+      position: static
+  .tag-index-grid
+    grid-template-columns: repeat(2, minmax(0, 1fr))
+
+@media mq-mobile
+  #main-grid,
+  #main-grid.right-sidebar
+    grid-template-columns: minmax(0, 1fr)
+    #content-body
+      grid-column: 1
+    #sidebar-wrapper
+      grid-column: 1
+  :root #nav
+    min-height: 80px
+  .tag-index-header
+    padding: 28px 22px 24px
+  .tag-index-heading
+    display: block
+    h1
+      font-size: 40px
+    p
+      font-size: 15px
+  .tag-index-total
+    display: inline-flex
+    margin-top: 18px
+  .tag-index-grid
+    grid-template-columns: minmax(0, 1fr)
+    gap: 10px
+    padding: 20px 22px 28px
+  .tag-index-empty
+    padding: 28px 22px
+  #navbar
+    height: 64px
+    top: 6px
+  #title-nav
+    a
+      height: 52px
+      padding: 0 8px
+      #vivia-logo
+        width: 34px
+        height: 34px
+    .brand-lockup span
+      display: none
+  #sub-nav
+    margin-right: 6px
+  .home-story
+    .article-inner
+      display: flex
+      flex-direction: column
+    &:not(.no-cover) .article-main
+      display: block
+    .article-cover
+      min-height: 0
+      aspect-ratio: 5 / 2
+      margin: 0
+      border: 0
+      border-radius: 0
+      box-shadow: none
+    .article-header
+      padding: 24px 22px 0
+    .article-entry
+      padding: 0 22px
+    .article-title
+      font-size: 26px
+    .truncate-text
+      -webkit-line-clamp: 3
+      line-clamp: 3
+    .article-footer
+      padding: 0 22px 18px
+    &.no-cover
+      .article-inner
+        min-height: 0
+        background:
+          linear-gradient(120deg, rgba(124, 58, 237, 0.07), transparent 68%),
+          var(--card-background)
+      .article-header
+        padding: 24px 22px 0
+      .article-entry
+        padding: 0 22px
+      .article-title
+        font-size: 26px
+      .article-footer
+        padding: 0 22px 18px
+  .article-header
+    padding: 28px 22px 0
+  .article-entry
+    padding: 0 22px
+    font-size: 16px
+  #article-nav
+    flex-direction: column
+  #footer
+    #footer-info
+      grid-template-columns: 1fr
+      gap: 6px
+
+@media (prefers-reduced-motion: reduce)
+  html
+    scroll-behavior: auto
+  *,
+  *:before,
+  *:after
+    animation-duration: 0.01ms !important
+    animation-iteration-count: 1 !important
+    scroll-behavior: auto !important
+    transition-duration: 0.01ms !important
