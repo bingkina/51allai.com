@@ -1,7 +1,7 @@
 <header id="navbar">
   <nav id="title-nav">
     <a href="<%- url_for("/") %>" aria-label="<%= config.title %> 首页">
-      <img id="vivia-logo" src="<%- url_for(theme.avatar || theme.favicon || '/icon.png') %>" alt="<%= config.title %>">
+      <img id="vivia-logo" src="<%- url_for('/icon.png') %>" alt="<%= config.title %>">
       <div class="brand-lockup">
         <strong><%- config.title %></strong>
         <span>AI 科技资讯</span>
