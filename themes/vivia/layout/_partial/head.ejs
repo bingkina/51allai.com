@@ -61,10 +61,13 @@
     var canonicalUrl = config.url.replace(/\/$/, '') + url_for(page.path || '');
 
     // ---- OG Image ----
-    // 优先级：frontmatter.cover > frontmatter.photos > 正文首图 > 主题 default_cover > 头像
+    // 优先级：首页最新文章 frontmatter.cover > 当前页 cover > photos > 正文首图 > 主题 default_cover > 头像
     // 文章页务必提取一张代表图，否则社交分享卡片只能 fallback 到头像，CTR 接近 0
     var ogImage = '';
-    if (page.cover) {
+    var latestHomePost = (is_home() && page.posts && page.posts.length) ? page.posts.first() : null;
+    if (latestHomePost && latestHomePost.cover) {
+      ogImage = /^https?:\/\//.test(latestHomePost.cover) ? latestHomePost.cover : (config.url.replace(/\/$/, '') + url_for(latestHomePost.cover));
+    } else if (page.cover) {
       ogImage = /^https?:\/\//.test(page.cover) ? page.cover : (config.url.replace(/\/$/, '') + url_for(page.cover));
     } else if (page.photos && page.photos.length) {
       ogImage = page.photos[0];
@@ -156,11 +159,6 @@
           "@type": "ImageObject",
           "url": "<%= config.url.replace(/\/$/, '') + url_for(theme.avatar || '/avatar.png') %>"
         }
-      },
-      "potentialAction": {
-        "@type": "SearchAction",
-        "target": "<%= config.url.replace(/\/$/, '') %>/search/?q={search_term_string}",
-        "query-input": "required name=search_term_string"
       }
     }
     </script>
