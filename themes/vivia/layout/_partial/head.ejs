@@ -63,9 +63,13 @@
     // ---- OG Image ----
     // 优先级：首页最新文章 frontmatter.cover > 当前页 cover > photos > 正文首图 > 主题 default_cover > 头像
     // 文章页务必提取一张代表图，否则社交分享卡片只能 fallback 到头像，CTR 接近 0
+    var siteIcon = config.url.replace(/\/$/, '') + url_for('/icon.png');
     var ogImage = '';
     var latestHomePost = (is_home() && page.posts && page.posts.length) ? page.posts.first() : null;
-    if (latestHomePost && latestHomePost.cover) {
+    if (is_home()) {
+      // 首页预览统一使用站点图标，避免 Safari 起始页显示最新文章封面。
+      ogImage = siteIcon;
+    } else if (latestHomePost && latestHomePost.cover) {
       ogImage = /^https?:\/\//.test(latestHomePost.cover) ? latestHomePost.cover : (config.url.replace(/\/$/, '') + url_for(latestHomePost.cover));
     } else if (page.cover) {
       ogImage = /^https?:\/\//.test(page.cover) ? page.cover : (config.url.replace(/\/$/, '') + url_for(page.cover));
@@ -251,7 +255,6 @@
     <%- feed_tag(theme.rss) %>
   <% } %>
 
-  <% var siteIcon = config.url.replace(/\/$/, '') + url_for('/icon.png'); %>
   <link rel="icon" href="<%= siteIcon %>" type="image/png" sizes="any">
   <link rel="shortcut icon" href="<%= siteIcon %>" type="image/png">
   <link rel="apple-touch-icon" href="<%= siteIcon %>">
