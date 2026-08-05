@@ -8,7 +8,7 @@
     "clean": "hexo clean",
     "deploy": "hexo deploy",
     "server": "hexo server",
-    "publish": "bash -c 'set -a && [ -f .env ] && source .env; set +a && hexo clean && hexo generate && if [ \"${SKIP_ALGOLIA:-0}\" = \"1\" ]; then echo \"INFO  Skipping Algolia indexing...\"; else hexo algolia; fi && node .tools/submit-indexnow.js && node .tools/submit-baidu.js && git add . && git commit -m \"更新博客\" && git push'"
+    "publish": "bash -c 'set -a && [ -f .env ] && source .env; set +a && hexo clean && hexo generate && if [ \"${SKIP_ALGOLIA:-0}\" = \"1\" ]; then echo \"INFO  Skipping Algolia indexing...\"; elif ! hexo algolia; then echo \"WARN  Algolia indexing failed; continuing publish...\"; fi && node .tools/submit-indexnow.js && node .tools/submit-baidu.js && git add . && git commit -m \"更新博客\" && git push'"
   },
   "hexo": {
     "version": "8.1.1"
