@@ -23,6 +23,9 @@
 ├── _config.vivia.yml            # Vivia 主题配置：导航、头像、社交链接、侧栏、统计
 ├── package.json                 # npm 脚本与依赖
 ├── package-lock.json            # 锁定依赖版本
+├── README.md                    # 面向开发者的项目说明、环境要求与常用命令
+├── design-system/51allai/       # 站点 UI 设计令牌、排版、布局与可访问性约定
+│   └── MASTER.md
 ├── scaffolds/                   # Hexo 新建内容模板
 │   ├── post.md                  # 正式文章模板
 │   ├── draft.md                 # 草稿模板
@@ -32,6 +35,7 @@
 │   ├── check-duplicate-permalinks.js
 │   ├── image-icon.js            # 社交图标图片转换
 │   ├── link-qrcode.js           # 社交链接二维码悬浮层
+│   ├── local-image-proxy.js     # 本地预览时代理 R2 图片的受限中间件
 │   ├── related-posts.js         # 相关文章 helper 与注入
 │   └── seo-enhance.js           # 首图/懒加载/og:image 辅助
 ├── source/                      # Hexo 源内容与静态资源
@@ -48,7 +52,7 @@
 ├── themes/vivia/                # 本地主题覆盖，优先于 npm 包主题
 │   ├── layout/                  # EJS 模板
 │   ├── source/css/              # Stylus 样式
-│   └── scripts/                 # 主题自身脚本
+│   └── source/js/               # 主题交互、WebMCP 与本地图片回退脚本
 ├── functions/                   # Cloudflare Pages Functions
 │   ├── _middleware.js           # 根据 Accept 头协商 HTML/Markdown 响应
 │   ├── markdown-negotiation.js  # HTML 转 Markdown 与响应头处理
@@ -71,6 +75,8 @@
 - `node_modules/` 不应提交。
 
 ## 常用开发命令
+
+本项目当前依赖 Hexo 8，开发环境需要 Node.js `>=20.19.0`。开始安装或构建前可先运行 `node --version` 确认版本。
 
 ```bash
 npm install
@@ -130,6 +136,8 @@ npm run build
 
 - 修改 Hexo 配置、主题模板、脚本、文章 frontmatter 后，至少运行 `npm run build`。
 - 修改页面交互或样式后，运行 `npm run server`，在浏览器检查首页、文章页、归档页、标签页和移动端布局。
+- 修改主题布局或样式时，以 `design-system/51allai/MASTER.md` 为基线，重点检查浅色/深色主题、键盘焦点、`prefers-reduced-motion`、正文行宽和 767px/1023px 断点。
+- 修改 `scripts/local-image-proxy.js` 或 `themes/vivia/source/js/local-image-fallback.js` 后，使用 `npm run server` 检查 `images.51allai.com/blog/` 图片在本地加载失败时是否仅回退到 `/__r2-preview/`；代理不得放宽到其他域名、非 `blog/` 路径或包含路径穿越的请求。
 - 修改 `functions/archives/[id].js` 后，应按 Cloudflare Pages Functions 语义检查 `/archives/<数字>` 返回 410，非数字归档路径继续交给静态资源或 `_redirects`。
 - 修改 `functions/_middleware.js` 或 `functions/markdown-negotiation.js` 后，至少运行 `test/markdown-negotiation.test.mjs`，并确认普通 HTML 请求不变、`Accept: text/markdown` 请求返回 Markdown。
 - 修改 `themes/vivia/source/js/webmcp.js` 后，至少运行 `test/webmcp.test.mjs`。
@@ -192,6 +200,8 @@ JavaScript：
 - 主题模板位于 `themes/vivia/layout/`，使用 EJS。
 - 样式位于 `themes/vivia/source/css/`，使用 Stylus。
 - 本地 `themes/vivia/` 覆盖优先于 npm 包主题；修改主题行为时优先改本地覆盖文件。
+- 站点级设计规范位于 `design-system/51allai/MASTER.md`；新增或调整 UI 时应复用其中的颜色、排版、间距、断点、焦点态和可访问性约定。
+- 站点重设计样式集中在 `themes/vivia/source/css/_redesign.styl`，并由 `style.styl` 引入；避免在模板中散落内联样式或重复定义设计令牌。
 - SEO meta、canonical、Open Graph、Twitter Card、JSON-LD 主要集中在 `themes/vivia/layout/_partial/head.ejs`。
 
 Markdown：
