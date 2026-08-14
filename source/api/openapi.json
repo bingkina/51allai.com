@@ -76,6 +76,24 @@
         }
       }
     },
+    "/.well-known/agent-card.json": {
+      "get": {
+        "summary": "A2A Agent Card",
+        "description": "Returns the public A2A Protocol Agent Card for 51AllAI content discovery.",
+        "responses": {
+          "200": {
+            "description": "A2A Agent Card.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
     "/.well-known/oauth-authorization-server": {
       "get": {
         "summary": "OAuth authorization server metadata",

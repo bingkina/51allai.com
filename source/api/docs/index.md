@@ -8,6 +8,7 @@ description: 51AllAI public content discovery API documentation for automated ag
 51AllAI exposes a small public discovery surface for automated agents and search tools.
 
 - API catalog: `https://51allai.com/.well-known/api-catalog`
+- A2A Agent Card: `https://51allai.com/.well-known/agent-card.json`
 - OpenAPI description: `https://51allai.com/api/openapi.json`
 - Status: `https://51allai.com/api/status`
 - Atom feed: `https://51allai.com/atom.xml`

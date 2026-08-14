@@ -25,6 +25,7 @@ skip_render:
   - auth.md
   # 机器可读的发现接口需原样发布，但不应作为搜索结果页面进入 sitemap。
   - api/openapi.json
+  - .well-known/agent-card.json
   - .well-known/agent-skills/index.json
   - .well-known/mcp/server-card.json
 new_post_name: ':title.md'
@@ -69,6 +70,7 @@ include:
   - _headers
   - .well-known/*
   - .well-known/dns-aid
+  - .well-known/agent-card.json
   - .well-known/agent-skills/index.json
   - .well-known/mcp/server-card.json
 exclude: null

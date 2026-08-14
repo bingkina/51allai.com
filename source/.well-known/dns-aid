@@ -1,9 +1,10 @@
 {
   "version": "DNS-AID1",
   "domain": "51allai.com",
-  "updated": "2026-06-05",
+  "updated": "2026-08-14",
   "entrypoints": {
     "index": "https://51allai.com/.well-known/dns-aid",
+    "a2aAgentCard": "https://51allai.com/.well-known/agent-card.json",
     "apiCatalog": "https://51allai.com/.well-known/api-catalog",
     "mcpServerCard": "https://51allai.com/.well-known/mcp/server-card.json",
     "agentSkills": "https://51allai.com/.well-known/agent-skills/index.json"
