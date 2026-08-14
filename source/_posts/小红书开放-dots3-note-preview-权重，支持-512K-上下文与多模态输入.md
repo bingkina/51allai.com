@@ -15,6 +15,11 @@ cover: https://images.51allai.com/blog/xiaohongshu-dots3-note-preview-cover_2026
 
 dots3-note preview 是 dots3 系列首个开放权重模型。公开内容包括模型权重和建模代码，许可证为 Apache 2.0。开发者可以从 Hugging Face 或 ModelScope 获取 BF16 原始精度版本，也可以选择 FP8 版本；FP8 用更低的数值精度保存和计算模型参数，主要用于减少显存占用并提高部署效率。
 
+项目与模型权重地址：
+
+- GitHub：[https://github.com/studio-dots-ai/dots3-note-prev](https://github.com/studio-dots-ai/dots3-note-prev)
+- Hugging Face：[https://huggingface.co/dots-studio/dots3-note-prev](https://huggingface.co/dots-studio/dots3-note-prev)
+
 这次开放的准确名称是 dots3-note preview。模型页同时提供配置文件、分词器、聊天模板和分片权重，代码仓库则给出 Transformers、SGLang 与 vLLM 的运行方式。它不是只公开论文或在线演示，开发者拿到权重后可以在自己的计算环境中部署服务。
 
 ## 2800 亿参数中每次激活 160 亿
