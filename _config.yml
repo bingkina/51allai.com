@@ -111,7 +111,9 @@ algolia:
 sitemap:
   path: sitemap.xml
   rel: true
-  tags: true
+  # 标签页数量已超过文章页，且大量为单篇文章的一次性标签。
+  # 页面继续保留并可通过站内链接访问，但不再主动提交给 Google。
+  tags: false
   categories: true
 
 # SEO 优化 - RSS 订阅
