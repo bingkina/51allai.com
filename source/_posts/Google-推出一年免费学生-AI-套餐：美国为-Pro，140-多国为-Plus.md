@@ -1,5 +1,5 @@
 ---
-title: Google 推出一年免费学生 AI 套餐：美国为 Pro，140 多国为 Plus
+title: Google 推出一年免费学生 AI 套餐：美国为 Pro 套餐，140 多国为 Plus 套餐
 permalink: posts/2026/08/google-ai-student-plan-2026/
 tags: [google, gemini, pricing, product-update]
 date: 2026-08-20 09:32:51
