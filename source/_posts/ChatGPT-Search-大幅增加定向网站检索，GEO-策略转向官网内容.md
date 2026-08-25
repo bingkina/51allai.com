@@ -14,7 +14,7 @@ cover: https://images.51allai.com/blog/chatgpt-search-site-query-geo-cover_20260
 
 ChatGPT Search 会把用户的问题拆成若干条后台搜索词，再用检索结果组织答案。这些搜索词通常被称为 query fanout，中文可理解为“查询分流”：一个问题可以触发多次不同角度的搜索。
 
-一组持续追踪 ChatGPT 网页端的第三方监测样本记录到，包含 `site:` 限定符的查询占比在 2026 年 8 月 7 日为 0.37%，8 月 8 日升至 16.8%。`site:example.com 关键词` 只在指定域名中找页面，相当于先选定信息来源，再检索相关内容。
+[Promptwatch 公布的连续监测样本](https://promptwatch.com/data/chatgpt-site-operator-fanouts)记录到，包含 `site:` 限定符的查询占比在 2026 年 8 月 7 日为 0.37%，8 月 8 日升至 16.8%。`site:example.com 关键词` 只在指定域名中找页面，相当于先选定信息来源，再检索相关内容。
 
 ![ChatGPT Search site 限定查询占比变化折线图](https://images.51allai.com/blog/chatgpt-search-site-query-share-chart_20260824_103808.png)
 
@@ -28,7 +28,7 @@ ChatGPT Search 会把用户的问题拆成若干条后台搜索词，再用检�
 
 `site:` 是搜索查询限定符。ChatGPT 可以把这类查询发送给合作搜索服务，从已经建立的网页索引中查找指定域名的内容。它和爬虫直接访问网站是两个环节。
 
-OpenAI 将搜索相关访问分为不同用途。OAI-SearchBot 用于发现和收录可能出现在 ChatGPT 搜索结果中的网页；ChatGPT-User 负责响应用户触发的网页访问；GPTBot 则与模型训练数据收集相关。站长可以单独允许搜索收录，同时拒绝训练用途的抓取。
+[OpenAI 面向发布者的说明](https://help.openai.com/en/articles/12627856-publishers-and-developers-faq)将搜索相关访问分为不同用途。OAI-SearchBot 用于发现和收录可能出现在 ChatGPT 搜索结果中的网页；ChatGPT-User 负责响应用户触发的网页访问；GPTBot 则与模型训练数据收集相关。站长可以单独允许搜索收录，同时拒绝训练用途的抓取。
 
 因此，把这次变化称为“大规模定点搜刮”并不准确。现有证据指向的是后台查询更频繁地限定域名，不代表 ChatGPT 绕过搜索索引，对这些网站进行整站抓取。
 

@@ -4,6 +4,7 @@
   "private": true,
   "scripts": {
     "postinstall": "patch-package",
+    "audit:recent-posts": "node .tools/audit-recent-posts.js",
     "build": "hexo generate",
     "clean": "hexo clean",
     "deploy": "hexo deploy",

@@ -11,4 +11,5 @@ Disallow: /*?*
 
 # 站点地图
 Sitemap: https://51allai.com/sitemap.xml
+Sitemap: https://51allai.com/news-sitemap.xml
 Sitemap: https://51allai.com/atom.xml

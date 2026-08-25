@@ -17,7 +17,7 @@ cover: https://images.51allai.com/blog/deepseek-v4-flash-vision-exp-cover-5x2_20
 
 ## 实验模型把图像输入接入 V4 Flash
 
-DeepSeek-V4-Flash-Vision-Exp 是面向 API 的实验性视觉理解模型。它可以接收图片和文字，用于描述图片、读取截图中的文字、分析图表等任务。调用地址仍为 `https://api.deepseek.com`，模型参数需要写成 `deepseek-v4-flash-vision-exp`。
+DeepSeek-V4-Flash-Vision-Exp 是面向 API 的实验性视觉理解模型。它可以接收图片和文字，用于描述图片、读取截图中的文字、分析图表等任务。[DeepSeek 图像输入文档](https://api-docs.deepseek.com/zh-cn/guides/vision)列出了传图方式和请求限制；调用地址仍为 `https://api.deepseek.com`，模型参数需要写成 `deepseek-v4-flash-vision-exp`。
 
 模型支持 100 万 Token 上下文和 38.4 万 Token 最大输出，同时提供思考与非思考模式。JSON 输出、工具调用、Responses API 和 Anthropic API 均可使用；FIM 补全不在支持范围内。FIM 是根据光标前后内容补写中间文本或代码的接口能力。
 
@@ -64,7 +64,7 @@ print(response.choices[0].message.content)
 
 对不需要细节的图片，可以把 `detail` 设为 `low`。服务会先把图片缩放到 512×512，以减少处理时间和输入成本；需要读取小字或观察细节时，可使用保留原图的 `original` 模式。
 
-## 请求规模取决于传图方式
+## 对开发者的影响：请求规模取决于传图方式
 
 Base64 图片会占用 48 MiB 的请求体限额。外部图片 URL 最长为 8192 个字符，下载必须在 60 秒内完成。单次请求最多可以包含 600 张图片；不含 Files API 图片时，图片总大小上限为 64 MiB，包含 `file_id` 图片后总上限可以达到 200 MiB。
 

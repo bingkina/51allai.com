@@ -60,6 +60,13 @@
     // ---- Canonical URL ----
     var canonicalUrl = config.url.replace(/\/$/, '') + url_for(page.path || '');
 
+    // 标签聚合页保留给站内浏览，但不参与搜索引擎索引。
+    // 不在 robots.txt 屏蔽这些 URL，确保爬虫能够读取 noindex。
+    var isTagIndexPage = page.layout === 'tags' ||
+      page.path === 'tags/' ||
+      page.path === 'tags/index.html';
+    var shouldNoindex = is_tag() || isTagIndexPage;
+
     // ---- OG Image ----
     // 优先级：首页最新文章 frontmatter.cover > 当前页 cover > photos > 正文首图 > 主题 default_cover > 头像
     // 文章页务必提取一张代表图，否则社交分享卡片只能 fallback 到头像，CTR 接近 0
@@ -98,7 +105,11 @@
     <meta name="keywords" content="<%= config.keywords %>">
   <% } %>
   <meta name="author" content="<%= config.author %>">
-  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+  <% if (shouldNoindex) { %>
+    <meta name="robots" content="noindex, follow">
+  <% } else { %>
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+  <% } %>
   <meta name="google-adsense-account" content="ca-pub-2636176262045069">
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2636176262045069"
      crossorigin="anonymous"></script>

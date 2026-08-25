@@ -58,7 +58,7 @@ sidebar:
 
 # Sidebar Widget behavior
 archive_type: 'monthly'
-recent_posts_limits: 5
+recent_posts_limits: 10
 categories:
   max_depth: 2             # Maximum depth of categories displayed in the widget (null for unlimited)
 
