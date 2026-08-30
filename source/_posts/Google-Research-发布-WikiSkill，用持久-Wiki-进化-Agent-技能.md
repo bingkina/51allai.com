@@ -3,10 +3,10 @@ title: Google Research 发布 WikiSkill，用持久 Wiki 进化 Agent 技能
 permalink: posts/2026/08/google-wikiskill-agent-skills/
 tags: [google, wikiskill, ai-agents, agent-framework]
 date: 2026-08-31 00:10:20
-categories: https://images.51allai.com/blog/google-wikiskill-agent-skills-cover_20260831_001729.png
+categories: 
   - 智能体
 description: Google Research 发布 WikiSkill 研究框架，把智能体的原始执行记录、持久知识与可执行技能分层管理，再通过验证和回滚持续改进技能。实验覆盖五类任务和五个模型，Qwen 9B 搭配进化技能的平均成绩超过无技能的 27B 模型，部分技能还能跨模型迁移。
-cover:
+cover: https://images.51allai.com/blog/google-wikiskill-agent-skills-cover_20260831_001729.png
 ---
 
 > Google Research 团队发布 WikiSkill 研究框架，把智能体的执行记录整理成持久 Wiki，再用这些知识持续创建和修改 Agent 技能。实验覆盖 5 类任务和 5 个模型；Qwen 9B 搭配进化技能后的平均成绩为 47.4%，超过无技能 Qwen 27B 的 39.4%。
