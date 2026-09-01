@@ -17,6 +17,11 @@
         <%- partial('post/title', {class_name: 'p-name article-title'}) %>
         <div class='meta-info-bar'>
           <%- partial('post/date', {class_name: 'meta-info', date_format: null}) %>
+          <% if (!index) { %>
+            <div class="need-seperator meta-info">
+              <a href="<%- url_for('/about/') %>" rel="author"><%= config.author %></a>
+            </div>
+          <% } %>
           <div class="need-seperator meta-info">
             <%- partial('post/category') %>  
           </div>

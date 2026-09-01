@@ -37,3 +37,6 @@
 
 /api/status
   Content-Type: application/json
+
+/llms.txt
+  Content-Type: text/plain; charset=utf-8

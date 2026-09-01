@@ -1,4 +1,16 @@
-<section class="story-feed" aria-label="文章列表">
+<section class="home-intro" aria-labelledby="home-title">
+  <p class="home-intro-kicker">AI 科技资讯与技术观察</p>
+  <h1 id="home-title">追踪 AI 智能体、大模型与多模态前沿</h1>
+  <p>51AllAI 用中文梳理全球 AI 产品、研究与行业变化，优先核对官方公告、技术文档、论文和代码仓库，帮助你快速判断一项更新是什么、有什么影响、是否值得关注。</p>
+  <nav class="home-topic-links" aria-label="核心主题">
+    <a href="<%- url_for('/categories/智能体/') %>">AI 智能体</a>
+    <a href="<%- url_for('/categories/大模型/') %>">大模型</a>
+    <a href="<%- url_for('/categories/多模态/') %>">多模态</a>
+    <a href="<%- url_for('/categories/行业观察/') %>">行业观察</a>
+  </nav>
+</section>
+
+<section class="story-feed" aria-label="最新文章">
   <% page.posts.each(function(post, position){ %>
     <%- partial('_partial/article', {post: post, index: true, position: position}) %>
   <% }) %>

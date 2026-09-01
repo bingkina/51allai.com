@@ -13,7 +13,7 @@ hexo.extend.helper.register('get_archive_list', function(config) {
                 month: item.date.month(),
                 str: item.date.format("MMMM YYYY"),
                 count: 1,
-                url: `/archives/${item.date.format('YYYY/MM')}`
+                url: `/archives/${item.date.format('YYYY/MM')}/`
             })
             map[key] = curr++;
         }

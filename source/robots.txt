@@ -3,8 +3,8 @@ User-agent: *
 Allow: /
 Content-Signal: ai-train=yes, search=yes, ai-input=yes
 
-# 屏蔽没有独立价值的低质量页面，节省爬虫预算
-Disallow: /page/
+# 屏蔽没有独立价值的站内搜索页。分页页由 HTML noindex 控制，
+# 但保持可抓取，以便搜索引擎继续发现其中的旧文章链接。
 Disallow: /search/
 Disallow: /search.xml
 Disallow: /*?*

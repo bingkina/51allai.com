@@ -1,0 +1,26 @@
+# 51AllAI
+
+> 51AllAI 是专注人工智能前沿动态的中文科技资讯站，持续追踪大模型、多模态、AI 智能体与生成式 AI 产品。
+
+内容优先核对官方公告、技术文档、研究论文和代码仓库，文章通常包含明确的发布日期、关键数字、适用范围、原始来源与风险边界。
+
+## 主要入口
+
+- [首页](https://51allai.com/): 最新 AI 科技资讯与技术观察
+- [全部文章](https://51allai.com/archives/): 按时间浏览所有文章
+- [AI 智能体](https://51allai.com/categories/%E6%99%BA%E8%83%BD%E4%BD%93/): 编码、浏览器、桌面与企业 Agent
+- [大模型](https://51allai.com/categories/%E5%A4%A7%E6%A8%A1%E5%9E%8B/): 模型发布、推理、上下文与 API
+- [多模态](https://51allai.com/categories/%E5%A4%9A%E6%A8%A1%E6%80%81/): 图像、视频、语音与跨模态模型
+- [行业观察](https://51allai.com/categories/%E8%A1%8C%E4%B8%9A%E8%A7%82%E5%AF%9F/): 商业化、生态、安全与行业变化
+- [关于 51AllAI](https://51allai.com/about/): 内容定位、来源与更正原则
+
+## 机器可读接口
+
+- [Atom Feed](https://51allai.com/atom.xml): 最近文章订阅
+- [Sitemap](https://51allai.com/sitemap.xml): 可索引页面清单
+- [News Sitemap](https://51allai.com/news-sitemap.xml): 最近 48 小时新闻文章
+- [Search XML](https://51allai.com/search.xml): 文章标题、正文与 URL
+- [OpenAPI](https://51allai.com/api/openapi.json): 公共内容发现接口描述
+- [Agent Card](https://51allai.com/.well-known/agent-card.json): Agent 能力与发现元数据
+
+HTML 内容页支持通过 `Accept: text/markdown` 请求 Markdown 表示。引用文章时，请保留文章标题与 canonical URL，并以正文列出的原始来源核对时效性信息。

@@ -81,6 +81,12 @@ const headTemplate = await readFile(
 assert.match(headTemplate, /var shouldNoindex = is_tag\(\) \|\| isTagIndexPage/);
 assert.match(headTemplate, /content="noindex, follow"/);
 assert.match(headTemplate, /content="index, follow, max-image-preview:large/);
+assert.match(headTemplate, /isTagIndexPage \|\| isPaginatedPage/);
+assert.match(headTemplate, /'@type': 'NewsMediaOrganization'/);
+assert.match(headTemplate, /'@type': 'NewsArticle'/);
+assert.match(headTemplate, /'@type': 'ItemList'/);
+assert.match(headTemplate, /isAccessibleForFree: true/);
+assert.match(headTemplate, /url: aboutUrl/);
 
 const tagIndex = await readFile(new URL('../source/tags/index.md', import.meta.url), 'utf8');
 assert.match(tagIndex, /^sitemap: false$/m);
@@ -94,3 +100,30 @@ assert.match(themeConfig, /^recent_posts_limits: 10$/m);
 const robots = await readFile(new URL('../source/robots.txt', import.meta.url), 'utf8');
 assert.match(robots, /^Sitemap: https:\/\/51allai\.com\/news-sitemap\.xml$/m);
 assert.doesNotMatch(robots, /^Disallow: \/tags\//m);
+assert.doesNotMatch(robots, /^Disallow: \/page\//m);
+
+const homeTemplate = await readFile(
+  new URL('../themes/vivia/layout/index.ejs', import.meta.url),
+  'utf8',
+);
+assert.match(homeTemplate, /<h1 id="home-title">追踪 AI 智能体、大模型与多模态前沿<\/h1>/);
+
+const aboutPage = await readFile(new URL('../source/about/index.md', import.meta.url), 'utf8');
+assert.match(aboutPage, /^title: 关于 51AllAI$/m);
+assert.match(aboutPage, /^## 信息来源与写作原则$/m);
+
+const llms = await readFile(new URL('../source/llms.txt', import.meta.url), 'utf8');
+assert.match(llms, /^# 51AllAI$/m);
+assert.match(llms, /^## 机器可读接口$/m);
+
+const archiveWidget = await readFile(
+  new URL('../themes/vivia/layout/_widget/archive.ejs', import.meta.url),
+  'utf8',
+);
+assert.doesNotMatch(archiveWidget, /url_for\(item\.url\) %> "/);
+
+const archiveHelper = await readFile(
+  new URL('../themes/vivia/scripts/archive-helper.js', import.meta.url),
+  'utf8',
+);
+assert.match(archiveHelper, /format\('YYYY\/MM'\)\}\/`/);
