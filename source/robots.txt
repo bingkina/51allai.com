@@ -3,10 +3,8 @@ User-agent: *
 Allow: /
 Content-Signal: ai-train=yes, search=yes, ai-input=yes
 
-# 屏蔽没有独立价值的站内搜索页。分页页由 HTML noindex 控制，
-# 但保持可抓取，以便搜索引擎继续发现其中的旧文章链接。
-Disallow: /search/
-Disallow: /search.xml
+# 搜索页、搜索 XML 与分页保持可抓取，以便爬虫和 Agent 发现文章；
+# 它们分别通过 HTML robots meta 或 X-Robots-Tag 控制索引。
 Disallow: /*?*
 
 # 站点地图

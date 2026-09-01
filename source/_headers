@@ -40,3 +40,7 @@
 
 /llms.txt
   Content-Type: text/plain; charset=utf-8
+
+/search.xml
+  Content-Type: application/xml; charset=utf-8
+  X-Robots-Tag: noindex

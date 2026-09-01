@@ -79,8 +79,9 @@
     var isTagIndexPage = page.layout === 'tags' ||
       page.path === 'tags/' ||
       page.path === 'tags/index.html';
+    var isSearchPage = page.path && page.path.startsWith('search/');
     var isPaginatedPage = page.current && page.current > 1;
-    var shouldNoindex = is_tag() || isTagIndexPage || isPaginatedPage;
+    var shouldNoindex = is_tag() || isTagIndexPage || isSearchPage || isPaginatedPage;
 
     // ---- OG Image ----
     // 优先级：首页最新文章 frontmatter.cover > 当前页 cover > photos > 正文首图 > 主题 default_cover > 头像

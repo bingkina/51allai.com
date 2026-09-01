@@ -81,7 +81,8 @@ const headTemplate = await readFile(
 assert.match(headTemplate, /var shouldNoindex = is_tag\(\) \|\| isTagIndexPage/);
 assert.match(headTemplate, /content="noindex, follow"/);
 assert.match(headTemplate, /content="index, follow, max-image-preview:large/);
-assert.match(headTemplate, /isTagIndexPage \|\| isPaginatedPage/);
+assert.match(headTemplate, /var isSearchPage = page\.path && page\.path\.startsWith\('search\/'\)/);
+assert.match(headTemplate, /isTagIndexPage \|\| isSearchPage \|\| isPaginatedPage/);
 assert.match(headTemplate, /'@type': 'NewsMediaOrganization'/);
 assert.match(headTemplate, /'@type': 'NewsArticle'/);
 assert.match(headTemplate, /'@type': 'ItemList'/);
@@ -101,6 +102,11 @@ const robots = await readFile(new URL('../source/robots.txt', import.meta.url), 
 assert.match(robots, /^Sitemap: https:\/\/51allai\.com\/news-sitemap\.xml$/m);
 assert.doesNotMatch(robots, /^Disallow: \/tags\//m);
 assert.doesNotMatch(robots, /^Disallow: \/page\//m);
+assert.doesNotMatch(robots, /^Disallow: \/search\/$/m);
+assert.doesNotMatch(robots, /^Disallow: \/search\.xml$/m);
+
+const headers = await readFile(new URL('../source/_headers', import.meta.url), 'utf8');
+assert.match(headers, /\/search\.xml\n  Content-Type: application\/xml; charset=utf-8\n  X-Robots-Tag: noindex/);
 
 const homeTemplate = await readFile(
   new URL('../themes/vivia/layout/index.ejs', import.meta.url),
