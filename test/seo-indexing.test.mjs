@@ -127,3 +127,10 @@ const archiveHelper = await readFile(
   'utf8',
 );
 assert.match(archiveHelper, /format\('YYYY\/MM'\)\}\/`/);
+
+const footerTemplate = await readFile(
+  new URL('../themes/vivia/layout/_partial/footer.ejs', import.meta.url),
+  'utf8',
+);
+assert.match(footerTemplate, /url_for\('\/about\/'\)/);
+assert.match(footerTemplate, />关于 51AllAI<\/a>/);

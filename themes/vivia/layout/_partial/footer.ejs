@@ -8,6 +8,6 @@
     <% } %>
     <strong><%= theme.author || config.author || config.title %></strong>
     <span>记录 AI 的现在，理解技术的下一步。</span>
-    <small>&copy; <%= date(new Date(), 'YYYY') %> · <a href="<%- url_for('/atom.xml') %>">RSS 订阅</a> &amp; <a href="<%- url_for('/sitemap.xml') %>">Sitemap</a></small>
+    <small>&copy; <%= date(new Date(), 'YYYY') %> · <a href="<%- url_for('/about/') %>">关于 51AllAI</a> · <a href="<%- url_for('/atom.xml') %>">RSS 订阅</a> · <a href="<%- url_for('/sitemap.xml') %>">Sitemap</a></small>
   </div>
 </footer>
