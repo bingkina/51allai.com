@@ -30,7 +30,7 @@
           <%- partial('post/tag') %>
         <% } %>
       </header>
-      <div class="e-content article-entry" itemprop="articleBody">
+      <div class="e-content article-entry" itemprop="articleBody"<% if (!index && is_post()) { %> data-pagefind-body<% } %>>
         <% if (index) { %>
           <div class="truncate-text">
             <% if(description){ %>

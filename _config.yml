@@ -89,24 +89,6 @@ search:
   field: post
   content: true
 
-# Algolia 搜索配置 (hexo-algoliasearch)
-# SECURITY: adminApiKey 不再写在此处，改用环境变量 HEXO_ALGOLIA_INDEXING_KEY
-#   发布前执行:  export HEXO_ALGOLIA_INDEXING_KEY=xxxxxxxx
-# 旧的 adminApiKey 请立即在 Algolia 控制台吊销并重新生成。
-algolia:
-  appId: DB7LNOTMKC
-  apiKey: 8d8f5aa02241c1a6bb5134b0b9c9fd8e
-  indexName: 51allai
-  chunkSize: 5000
-  fields:
-    - title
-    - slug
-    - path
-    - categories
-    - tags
-    - date
-    - content:strip:truncate,0,500
-
 # SEO 优化 - 站点地图
 sitemap:
   path: sitemap.xml

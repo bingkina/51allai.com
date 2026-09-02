@@ -5,11 +5,11 @@
   "scripts": {
     "postinstall": "patch-package",
     "audit:recent-posts": "node .tools/audit-recent-posts.js",
-    "build": "hexo generate",
+    "build": "hexo generate && pagefind --site public",
     "clean": "hexo clean",
     "deploy": "hexo deploy",
     "server": "hexo server",
-    "publish": "bash -c 'set -a && [ -f .env ] && source .env; set +a && hexo clean && hexo generate && if [ \"${SKIP_ALGOLIA:-0}\" = \"1\" ]; then echo \"INFO  Skipping Algolia indexing...\"; elif ! hexo algolia; then echo \"WARN  Algolia indexing failed; continuing publish...\"; fi && node .tools/submit-indexnow.js && node .tools/submit-baidu.js && git add . && git commit -m \"更新博客\" && git push'"
+    "publish": "bash -c 'set -a && [ -f .env ] && source .env; set +a && hexo clean && npm run build && node .tools/submit-indexnow.js && node .tools/submit-baidu.js && git add . && git commit -m \"更新博客\" && git push'"
   },
   "hexo": {
     "version": "8.1.1"
@@ -17,7 +17,6 @@
   "dependencies": {
     "colorjs.io": "^0.6.1",
     "hexo": "^8.0.0",
-    "hexo-algoliasearch": "^2.0.1",
     "hexo-generator-archive": "^2.0.0",
     "hexo-generator-category": "^2.0.0",
     "hexo-generator-feed": "^3.0.0",
@@ -37,6 +36,7 @@
     "stylus": "^0.64.0"
   },
   "devDependencies": {
+    "pagefind": "^1.5.2",
     "patch-package": "^8.0.1"
   }
 }

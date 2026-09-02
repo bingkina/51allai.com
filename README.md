@@ -8,8 +8,8 @@
 
 - 基于 [Hexo](https://hexo.io/) 8 和 [Vivia](https://github.com/saicaca/hexo-theme-vivia) 主题构建。
 - 使用 `themes/vivia/` 保存主题本地覆盖，便于维护站点专属布局、样式和交互。
-- 支持文章、分类、标签、归档、Atom Feed、站点地图和本地 `search.xml` 搜索。
-- 集成 Algolia 搜索索引、IndexNow 和百度主动推送脚本。
+- 支持文章、分类、标签、归档、Atom Feed、站点地图、Pagefind 站内搜索和机器可读的 `search.xml`。
+- 集成 Pagefind 静态搜索索引、IndexNow 和百度主动推送脚本。
 - 通过 Cloudflare Pages Functions 提供 HTML/Markdown 内容协商、旧归档地址处理和 Agent 发现能力。
 - 提供 WebMCP、API catalog、OpenAPI 和 `.well-known` 发现文件，方便工具和 Agent 读取站点能力。
 - 站点使用中文（`zh-CN`）和 Asia/Shanghai 时区，URL 采用无 `.html` 的固定 permalink。
@@ -28,7 +28,7 @@ npm install
 ## 常用命令
 
 ```bash
-# 生成静态文件到 public/
+# 生成静态文件及 Pagefind 索引到 public/
 npm run build
 
 # 清理 Hexo 缓存和生成文件
@@ -101,9 +101,9 @@ bash .tools/upload-r2.sh path/to/image.png
 
 ## 配置和发布
 
-站点配置位于 `_config.yml` 和 `_config.vivia.yml`。搜索索引和 URL 推送使用的密钥应通过环境变量提供，不能写入配置文件或提交到 Git。发布前应先完成本地构建和测试，并确认所有需要发布的文章位于 `source/_posts/`。
+站点配置位于 `_config.yml` 和 `_config.vivia.yml`。URL 推送使用的密钥应通过环境变量提供，不能写入配置文件或提交到 Git。Pagefind 索引在 `npm run build` 中根据生成后的文章 HTML 自动创建，不需要外部搜索服务或密钥；机器和 Agent 仍可通过 `search.xml` 读取文章目录。发布前应先完成本地构建和测试，并确认所有需要发布的文章位于 `source/_posts/`。
 
-`npm run publish` 是完整发布流水线，会清理并生成站点、执行搜索/URL 推送，然后提交并推送 Git。它会产生外部服务和 Git 状态变更，仅应在明确确认发布范围后执行。
+`npm run publish` 是完整发布流水线，会清理并生成站点及 Pagefind 索引、执行 URL 推送，然后提交并推送 Git。它会产生外部服务和 Git 状态变更，仅应在明确确认发布范围后执行。
 
 常规代码或内容修改只需构建验证：
 
