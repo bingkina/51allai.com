@@ -3,9 +3,13 @@ title: 腾讯开源 Hy4 preview：770B 总参数、1M 上下文，API 输入价 
 permalink: posts/2026/08/tencent-hy4-preview/
 tags: [tencent, hunyuan, open-source, model-release, pricing]
 date: 2026-08-28 19:54:41
+updated: 2026-09-02 14:10:00
 categories: 大模型
 description: 腾讯开源 Hy4 preview，模型采用 770B 总参数、49B 激活参数的混合专家架构，支持 100 万 Token 上下文。本文梳理 Apache 2.0 许可证、应用与 API 入口，以及输入 6 元、输出 18 元每百万 Token 的调用成本。
 cover: https://images.51allai.com/blog/tencent-hy4-preview-cover_20260828_195812.png
+sources:
+  - name: 腾讯混元 Hy4 preview 官方仓库
+    url: https://github.com/Tencent-Hunyuan/Hy4-preview
 ---
 
 > 腾讯于 2026 年 8 月 28 日开源 Hy4 preview。模型拥有 770B 总参数、49B 激活参数和 100 万 Token 上下文，并已接入腾讯产品、腾讯云 TokenHub 与 OpenRouter；API 输入价格为 6 元/百万 Token。

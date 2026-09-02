@@ -1,0 +1,23 @@
+<% const topicPosts = topic_posts(page.topic_tags, 20); %>
+<article class="topic-page" data-pagefind-body>
+  <header class="topic-header">
+    <p class="home-intro-kicker">51AllAI 精选专题</p>
+    <h1><%= page.title %></h1>
+    <p><%= page.description %></p>
+  </header>
+  <div class="article-entry topic-intro"><%- page.content %></div>
+  <section class="topic-stories" aria-labelledby="topic-stories-title">
+    <h2 id="topic-stories-title">最新报道与时间线</h2>
+    <p class="topic-note">按发布日期排列，保留每篇报道发布时的版本与适用范围。历史消息不代表产品当前状态。</p>
+    <ol class="topic-story-list">
+      <% topicPosts.forEach(function(post) { %>
+        <li>
+          <time datetime="<%= post.date.toISOString() %>"><%= date(post.date, 'YYYY-MM-DD') %></time>
+          <h3><a href="<%- url_for(post.path) %>"><%= post.title %></a></h3>
+          <p><%= post.description || truncate(strip_html(post.content), {length: 140}) %></p>
+        </li>
+      <% }); %>
+    </ol>
+  </section>
+  <nav class="topic-footer" aria-label="专题导航"><a href="<%- url_for('/topics/') %>">浏览全部精选专题</a></nav>
+</article>

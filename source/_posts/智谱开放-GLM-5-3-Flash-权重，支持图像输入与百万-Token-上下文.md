@@ -3,9 +3,13 @@ title: 智谱开放 GLM-5.3-Flash 权重，支持图像输入与百万 Token 上
 permalink: posts/2026/08/zhipu-glm-53-flash/
 tags: [zhipu, glm-5.3, open-source, multimodal, model-release]
 date: 2026-08-27 09:32:34
+updated: 2026-09-02 14:10:00
 categories: 大模型
 description: 智谱开放 GLM-5.3-Flash 模型权重，提供 320B 总参数、18B 激活参数、图像输入和 100 万 Token 上下文。本文梳理 MIT 许可证、API 价格、Coding Plan 和本地部署入口，帮助用户判断试用方式与硬件门槛。
 cover: https://images.51allai.com/blog/zhipu-glm-53-flash-cover_20260827_093559.png
+sources:
+  - name: 智谱 AI 开放文档 — GLM-5.3-Flash
+    url: https://docs.bigmodel.cn/cn/guide/models/vlm/glm-5.3-flash
 ---
 
 > 智谱于 2026 年 8 月 26 日发布 GLM-5.3-Flash，并以 MIT 许可证开放模型权重。该模型有 320B 总参数、18B 激活参数，支持图像输入和 100 万 Token 上下文，同时提供 API、Coding Plan 与本地部署入口。

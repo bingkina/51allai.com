@@ -3,10 +3,14 @@ title: Codex with ChatGPT 开源，让 ChatGPT 规划、Codex 执行
 permalink: posts/2026/08/codex-with-chatgpt-bridge/
 tags: [codex-with-chatgpt, openai, codex, chatgpt, agent-framework]
 date: 2026-08-31 09:57:09
+updated: 2026-09-02 14:10:00
 categories:
   - 智能体
 description: Codex with ChatGPT 开源，把 ChatGPT 网页端用于规划和代码审查，本地 Codex 负责编辑、命令与测试。本文说明 8 个只读 MCP 工具、安装步骤、Cloudflare 连接方式、125 项测试结果，以及代码片段仍会传给 ChatGPT 的隐私边界，帮助开发者判断它是否适合个人或团队代码仓库。
 cover: https://images.51allai.com/blog/codex-with-chatgpt-bridge-cover_20260831_100631.png
+sources:
+  - name: XiaoDuoYa/codex-with-chatgpt GitHub 仓库
+    url: https://github.com/XiaoDuoYa/codex-with-chatgpt
 ---
 
 > 社区项目 Codex with ChatGPT，让 ChatGPT 网页端负责规划和审查，本地 Codex 继续改代码、跑命令和测试。ChatGPT 通过 8 个只读 MCP 工具按需读取工作区，不能借此写文件或执行命令。

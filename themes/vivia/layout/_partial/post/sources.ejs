@@ -1,0 +1,14 @@
+<%
+  const sources = article_sources(post);
+%>
+<% if (sources.length) { %>
+  <section class="article-sources" aria-labelledby="article-sources-title">
+    <h2 id="article-sources-title">原始来源</h2>
+    <p>以下资料用于核对本文信息；价格、开放范围与产品状态请以来源的最新说明为准。</p>
+    <ol>
+      <% sources.forEach(function(source) { %>
+        <li><a href="<%= source.url %>" rel="external noopener noreferrer"><%= source.name %></a><% if (source.note) { %><span> — <%= source.note %></span><% } %></li>
+      <% }); %>
+    </ol>
+  </section>
+<% } %>

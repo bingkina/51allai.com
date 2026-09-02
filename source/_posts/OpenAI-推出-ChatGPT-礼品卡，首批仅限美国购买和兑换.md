@@ -3,9 +3,13 @@ title: OpenAI 推出 ChatGPT 礼品卡，首批仅限美国购买和兑换
 permalink: posts/2026/09/openai-chatgpt-gift-cards/
 tags: [openai, chatgpt, product-update, pricing]
 date: 2026-09-01 20:32:46
+updated: 2026-09-02 14:10:00
 categories: 行业观察
 description: OpenAI 推出 ChatGPT 礼品卡，当前仅限美国、美元账户购买和兑换，常规金额为 15 至 250 美元。本文梳理兑换入口、可支付的订阅与积分、网页端限制，以及余额不能转移或提现等注意事项，并说明礼品卡与赠送 ChatGPT 积分的区别，避免买错或充进错误账户。
 cover: https://images.51allai.com/blog/openai-chatgpt-gift-cards-cover_20260901_205243.png
+sources:
+  - name: OpenAI Help Center — Buying and redeeming OpenAI gift cards
+    url: https://help.openai.com/en/articles/20001491
 ---
 
 > OpenAI 已开放美元计价的 ChatGPT 礼品卡，当前仅限美国购买和兑换，常规购买金额为 15 至 250 美元。兑换后余额进入 OpenAI 钱包，可支付 ChatGPT 网页版订阅、续费和符合条件的积分购买，但不能用于 App Store、Google Play 或 API 预付费。

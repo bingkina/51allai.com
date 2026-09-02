@@ -13,6 +13,12 @@
 - [多模态](https://51allai.com/categories/%E5%A4%9A%E6%A8%A1%E6%80%81/): 图像、视频、语音与跨模态模型
 - [行业观察](https://51allai.com/categories/%E8%A1%8C%E4%B8%9A%E8%A7%82%E5%AF%9F/): 商业化、生态、安全与行业变化
 - [关于 51AllAI](https://51allai.com/about/): 内容定位、来源与更正原则
+- [精选专题](https://51allai.com/topics/): 产品定位、官方资料入口与持续报道时间线
+- [OpenAI 与 ChatGPT](https://51allai.com/topics/openai/): 产品、模型 API 与账号生态
+- [Claude 与 Anthropic](https://51allai.com/topics/claude/): 模型、Claude Code 与使用边界
+- [DeepSeek](https://51allai.com/topics/deepseek/): 模型、API、权重与开发工具
+- [Codex](https://51allai.com/topics/codex/): 编程智能体与工作流
+- [AI 视频生成](https://51allai.com/topics/ai-video/): 视频生成、编辑与音视频能力
 
 ## 机器可读接口
 

@@ -3,9 +3,16 @@ title: WorkBuddy 国际版接入 Hy4 preview，770B 开源模型限免两周
 permalink: posts/2026/08/workbuddy-hy4-preview-global/
 tags: [tencent, workbuddy, hunyuan, model-release, product-update]
 date: 2026-08-30 13:52:23
+updated: 2026-09-02 14:10:00
 categories: 智能体
 description: WorkBuddy 国际版接入腾讯混元 Hy4 preview，全球用户可直接选择这款 770B 总参数、49B 激活参数和 1M 上下文的开源模型。本文梳理两周限免、产品入口，以及它对文档、表格和演示文稿任务的实际使用方式，帮助办公用户判断是否值得在限免期内切换模型试用。
 cover: https://images.51allai.com/blog/workbuddy-hy4-preview-global-cover-original_20260830_135459.png
+sources:
+  - name: WorkBuddy 国际版
+    url: https://www.workbuddy.ai/
+    note: 产品入口；限免与开放范围以页面当前显示为准
+  - name: 腾讯混元 Hy4 preview 官方仓库
+    url: https://github.com/Tencent-Hunyuan/Hy4-preview
 ---
 
 > WorkBuddy 国际版已接入腾讯混元 Hy4 preview。该模型总参数 770B、每次推理激活 49B，支持超过 100 万 Token 上下文；全球用户可直接在 WorkBuddy 中使用，首发两周免费，不必自行下载和部署模型。

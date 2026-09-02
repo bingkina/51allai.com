@@ -500,6 +500,71 @@ button:focus-visible
   img
     aspect-ratio: 5 / 2
 
+.article-sources
+  margin-top: 32px
+  padding: 20px 24px
+  border: 1px solid var(--border-subtle)
+  border-radius: 16px
+  background: var(--surface-muted)
+  h2
+    margin-top: 0
+    font-size: 1.2em
+  p, li
+    font-size: 15px
+  a
+    overflow-wrap: anywhere
+
+.topic-page
+  border: 1px solid var(--border-subtle)
+  border-radius: 22px
+  overflow: hidden
+  background: var(--card-background)
+  box-shadow: var(--shadow-card)
+  .topic-header, .topic-intro, .topic-stories, .topic-footer
+    padding: 28px 40px
+  .topic-header
+    border-bottom: 1px solid var(--border-subtle)
+    background: var(--surface-muted)
+    h1
+      margin: 8px 0 16px
+      color: var(--main-title)
+      font-family: "Songti SC", "Noto Serif CJK SC", STSong, Georgia, serif
+      font-size: clamp(30px, 4vw, 44px)
+    p
+      margin: 0
+  .topic-intro
+    max-width: 760px
+    margin: 0 auto
+    box-sizing: border-box
+  .topic-stories
+    border-top: 1px solid var(--border-subtle)
+    h2
+      margin-top: 0
+  .topic-note, time
+    color: var(--text-muted)
+    font-size: 14px
+  .topic-story-list
+    padding: 0
+    list-style: none
+    li
+      padding: 24px 0
+      border-bottom: 1px solid var(--border-subtle)
+    h3
+      margin: 8px 0
+      font-size: 20px
+      line-height: 1.5
+    p
+      margin: 0
+      color: var(--text-muted)
+      line-height: 1.7
+  .topic-footer a
+    display: inline-flex
+    align-items: center
+    min-height: 44px
+  @media mq-mobile
+    .topic-header, .topic-intro, .topic-stories, .topic-footer
+      padding: 24px 20px
+
 #sidebar .sticky
   top: 24px
 

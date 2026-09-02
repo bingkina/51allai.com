@@ -3,10 +3,14 @@ title: Anthropic 推出 Claude Fable 5.1 与 Mythos 5.1，缓存读取降价 75%
 permalink: posts/2026/09/claude-fable-5-1-mythos-5-1/
 tags: [anthropic, claude-fable, model-release, pricing]
 date: 2026-09-02 10:18:07
+updated: 2026-09-02 14:10:00
 categories:
   - 大模型
 description: Anthropic 推出 Claude Fable 5.1 与 Claude Mythos 5.1。两者共享 100 万 Token 上下文与 128K 输出规格，Fable 面向普通用户和开发者开放，Mythos 仅限受信机构；API 输入输出价格不变，缓存读取价格降至原来的四分之一。
 cover: https://images.51allai.com/blog/claude-fable-5-1-mythos-5-1-cover-v2_20260902_103143.png
+sources:
+  - name: Anthropic — Claude Fable 5.1 and Mythos 5.1
+    url: https://www.anthropic.com/claude-fable-and-mythos-5-1
 ---
 
 > Anthropic 推出 Claude Fable 5.1 与 Claude Mythos 5.1。两者使用同一底层模型，Fable 5.1 面向普通用户和开发者开放，Mythos 5.1 仅限受信机构。API 输入和输出价格保持不变，缓存读取价格从每百万 Token 1 美元降至 0.25 美元。

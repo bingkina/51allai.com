@@ -18,8 +18,13 @@
         <div class='meta-info-bar'>
           <%- partial('post/date', {class_name: 'meta-info', date_format: null}) %>
           <% if (!index) { %>
+            <% if (post.updated && new Date(post.updated).getTime() > new Date(post.date).getTime() + 60000) { %>
+              <div class="need-seperator meta-info">
+                更新于 <time class="dt-updated" datetime="<%= date_xml(post.updated) %>" itemprop="dateModified"><%= date(post.updated, null) %></time>
+              </div>
+            <% } %>
             <div class="need-seperator meta-info">
-              <a href="<%- url_for('/about/') %>" rel="author"><%= config.author %></a>
+              <a href="<%- url_for('/about/') %>" rel="author"><%= post.author || config.author %><% if (!post.author) { %> 编辑部<% } %></a>
             </div>
           <% } %>
           <div class="need-seperator meta-info">
@@ -43,6 +48,9 @@
           </div>
         <% } else { %>
           <%- post.content %>
+          <% if (is_post()) { %>
+            <%- partial('post/sources', {post: post}) %>
+          <% } %>
         <% } %>
       </div>
 

@@ -43,7 +43,8 @@ function auditPost(filePath, now, days) {
   if (!attributes.date || Number.isNaN(publishedAt.getTime())) return null;
   if (publishedAt < cutoff || publishedAt > now) return null;
 
-  const externalReferences = getExternalReferences(body);
+  // 将 frontmatter 的 sources 一并纳入检查；封面域名仍会被 INTERNAL_HOSTS 排除。
+  const externalReferences = getExternalReferences(source);
   const internalPostLinks = body.match(/\]\(\/posts\/[^)]+\)/g) || [];
   const hasImpactOrComparison = /^##+\s+.*(?:影响|相比|对比|变化|意味着|怎么选|如何选择|用户|开发者|从.+(?:升级|转|延伸)|重心|注意|适合|调用前)/m.test(body);
 

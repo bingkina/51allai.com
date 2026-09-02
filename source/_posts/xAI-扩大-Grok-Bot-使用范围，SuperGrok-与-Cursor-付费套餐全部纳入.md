@@ -3,9 +3,13 @@ title: Grok Bot 扩大使用范围，SuperGrok 与 Cursor Pro 均可使用
 permalink: posts/2026/08/grok-bot-paid-plans/
 tags: [xai, grok, cloud-agent, product-update]
 date: 2026-08-28 10:13:12
+updated: 2026-09-02 14:10:00
 categories: 智能体
 description: Grok Bot 已扩展到 SuperGrok 三档个人套餐、Cursor 三档付费个人套餐和自助 Teams。本文说明它如何借助共享云电脑跨应用持续执行任务、桌面与 iOS 使用入口、独立周用量机制，以及登录凭证、审批与数据存储边界。
 cover: https://images.51allai.com/blog/grok-bot-paid-plans-cover_20260828_102109.png
+sources:
+  - name: SpaceXAI Docs — Grok Bot Get started
+    url: https://docs.x.ai/grok-bot/get-started
 ---
 
 > Grok Bot 于 8 月 11 日进入测试，8 月 26 日扩展到 SuperGrok、SuperGrok Plus、SuperGrok Heavy、Cursor Pro、Cursor Pro+、Cursor Ultra 和 Cursor Teams 付费套餐。每个账号获得一台持续运行的云电脑，多个 Bot 可以共享登录状态并并行处理任务。

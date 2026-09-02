@@ -117,6 +117,7 @@ assert.match(homeTemplate, /<h1 id="home-title">追踪 AI 智能体、大模型�
 const aboutPage = await readFile(new URL('../source/about/index.md', import.meta.url), 'utf8');
 assert.match(aboutPage, /^title: 关于 51AllAI$/m);
 assert.match(aboutPage, /^## 信息来源与写作原则$/m);
+assert.match(aboutPage, /^## AI 辅助与人工判断$/m);
 
 const llms = await readFile(new URL('../source/llms.txt', import.meta.url), 'utf8');
 assert.match(llms, /^# 51AllAI$/m);
@@ -140,3 +141,4 @@ const footerTemplate = await readFile(
 );
 assert.match(footerTemplate, /url_for\('\/about\/'\)/);
 assert.match(footerTemplate, />关于 51AllAI<\/a>/);
+assert.match(footerTemplate, />精选专题<\/a>/);
