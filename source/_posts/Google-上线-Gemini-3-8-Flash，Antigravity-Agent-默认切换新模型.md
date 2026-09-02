@@ -6,6 +6,15 @@ date: 2026-09-02 23:49:59
 categories: 大模型
 description: Google 上线 Gemini 3.8 Flash 稳定版，并将 Antigravity Agent 默认模型切换至新版本。普通用户可在 Google AI Studio 试用，开发者可通过稳定模型 ID 接入生产应用。本文梳理百万 Token 输入、内置工具、2026 年底前限时 API 价格和旧版迁移参数，并说明计算机使用仍处预览、图像与音频生成不在该模型范围内。
 cover: https://images.51allai.com/blog/google-gemini-38-flash-cover_20260902_235750.png
+sources:
+  - name: Google AI for Developers — Gemini 3.8 Flash model
+    url: https://ai.google.dev/gemini-api/docs/models/gemini-3.8-flash
+  - name: Google AI for Developers — What's new in Gemini 3.8 Flash
+    url: https://ai.google.dev/gemini-api/docs/latest-model
+  - name: Google AI for Developers — Gemini 3.8 Flash pricing
+    url: https://ai.google.dev/gemini-api/docs/pricing#gemini-3.8-flash
+  - name: Google DeepMind — Gemini 3.8 Flash model card
+    url: https://deepmind.google/models/model-cards/gemini-3-8-flash/
 ---
 > Google 于 9 月 2 日上线 Gemini 3.8 Flash 稳定版，模型 ID 为 `gemini-3.8-flash`。它已可用于生产环境，支持百万 Token 输入与 64K Token 输出；Gemini Managed Agents 中的 Antigravity Agent 也已默认切换到该模型。
 ![Google Gemini 3.8 Flash 与 Antigravity Agent 默认模型升级](https://images.51allai.com/blog/google-gemini-38-flash-cover_20260902_235750.png)
