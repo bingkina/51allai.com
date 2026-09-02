@@ -3,7 +3,6 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "postinstall": "patch-package",
     "audit:recent-posts": "node .tools/audit-recent-posts.js",
     "build": "hexo generate && pagefind --site public",
     "clean": "hexo clean",
@@ -36,7 +35,6 @@
     "stylus": "^0.64.0"
   },
   "devDependencies": {
-    "pagefind": "^1.5.2",
-    "patch-package": "^8.0.1"
+    "pagefind": "^1.5.2"
   }
 }
