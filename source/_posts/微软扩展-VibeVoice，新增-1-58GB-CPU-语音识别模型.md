@@ -1,10 +1,10 @@
 ---
-title: 微软扩展 VibeVoice，新增 1.58GB CPU 语音识别模型
+title: 微软语音AI VibeVoice，新增 1.58GB CPU 语音识别模型
 permalink: posts/2026/09/microsoft-vibevoice-asr-bitnet/
 tags: [microsoft, vibevoice, speech-recognition, open-source, model-release]
 date: 2026-09-02 09:34:17
 categories: 多模态
-description: 微软扩展 VibeVoice 开源语音家族，新增 1.58GB 的 VibeVoice-ASR-BitNet 语音识别模型和 C++ 运行时。它面向 x86 与 ARM CPU 本地转写，无需 GPU，本文梳理量化方式、安装步骤与已确认限制。
+description: 微软语音AI VibeVoice 开源语音家族，新增 1.58GB 的 VibeVoice-ASR-BitNet 语音识别模型和 C++ 运行时。它面向 x86 与 ARM CPU 本地转写，无需 GPU，本文梳理量化方式、安装步骤与已确认限制。
 cover: https://images.51allai.com/blog/microsoft-vibevoice-asr-bitnet-cover_20260902_094001.png
 ---
 > 微软为 VibeVoice 新增 VibeVoice-ASR-BitNet，把语音识别模型从 4.62GB 压缩到 1.58GB，并公开 MIT 许可的 C++ 运行时。它可在 x86 和 ARM CPU 上本地转写音频，无需 GPU；当前采用离线批处理，不支持流式识别。
