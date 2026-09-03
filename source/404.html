@@ -1,26 +1,51 @@
 <!DOCTYPE html>
-<html lang="zh-CN" theme="light">
+<html lang="zh-CN">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="robots" content="noindex, nofollow">
+  <meta name="color-scheme" content="light dark">
   <title>页面未找到 | 51AllAI</title>
   <meta name="description" content="您访问的页面不存在，请检查链接或返回首页。">
   <style>
+    :root {
+      color-scheme: light;
+      --page-background: #f7f5fc;
+      --text: #151226;
+      --text-muted: #625d72;
+      --primary: #7c3aed;
+      --primary-hover: #6d28d9;
+      --secondary-background: #f1edfa;
+      --secondary-hover: #e8e0f7;
+      --border: #e6e0f0;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        color-scheme: dark;
+        --page-background: #090d18;
+        --text: #f8fafc;
+        --text-muted: #aeb8cc;
+        --primary: #7c3aed;
+        --primary-hover: #6d28d9;
+        --secondary-background: #182033;
+        --secondary-hover: #202940;
+        --border: #293248;
+      }
+    }
     * { margin: 0; padding: 0; box-sizing: border-box; }
     body {
       font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans SC", Helvetica, Arial, sans-serif;
-      background: #0d0d1a;
-      color: #e0e0e0;
+      background: var(--page-background);
+      color: var(--text);
       min-height: 100vh;
       display: flex;
       align-items: center;
       justify-content: center;
     }
     .container { text-align: center; max-width: 500px; padding: 40px 20px; }
-    h1 { font-size: 6em; font-weight: 800; color: #5e5ce6; margin-bottom: 0.1em; }
+    h1 { font-size: 6em; font-weight: 800; color: var(--primary); margin-bottom: 0.1em; }
     h2 { font-size: 1.4em; font-weight: 500; margin-bottom: 0.8em; }
-    p { color: #888; line-height: 1.7; margin-bottom: 2em; }
+    p { color: var(--text-muted); line-height: 1.7; margin-bottom: 2em; }
     .actions { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
     .btn {
       display: inline-block;
@@ -30,10 +55,10 @@
       text-decoration: none;
       transition: background 0.2s;
     }
-    .btn-primary { background: #5e5ce6; color: #fff; }
-    .btn-primary:hover { background: #4a48d4; }
-    .btn-secondary { background: #1e1e30; color: #ccc; border: 1px solid #333; }
-    .btn-secondary:hover { background: #2a2a40; }
+    .btn-primary { background: var(--primary); color: #fff; }
+    .btn-primary:hover { background: var(--primary-hover); }
+    .btn-secondary { background: var(--secondary-background); color: var(--text); border: 1px solid var(--border); }
+    .btn-secondary:hover { background: var(--secondary-hover); }
   </style>
 </head>
 <body>
