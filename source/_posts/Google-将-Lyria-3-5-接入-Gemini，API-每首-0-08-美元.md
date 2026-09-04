@@ -26,7 +26,7 @@ cover: https://images.51allai.com/blog/google-lyria-35-gemini-api-cover_20260905
 > Google 将 Lyria 3.5 接入 Gemini，用户可选择曲风、人声或纯音乐，通过文字、图片生成短片段或最长 3 分钟音轨。开发者可调用模型 ID `lyria-3.5`，每首收费 0.08 美元。
 ![Google Lyria 3.5 接入 Gemini 与 API 音乐生成](https://images.51allai.com/blog/google-lyria-35-gemini-api-cover_20260905_002802.png)
 
-## Lyria 3.5 进入 Gemini 音乐生成入口
+## Lyria 3.5 接入 Gemini 音乐生成
 
 Google 在 9 月 4 日宣布将 Lyria 3.5 接入 Gemini。用户可以先选择音乐流派，再决定生成带人声的歌曲或纯音乐；模板库提供现成的创作起点，也可以直接输入自己的描述。
 
