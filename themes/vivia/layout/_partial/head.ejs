@@ -90,6 +90,13 @@
     var siteIcon = config.url.replace(/\/$/, '') + url_for('/icon.png');
     var ogImage = '';
     var latestHomePost = (is_home() && page.posts && page.posts.length) ? page.posts.first() : null;
+    var homeLeadImage = '';
+    if (is_home() && (!page.current || page.current === 1) && latestHomePost) {
+      var rawLeadImage = latestHomePost.cover || (latestHomePost.photos && latestHomePost.photos.length ? latestHomePost.photos[0] : null) || first_content_image(latestHomePost.content);
+      if (rawLeadImage) {
+        homeLeadImage = /^https?:\/\//.test(rawLeadImage) ? rawLeadImage : (config.url.replace(/\/$/, '') + url_for(rawLeadImage));
+      }
+    }
     if (is_home()) {
       // 首页预览统一使用站点图标，避免 Safari 起始页显示最新文章封面。
       ogImage = siteIcon;
@@ -265,9 +272,9 @@
   <% } else { %>
     <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
   <% } %>
-  <meta name="google-adsense-account" content="ca-pub-2636176262045069">
-  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2636176262045069"
-     crossorigin="anonymous"></script>
+  <% if (homeLeadImage) { %>
+    <link rel="preload" as="image" href="<%= homeLeadImage %>" fetchpriority="high">
+  <% } %>
 
   <link rel="canonical" href="<%= canonicalUrl %>">
 
@@ -321,10 +328,15 @@
   <link rel="preconnect" href="https://www.googletagmanager.com" crossorigin>
   <link rel="dns-prefetch" href="https://hm.baidu.com">
 
-  <!-- Font Awesome -->
-  <link rel="stylesheet" href="https://cdn.staticfile.org/font-awesome/6.4.2/css/fontawesome.min.css">
-  <link rel="stylesheet" href="https://cdn.staticfile.org/font-awesome/6.4.2/css/brands.min.css">
-  <link rel="stylesheet" href="https://cdn.staticfile.org/font-awesome/6.4.2/css/solid.min.css">
+  <!-- Font Awesome: 非阻塞加载，避免阻塞首屏 FCP 与 LCP 绘制 -->
+  <link rel="preload" href="https://cdn.staticfile.org/font-awesome/6.4.2/css/fontawesome.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <link rel="preload" href="https://cdn.staticfile.org/font-awesome/6.4.2/css/brands.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <link rel="preload" href="https://cdn.staticfile.org/font-awesome/6.4.2/css/solid.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript>
+    <link rel="stylesheet" href="https://cdn.staticfile.org/font-awesome/6.4.2/css/fontawesome.min.css">
+    <link rel="stylesheet" href="https://cdn.staticfile.org/font-awesome/6.4.2/css/brands.min.css">
+    <link rel="stylesheet" href="https://cdn.staticfile.org/font-awesome/6.4.2/css/solid.min.css">
+  </noscript>
 
   <% if (config.feed) { %>
     <%- feed_tag() %>
@@ -337,4 +349,9 @@
   <link rel="apple-touch-icon" href="<%= siteIcon %>">
 
   <%- css('css/style') %>
+
+  <!-- Google AdSense -->
+  <meta name="google-adsense-account" content="ca-pub-2636176262045069">
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2636176262045069"
+     crossorigin="anonymous"></script>
 </head>
