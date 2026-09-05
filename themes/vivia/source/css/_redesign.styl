@@ -952,6 +952,16 @@ button:focus-visible
     #footer-info
       grid-template-columns: 1fr
       gap: 6px
+      min-width: 0
+      white-space: normal
+      small
+        display: flex
+        flex-wrap: wrap
+        gap: 0 8px
+        line-height: 1.7
+        overflow-wrap: anywhere
+        .footer-separator
+          display: none
 
 @media (prefers-reduced-motion: reduce)
   html
