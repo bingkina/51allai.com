@@ -22,6 +22,7 @@ code_dir: downloads/code
 i18n_dir: ':lang'
 skip_render:
   - 404.html
+  - ByteDanceVerify.html
   - auth.md
   # 机器可读的发现接口需原样发布，但不应作为搜索结果页面进入 sitemap。
   - api/openapi.json
