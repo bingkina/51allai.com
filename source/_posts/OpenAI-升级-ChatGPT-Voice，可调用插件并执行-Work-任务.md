@@ -15,11 +15,11 @@ sources:
 date: 2026-09-24 09:33:05
 categories: 智能体
 description: OpenAI 升级 ChatGPT Voice：Live 可在网页、iOS 和 Android 调用插件与连接应用，并进入 ChatGPT Work 执行文档、演示文稿、表格和浏览器任务。本文说明使用入口、套餐要求、审批与用量规则。
-cover:
+cover: https://images.51allai.com/blog/chatgpt-voice-plugins-work-agent-cover_20260924_093744.png
 ---
 
 > OpenAI 于 2026 年 9 月 23 日升级 ChatGPT Voice。Live 现在可在网页、iOS 和 Android 调用插件与连接应用，并进入 ChatGPT Work，通过语音发起文档、演示文稿、表格和浏览器任务。
-![ChatGPT Voice 插件与 Work 语音智能体任务](待补图)
+![ChatGPT Voice 插件与 Work 语音智能体任务](https://images.51allai.com/blog/chatgpt-voice-plugins-work-agent-cover_20260924_093744.png)
 
 ## Voice 从语音问答扩展到工具调用
 
