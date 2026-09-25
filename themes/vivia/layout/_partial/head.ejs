@@ -78,12 +78,13 @@
 
     // 标签聚合页保留给站内浏览，但不参与搜索引擎索引。
     // 不在 robots.txt 屏蔽这些 URL，确保爬虫能够读取 noindex。
+    // 分页页面（/page/2/、/categories/.../page/2/ 等）保持可索引，
+    // 避免 Googlebot 将深度列表视为死胡同，确保深层历史文章能通过内链被持续抓取与传递权重。
     var isTagIndexPage = page.layout === 'tags' ||
       page.path === 'tags/' ||
       page.path === 'tags/index.html';
     var isSearchPage = page.path && page.path.startsWith('search/');
-    var isPaginatedPage = page.current && page.current > 1;
-    var shouldNoindex = is_tag() || isTagIndexPage || isSearchPage || isPaginatedPage;
+    var shouldNoindex = is_tag() || isTagIndexPage || isSearchPage;
 
     // ---- OG Image ----
     // 优先级：首页最新文章 frontmatter.cover > 当前页 cover > photos > 正文首图 > 主题 default_cover > 头像

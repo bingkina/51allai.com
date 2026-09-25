@@ -81,8 +81,8 @@ const headTemplate = await readFile(
 assert.match(headTemplate, /var shouldNoindex = is_tag\(\) \|\| isTagIndexPage/);
 assert.match(headTemplate, /content="noindex, follow"/);
 assert.match(headTemplate, /content="index, follow, max-image-preview:large/);
-assert.match(headTemplate, /var isSearchPage = page\.path && page\.path\.startsWith\('search\/'\)/);
-assert.match(headTemplate, /isTagIndexPage \|\| isSearchPage \|\| isPaginatedPage/);
+assert.match(headTemplate, /isTagIndexPage \|\| isSearchPage;/);
+assert.doesNotMatch(headTemplate, /shouldNoindex.*isPaginatedPage/);
 assert.match(headTemplate, /'@type': 'NewsMediaOrganization'/);
 assert.match(headTemplate, /'@type': 'NewsArticle'/);
 assert.match(headTemplate, /'@type': 'ItemList'/);
