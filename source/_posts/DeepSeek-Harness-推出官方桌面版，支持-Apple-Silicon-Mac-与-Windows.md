@@ -28,10 +28,6 @@ cover: https://images.51allai.com/blog/deepseek-harness-official-desktop-cover_2
 
 DeepSeek 已在 Harness 官方仓库中加入桌面应用，并于 2026 年 9 月 24 日发布 0.1.7-rc.2。用户可以直接下载 [Apple Silicon Mac 安装包](https://download.deepseek.com/dsh-desk/bin/mac-arm64/deepseek-harness-0.1.7-rc.2-mac-arm64.dmg)或 [Windows x64 安装包](https://download.deepseek.com/dsh-desk/bin/win-x64/deepseek-harness-0.1.7-rc.2-win-x64.exe)。
 
-这两个安装包都来自 `download.deepseek.com`。Mac 版本面向 M 系列芯片，Windows 版本面向 x64 电脑。当前官方更新源没有提供 Intel Mac 或 Linux 安装包。
-
-版本号中的 `rc` 代表 Release Candidate，也就是正式稳定版之前的候选版本。官方仓库仍把 DeepSeek Harness 定位为开发者预览版，并提醒后续更新可能包含不兼容改动。
-
 ## 桌面版把运行环境装进应用
 
 此前的官方使用方式需要先安装 Node.js，再在终端执行 `npx @deepseek-ai/dsh web`，由本地服务打开浏览器界面。桌面版改用 Electron 应用封装同一套 Harness 能力，内置 Node.js 与 pnpm，安装后可以从独立窗口进入工作区。
