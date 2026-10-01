@@ -21,11 +21,11 @@ sources:
 date: 2026-10-01 15:25:13
 categories: 智能体
 description: Cloudflare 发布统一命令行工具 cf，测试版覆盖 2900 多个公共 API 命令，并整合 Workers 开发部署。本文说明默认 JSON、自然语言命令搜索、TypeScript 配置、Wrangler 迁移方式，以及开发者和 AI 编程智能体如何安装使用。
-cover:
+cover: https://images.51allai.com/blog/cloudflare-cf-cli-cover_20261001_152741.png
 ---
 
 > Cloudflare 发布统一命令行工具 `cf`，测试版覆盖 2900 多个公共 API 命令，并可创建、开发和部署 Workers。它默认输出 JSON，提供自然语言命令搜索和 TypeScript 配置，面向开发者、自动化脚本与 AI 编程智能体。
-![Cloudflare cf 统一命令行工具与 AI 编程智能体](待补图)
+![Cloudflare cf 统一命令行工具与 AI 编程智能体](https://images.51allai.com/blog/cloudflare-cf-cli-cover_20261001_152741.png)
 
 ## 产品介绍：一个入口管理 Cloudflare 公共 API 和 Workers
 
