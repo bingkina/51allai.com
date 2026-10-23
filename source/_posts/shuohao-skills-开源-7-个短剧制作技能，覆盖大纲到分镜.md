@@ -28,11 +28,11 @@ date: 2026-10-23 13:33:28
 categories:
   - 智能体
 description: shuohao-skills 开源 7 个 AI 短剧制作技能，覆盖改编大纲、角色与美术设定、剧本、开场站位、分镜及独立角色参考图生成。本文梳理各环节产物、Claude Code 与 Codex 安装方式，以及模型额度、出图配置和下游视频制作的衔接边界。
-cover:
+cover: https://images.51allai.com/blog/shuohao-skills-ai-short-drama-cover_20261023_143722.png
 ---
 
 > shuohao-skills 是一套开源的 AI 短剧制作技能，包含 6 个制作阶段和独立的角色参考图生成工具。用户可以在 Claude Code、Codex 等 AI 助手中，把小说逐步整理为大纲、设定、剧本、站位和分镜，再将提示词与素材交给图片、视频生成工具。
-![shuohao-skills 七个技能组织 AI 短剧大纲、角色、站位与分镜的流程示意](待补图)
+![shuohao-skills 七个技能组织 AI 短剧大纲、角色、站位与分镜的流程示意](https://images.51allai.com/blog/shuohao-skills-ai-short-drama-cover_20261023_143722.png)
 
 ## 把小说整理成可检查的制作资料
 
