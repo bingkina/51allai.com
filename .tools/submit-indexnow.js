@@ -52,7 +52,7 @@ if (urls.length === 0) {
 
 const site = 'https://51allai.com';
 const payload = {
-  host: site,
+  host: new URL(site).hostname,
   key: APIKEY,
   keyLocation: `${site}/${APIKEY}.txt`,
   urlList: urls
