@@ -27,11 +27,11 @@ sources:
 date: 2026-11-03 18:54:18
 categories: 智能体
 description: Scrapling 是开源 Python 网页抓取框架，整合静态请求、动态网页渲染、内容提取和批量爬取，也能通过 MCP 为 AI 提供浏览器操作工具。本文梳理安装依赖、Markdown 导出、自适应匹配与适用场景，说明抓取结果进入 AI 工作流前需要检查什么。
-cover: 待补图
+cover: https://images.51allai.com/blog/scrapling-web-scraping-mcp-cover_20261103_190544.png
 ---
 
 > Scrapling 是开源 Python 网页抓取框架，可从网页提取指定字段、导出 Markdown，也能通过 MCP 让 AI 调用浏览器操作、截图和页面读取工具。它要求 Python 3.10 及以上，抓取与 AI 接入需安装相应依赖；适合自建资料采集脚本或为智能体补充网页访问能力。
-![Scrapling 网页抓取、Markdown 提取与 MCP 浏览器操作流程示意](待补图)
+![Scrapling 网页抓取、Markdown 提取与 MCP 浏览器操作流程示意](https://images.51allai.com/blog/scrapling-web-scraping-mcp-cover_20261103_190544.png)
 
 ## 从一个网页到批量采集，用同一套工具处理
 
