@@ -1,0 +1,10 @@
+Use case: stylized-concept
+Asset type: Chinese technology news article cover for 51AllAI.
+Primary request: create one polished editorial cover for the finalized title “Google 正式上线 Gemini 4 Carbon，API 首发价与 Argon 相同”.
+Verified article summary: Google expanded Gemini 4 Carbon access on November 10, 2026 to paid API users and gradually to Google AI Ultra subscribers. API introductory Standard prices match Argon: $2 per 1M input tokens and $10 per 1M output tokens through November 30, 2026. Antigravity /swarm is in preview for coordinated multi-agent project work.
+Scene: bright off-white editorial layout, beautifully crafted blue and soft teal translucent glass forms. A central substantial glass block engraved Gemini 4 Carbon with several smaller document sheets and neatly connected task nodes, representing document understanding and coordinated work. These are conceptual objects, not a product screenshot. Restrained, credible technology magazine art.
+Composition: exact 5:2 horizontal landscape canvas, ideally 2000x800. Keep all text and main subjects well inside safe margins for tiny edge cropping; 55% left area for large editorial title in two or three lines, glass conceptual illustration to the right.
+Title text, verbatim and complete: "Google 正式上线 Gemini 4 Carbon，API 首发价与 Argon 相同". Do not paraphrase. Typeset dark slate base with Gemini 4 Carbon in deep Google-blue and 首发价 in restrained teal. Modern readable Chinese sans serif, clear hierarchy and thumbnail readability, never a monotonous all-black title.
+Additional copy, verbatim: "2026.11.10" and "付费 API · Ultra 订阅逐步开放" as small factual editorial labels, not interface elements.
+Brand identity: Google and Gemini are the verified subjects; use the exact wordmarks in the title, and a subtle accurate Gemini four-point gradient sparkle only if it can be accurately rendered.
+Constraints: exact 5:2 canvas, only verified facts, no fake UI, no performance rankings, no invented product hardware, no sci-fi robots, no neon circuits, no watermarks, no pseudo-text or illegible filler. Bright clear lighting, crisp restrained type, elegant blue teal palette.
