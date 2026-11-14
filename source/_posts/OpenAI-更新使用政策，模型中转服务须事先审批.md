@@ -33,11 +33,11 @@ sources:
 date: 2026-11-14 21:47:34
 categories: 行业观察
 description: OpenAI 新版使用政策将于 11 月 20 日生效，要求提供模型直接访问的中转服务事先获批，并细化替代模型训练限制。本文说明普通应用集成与中转服务的区别，以及 ChatGPT 和 API 的地区、付款与账号共享规则。
-cover: 待补图
+cover: https://images.51allai.com/blog/openai-usage-policy-model-access-cover_20261114_220830.png
 ---
 
 > OpenAI 新版《使用政策》将于 2026 年 11 月 20 日生效，要求向第三方提供模型直接访问的中转服务事先获批，并细化替代模型训练材料与反馈的使用限制。普通应用接入模型功能，有不同的审批适用条件；个人用户还需核对现行的地区、付款与账号共享规则。
-![OpenAI 使用政策更新与模型中转服务事先审批示意](待补图)
+![OpenAI 使用政策更新与模型中转服务事先审批示意](https://images.51allai.com/blog/openai-usage-policy-model-access-cover_20261114_220830.png)
 
 ## 11 月 20 日起，提供模型直接访问须事先获批
 
