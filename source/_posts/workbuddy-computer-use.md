@@ -18,11 +18,11 @@ sources:
 date: 2026-11-23 10:05:15
 categories: 智能体
 description: 腾讯 WorkBuddy 开放电脑操控公测，可在没有开放接口的桌面软件里点击、输入和滚动。macOS 和 Windows 用户需使用 5.11.0 或更高版本，在「设置 → 智能体」安装并授权。企业版由管理员控制使用范围。
-cover:
+cover: https://images.51allai.com/blog/workbuddy-computer-use-cover_20261123_101027.png
 ---
 
 > 11 月 20 日，腾讯 WorkBuddy 开放电脑操控公测。这个功能可以识别桌面软件的界面并执行点击、输入和滚动，即使软件没有向外部开放接口。macOS 和 Windows 用户需更新到 5.11.0 或更高版本，在客户端设置中安装并授权。
-![WorkBuddy 电脑操控公测与桌面应用操作示意图](待补图)
+![WorkBuddy 电脑操控公测与桌面应用操作示意图](https://images.51allai.com/blog/workbuddy-computer-use-cover_20261123_101027.png)
 
 ## 直接在桌面软件里点击、输入和滚动
 
